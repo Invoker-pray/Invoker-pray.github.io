@@ -1,0 +1,392 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LLM-tune-section1 | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="it is time to fine-tuning the LLMLLMs excel in deal with normal context task, but may not always align with specific task or domains, so we can fine-tuning the pre-existing model, to improve LLMs’ per">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LLM-tune-section1">
+<meta property="og:url" content="https://invoker-pray.github.io/LLM-tune-section1/index.html">
+<meta property="og:site_name" content="Jiao hongbao&#39;s Trash">
+<meta property="og:description" content="it is time to fine-tuning the LLMLLMs excel in deal with normal context task, but may not always align with specific task or domains, so we can fine-tuning the pre-existing model, to improve LLMs’ per">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://invoker-pray.github.io/img/LLM-tune.jpg">
+<meta property="article:published_time" content="2025-05-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-11T05:04:08.682Z">
+<meta property="article:author" content="Jiao hongbao">
+<meta property="article:tag" content="LLM-find-tuning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invoker-pray.github.io/img/LLM-tune.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LLM-tune-section1",
+  "url": "https://invoker-pray.github.io/LLM-tune-section1/",
+  "image": "https://invoker-pray.github.io/img/LLM-tune.jpg",
+  "datePublished": "2025-05-29T16:00:00.000Z",
+  "dateModified": "2025-09-11T05:04:08.682Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiao hongbao",
+      "url": "https://invoker-pray.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/LLM-tune-section1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LLM-tune-section1',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">82</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/LLM-tune.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">LLM-tune-section1</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">LLM-tune-section1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-05-29T16:00:00.000Z" title="Created 2025-05-30 00:00:00">2025-05-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-09-11T05:04:08.682Z" title="Updated 2025-09-11 13:04:08">2025-09-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/model-AI/">model/AI</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="it-is-time-to-fine-tuning-the-LLM"><a href="#it-is-time-to-fine-tuning-the-LLM" class="headerlink" title="it is time to fine-tuning the LLM"></a>it is time to fine-tuning the LLM</h1><p>LLMs excel in deal with normal context task, but may not always align with specific task or domains, so we can fine-tuning the pre-existing model, to improve LLMs’ performance and accurancy on particular field.</p>
+<p>so I will learn LLM fine-tuning in this blog, and start my learning record.</p>
+<h1 id="the-key-step-of-LLM-fine-tuning"><a href="#the-key-step-of-LLM-fine-tuning" class="headerlink" title="the key step of LLM fine-tuning"></a>the key step of LLM fine-tuning</h1><ol>
+<li><p>select a model. to tune the model on my laptop, with 16GB CPU and 6GB graphic memory, I need to select a model that can be tuned successfully on my machine, without <em>CUDA outofmemory</em>.(and select a model that have better functionalities on our desired field)</p>
+</li>
+<li><p>prepare relevant dataset.</p>
+</li>
+<li><p>preprocess the dataset. clean, re-format, split, to meet the input format requirement.</p>
+</li>
+<li><p>fine-tuning. make the model more adapt and specialize for particular domain or application.</p>
+</li>
+<li><p>after fine-tuning we get the nuances of the parameters of the model for adapt sepcified domains, so we need to tailor the model with the adapt-nuances.</p>
+</li>
+</ol>
+<h1 id="different-tuning-type"><a href="#different-tuning-type" class="headerlink" title="different tuning type"></a>different tuning type</h1><ol>
+<li><p>full fine-tuning: update all model weights, just like create a new version of model.</p>
+</li>
+<li><p>parameter efficient fine-tuning: more efficient than full fine-tuning. PEFT only update a subset of parameter, effectively reduce the demand of computational resources.</p>
+</li>
+</ol>
+<p><strong>LoRA</strong> and <strong>QLoRA</strong> is the most widely used and effective PEFT.</p>
+<h2 id="LoRA"><a href="#LoRA" class="headerlink" title="LoRA"></a>LoRA</h2><p>LoRA use two smaller matrices as the adapter.</p>
+<p>after LoRA fine-tuning for a specific task, it will generate a <strong><em>LoRA adapter</em></strong>, use adapter and original LLM, we will get a model that have more proficiency on specific domains.</p>
+<h2 id="QLoRA"><a href="#QLoRA" class="headerlink" title="QLoRA"></a>QLoRA</h2><p>Quantized LoRA.</p>
+<p>QLoRA has lower precision. the pre-trained model is loaded into GPU memory with quantized weights, in constrast to the LoRA has lower precision, which means less memory overhead.</p>
+<h1 id="environment-prepare"><a href="#environment-prepare" class="headerlink" title="environment prepare"></a>environment prepare</h1><p>we use <em>jupyter notebook</em> to do practice about ML&#x2F;AI&#x2F;DL…</p>
+<p>we can use <em>kaggle notebook</em>, <em>colab</em>, or local environment.</p>
+<p>install necessary libraries for fine-tuning:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pip install -q -U bitsandbytes transformers peft accelerate datasets scipy einops evaluate trl rouge_score</span><br></pre></td></tr></table></figure>
+
+<p>or you can use my .toml:</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[project]</span></span><br><span class="line"><span class="attr">name</span> = <span class="string">&quot;llm&quot;</span></span><br><span class="line"><span class="attr">version</span> = <span class="string">&quot;0.1.0&quot;</span></span><br><span class="line"><span class="attr">description</span> = <span class="string">&quot;Add your description here&quot;</span></span><br><span class="line"><span class="attr">authors</span> = [&#123; name = <span class="string">&quot;Invoker-pray&quot;</span>, email = <span class="string">&quot;jiaohongbao04@gmail.com&quot;</span> &#125;]</span><br><span class="line"><span class="attr">dependencies</span> = [</span><br><span class="line">    <span class="string">&quot;transformers&gt;=4.52.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tensorflow&gt;=2.19.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;torch&gt;=2.7.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;torchvision&gt;=0.22.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;torchaudio&gt;=2.7.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pandas&gt;=2.2.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;sentencepiece&gt;=0.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tokenizers&gt;=0.21.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;datasets&gt;=3.6.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;evaluate&gt;=0.4.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;scikit-optimize&gt;=0.10.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;optuna&gt;=4.3.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tqdm&gt;=4.67.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;jupyter&gt;=1.1.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;accelerate&gt;=1.7.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;bitsandbytes&gt;=0.46.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;peft&gt;=0.15.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;trl&gt;=0.18.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;scipy&gt;=1.15.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;nodejs&gt;=0.1.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;gradio&gt;=5.31.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;transformers-stream-generator&gt;=0.0.5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;einops&gt;=0.8.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;requests&gt;=2.32.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;huggingface-hub&gt;=0.32.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pyopenssl&gt;=25.1.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hf-xet&gt;=1.1.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tf-keras&gt;=2.19.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tiktoken&gt;=0.9.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dataset&gt;=1.6.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;rouge-score&gt;=0.1.2&quot;</span>,</span><br><span class="line">]</span><br><span class="line"><span class="attr">readme</span> = <span class="string">&quot;README.md&quot;</span></span><br><span class="line"><span class="attr">requires-python</span> = <span class="string">&quot;&gt;= 3.8&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[build-system]</span></span><br><span class="line"><span class="attr">requires</span> = [<span class="string">&quot;hatchling&quot;</span>]</span><br><span class="line"><span class="attr">build-backend</span> = <span class="string">&quot;hatchling.build&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[tool.rye]</span></span><br><span class="line"><span class="attr">managed</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">dev-dependencies</span> = []</span><br><span class="line"></span><br><span class="line"><span class="section">[tool.hatch.metadata]</span></span><br><span class="line"><span class="attr">allow-direct-references</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[tool.hatch.build.targets.wheel]</span></span><br><span class="line"><span class="attr">packages</span> = [<span class="string">&quot;src/llm&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>and then we can import packages to confirm our environment.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datasets <span class="keyword">import</span> load_dataset</span><br><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> (</span><br><span class="line">    AutoModelForCausalLM,</span><br><span class="line">    AutoTokenizer,</span><br><span class="line">    BitsAndBytesConfig,</span><br><span class="line">    HfArgumentParser,</span><br><span class="line">    AutoTokenizer,</span><br><span class="line">    TrainingArguments,</span><br><span class="line">    Trainer,</span><br><span class="line">    GenerationConfig</span><br><span class="line">)</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">from</span> trl <span class="keyword">import</span> SFTTrainer</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> huggingface_hub <span class="keyword">import</span> interpreter_login</span><br><span class="line"></span><br><span class="line">interpreter_login()</span><br></pre></td></tr></table></figure>
+
+<p>Weights&amp;Biases is a visualized tool, you can check the train process via some values like loss, accuracy; also model version manage, hyperparameter manage…</p>
+<p>sometimes we do not want to use W&amp;B, for example the model is very easy, don’t want to create a account, connect to internet, or upload our logs, so we can baned it via:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&#x27;WANDB_DISSBLED&#x27;</span>] = <span class="string">&quot;true&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="loading-dataset"><a href="#loading-dataset" class="headerlink" title="loading dataset"></a>loading dataset</h1><p>we can use dataset from huggingface, like:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">huggingface_dataset_name = <span class="string">&quot;neil-code/dialogsum-test&quot;</span></span><br><span class="line">dataset = load_dataset(huggingface_dataset_name)</span><br></pre></td></tr></table></figure>
+
+<p>or we can use our custom dataset.</p>
+<h2 id="local-dataset-prepare-and-load"><a href="#local-dataset-prepare-and-load" class="headerlink" title="local dataset prepare and load"></a>local dataset prepare and load</h2><p>for demonstrate(local data): I will use the wechat chat history as dataset.</p>
+<p>like this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> datasets <span class="keyword">import</span> load_dataset</span><br><span class="line">dataset = load_dataset(<span class="string">&quot;json&quot;</span>, data_files=<span class="string">&quot;train_data1.json&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>and we can take a look at what is inside of the data:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;🤔\n？外面什么阴风\n杀软verilog实验\n@Invoker\u2005强芯的verilog做到哪了\nChat History for Group Chat\n荷塘月色: 话说有没有玩过galgame的同学 可以告诉我白屏是酱紫放的嘛\n荷塘月色: [Photo]\n荷塘月色: 就是那个出货的时候 那个白屏是怎么闪的\n荷塘月色: 我看网上说什么先闪两下 然后快速闪三下 最后慢慢闪一下这种\n荷塘月色: emm所以有样例视频嘛（如果能放出来的话）...\n@上岸复旦cos小仓朝日\u2005\n不知道，我快进的没注意这些\n表情\n下班\n若智实验&#x27;, &#x27;表情&#x27;, &#x27;You changed the group name to &quot;看看群uのflag&quot;\n表情\n我只要50是因为我似透了（恼）\n不能再拖延了\n唉唉，我得2月发邮件才有用&#x27;, &#x27;事已至此先练坐位体前屈&#x27;, &#x27;?\n帮我测&#x27;, &#x27;唉小萝莉jhb&#x27;, &#x27;表情&#x27;, &#x27;表情\n立即出分的吗&#x27;, &#x27;体测要带啥\n校园卡&#x27;, &#x27;无所谓，我会赖掉1k&#x27;, &#x27;反正只有毕业一个需求\n表情\n不是哥们，我跳远怎么才这么点&#x27;, &#x27;图片\n奏了&#x27;, &#x27;这跳远和50m的机子绝对有问题\n我草这跳远\n真有问题\n表情\n我感觉我会拼尽全力无法及格\n210及格\n你得跳220\n不是 我跳远测完了\n还差两个跑步\n跳远给我干没分了\n什么意思\n第一次180第二次1cm\n表情\n好像是踩线了\n神人项目\n这50也是傻逼啊\n你也坠机了吗\n他最好真跟保研没关系\n不然哥们不读研了\n傻逼\n&quot;姚维颢&quot; recalled a message\n我备战秋招去了\n要是没保上的话\n表情\n唉唉cs✌🏻本科学历有班上&#x27;, &#x27;👍🏻\n表情\nbyd怎么模电也有带隙基准&#x27;, &#x27;表情&#x27;, &#x27;这是什么群&#x27;, &#x27;这两天在调作息()\n已摆烂\n←到处觅食&#x27;, &#x27;实习倒计时3day&#x27;, &#x27;我有春游综合症\n现在什么都不想干&#x27;, &#x27;我也空虚\n我也空虚\n表情\n我空虚一个月了\n啥正事没干\n表情\n天天打守望先锋\n看直播\n《近月少女的礼仪2》将于5月9日推出！中文版特典活动将于5月8日登场！欢迎提前加入愿望单！本作是由日本美少女游戏资深大厂 Navel 制作的超人气女装系列作品的第三部。国际中文版除收录游戏本篇中的内容外，也将包括Limited Edition追加的『樱小路露娜接后日谈的后日谈《对好答案后是美妙的问候》以及『堂兄妹理论及其中心』两个特别篇内容以及全角色语音内容。此外，游戏将拥有超越原版的1920X1080的高清画质，内置简繁日三版本，预定支持Steam成就、集换卡牌、云存储等功能，并将支持大量额外内容。https://www.bilibili.com/video/BV1mNQGYUEbj\nSteam：https://store.steampowered.com/app/3446150 \n官网商城：https://store.hikarifield.co.jp/shop/tsukiniyorisou_2nd  \n\n本作由铃平广与西又葵继续联袂负责原画与角色设计；由系列前作《近月1》、《少女理论》的核心剧本家东之助独立执笔；遥空、奏雨、桐谷华、川岛莉乃等人气声优为本作新角色献声。主题曲《Glitter》由知名歌姬美乡秋演唱。  \n\n《近月少女的礼仪2》曾于美少女游戏大赏中荣获综合第1、剧本第1、系统第8、作画第3、音乐第4、影片第6，角色樱小路露娜第1、八日堂朔莉第2名、艾斯特第5、大藏瑠美音第8等诸多奖项。并曾于萌系游戏大赏中荣获年度纯爱系作品金奖。\n\n#HIKARI FIELD# #hikarifield# #steam# #Navel# #近月少女的礼仪# #樱小路露娜# #视觉小说# #视觉小说游戏# #galgame# #GAL# #女装#\n送我\n不如去玩恋爱泡馍\n感觉跳票了\n下一位\n好像快有demo了\n虽然我也觉得跳了&#x27;,</span><br></pre></td></tr></table></figure>
+
+<p>my dataset content has two features:</p>
+<ul>
+<li><p>input : the message someone send to me.</p>
+</li>
+<li><p>output : the message I response.</p>
+</li>
+</ul>
+<p>this is how the data generate:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> datasets <span class="keyword">import</span> load_dataset</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">folder_path = <span class="string">&quot;csv&quot;</span></span><br><span class="line"></span><br><span class="line">all_conversations = []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> dirpath, dirnames, filenames <span class="keyword">in</span> os.walk(folder_path):</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="keyword">if</span> filename.endswith(<span class="string">&quot;.csv&quot;</span>):</span><br><span class="line">            file_path = os.path.join(dirpath, filename)</span><br><span class="line">            df = pd.read_csv(file_path)</span><br><span class="line">            <span class="comment">#print(file_path)</span></span><br><span class="line">            all_conversation = []</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(df) -<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> df.iloc[i][<span class="string">&quot;is_sender&quot;</span>] == <span class="number">0</span>:</span><br><span class="line">                    all_conversation.append([<span class="number">0</span>,df.iloc[i][<span class="string">&quot;msg&quot;</span>]])</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    all_conversation.append([<span class="number">1</span>,df.iloc[i][<span class="string">&quot;msg&quot;</span>]])</span><br><span class="line">            all_conversations.append(all_conversation)</span><br><span class="line"></span><br><span class="line">convs = []</span><br><span class="line"><span class="keyword">for</span> conversation <span class="keyword">in</span> all_conversations:</span><br><span class="line">    conv = []</span><br><span class="line">    buffer = []</span><br><span class="line">    flag_init = <span class="number">1</span></span><br><span class="line">    before = <span class="number">100</span></span><br><span class="line">    <span class="keyword">for</span> message <span class="keyword">in</span> conversation:</span><br><span class="line">        <span class="comment">#print(message)</span></span><br><span class="line">        sender, msg = message</span><br><span class="line">        <span class="comment">#print(sender)</span></span><br><span class="line">        <span class="comment">#print(msg)</span></span><br><span class="line">        <span class="keyword">if</span> flag_init == <span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">            before = sender</span><br><span class="line">            buffer.append(msg)</span><br><span class="line">            flag_init = <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> sender == before:</span><br><span class="line">                buffer.append(msg)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                conv.append([before,buffer])</span><br><span class="line">                buffer = []</span><br><span class="line">                buffer.append(msg)</span><br><span class="line">                before = sender</span><br><span class="line">    convs.append(conv)</span><br><span class="line"><span class="built_in">all</span> = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> conv <span class="keyword">in</span> convs:</span><br><span class="line">    one = []</span><br><span class="line">    <span class="keyword">for</span> message <span class="keyword">in</span> conv:</span><br><span class="line">        <span class="comment">#print(message)</span></span><br><span class="line">        message[<span class="number">1</span>] = <span class="string">&quot;\n&quot;</span>.join(message[<span class="number">1</span>])</span><br><span class="line">            <span class="comment">#print(message[1])</span></span><br><span class="line">            <span class="comment">#print(&quot;---&quot;)</span></span><br><span class="line"></span><br><span class="line">        one.append(message)</span><br><span class="line">    <span class="built_in">all</span>.append(one)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">all</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> datasets <span class="keyword">import</span> load_dataset</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pairs = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(convs)):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">all</span>[i][<span class="number">0</span>][<span class="number">0</span>] == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">all</span>[i].pop(<span class="number">0</span>)</span><br><span class="line"><span class="comment">#print(all)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> conv <span class="keyword">in</span> <span class="built_in">all</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(conv) - <span class="number">1</span>):</span><br><span class="line">        sender, msg  = conv[i]</span><br><span class="line">        next_sender, next_msg = conv[i+<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 仅保留 -&gt;sender的连续对话</span></span><br><span class="line">        <span class="keyword">if</span> sender == <span class="number">0</span> <span class="keyword">and</span> next_sender == <span class="number">1</span>:</span><br><span class="line">            pairs.append(&#123;</span><br><span class="line">                <span class="string">&quot;input&quot;</span>: msg,</span><br><span class="line">                <span class="string">&quot;output&quot;</span>: next_msg</span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#print(pairs)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存为 JSON 文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;train_data1.json&quot;</span>, <span class="string">&quot;w&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    json.dump(pairs, f, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载为 HuggingFace 数据集</span></span><br><span class="line">dataset = load_dataset(<span class="string">&quot;json&quot;</span>, data_files=<span class="string">&quot;train_data1.json&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="create-bitsandbytes-configuration"><a href="#create-bitsandbytes-configuration" class="headerlink" title="create bitsandbytes configuration"></a>create bitsandbytes configuration</h1><p>we need a configuration class that specifies how we want to do the quantization.</p>
+<p>we can use <em>BitsAndBytesConfig</em> to load the model in 4-bit format.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">compute_dtype = <span class="built_in">getattr</span>(torch, <span class="string">&quot;float16&quot;</span>)</span><br><span class="line">bnb_config = BitsAndBytesConfig(</span><br><span class="line">        load_in_4bit=<span class="literal">True</span>,</span><br><span class="line">        bnb_4bit_quant_type=<span class="string">&#x27;nf4&#x27;</span>,</span><br><span class="line">        bnb_4bit_compute_dtype=compute_dtype,</span><br><span class="line">        bnb_4bit_use_double_quant=<span class="literal">False</span>,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>key words</th>
+<th>explaination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>compute_dtype &#x3D; getattr(torch, “float16”)</td>
+<td>get float16 attribute from torch, then give the value to compute<em>dtype(can also be _torch.float16</em>)</td>
+</tr>
+<tr>
+<td>bnb_config &#x3D; BitsAndBytesConfig()</td>
+<td>class of huggingface, a parameter for model quantized</td>
+</tr>
+<tr>
+<td>load_in_4bit</td>
+<td>model load as 4-bit</td>
+</tr>
+<tr>
+<td>bnb_4bit_quant_type &#x3D; ‘nf4’</td>
+<td>use ‘nf4’ quant format</td>
+</tr>
+<tr>
+<td>bnb_4bit_compute_dtype &#x3D; compute_dtype</td>
+<td>the data type while computing</td>
+</tr>
+<tr>
+<td>bnb_4bit_use_double_quant</td>
+<td>use double-quantization</td>
+</tr>
+</tbody></table>
+<h1 id="loading-pre-trained-model"><a href="#loading-pre-trained-model" class="headerlink" title="loading pre-trained model"></a>loading pre-trained model</h1><p>we use neil-code&#x2F;dialogsum-test as dataset, so we need a model that excel in english language process, we can use <em>Phi-2</em>(2.7 billion parameters).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">model_name=<span class="string">&#x27;microsoft/phi-2&#x27;</span></span><br><span class="line">device_map = &#123;<span class="string">&quot;&quot;</span>: <span class="number">0</span>&#125;</span><br><span class="line">original_model = AutoModelForCausalLM.from_pretrained(model_name,</span><br><span class="line">                                                      device_map=device_map,</span><br><span class="line">                                                      quantization_config=bnb_config,</span><br><span class="line">                                                      trust_remote_code=<span class="literal">True</span>,</span><br><span class="line">                                                      use_auth_token=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>key words</th>
+<th>explaination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>model_name &#x3D; ‘microsoft&#x2F;phi-2’</td>
+<td>select your model. if it can’t be found model in local machine, it will be download from huggingface hub.</td>
+</tr>
+<tr>
+<td>device_map &#x3D; {“”: 0}</td>
+<td>load model into GPU 0. if use accelerate, it can be “auto”.</td>
+</tr>
+<tr>
+<td>original_model &#x3D; AutoModelForCausalLM.from_pretrained()</td>
+<td>for substantial</td>
+</tr>
+<tr>
+<td>quantization_config</td>
+<td>quant func</td>
+</tr>
+<tr>
+<td>trust_remote_code</td>
+<td>allow execution of the repository code</td>
+</tr>
+<tr>
+<td>use_auth_token</td>
+<td>use the token of the account that login now</td>
+</tr>
+</tbody></table>
+<h1 id="tokenization"><a href="#tokenization" class="headerlink" title="tokenization"></a>tokenization</h1><p>neural network can only process digital tensor information, can not deal with text directly. so we should make tokenization, to transform the text information to token ID, for example:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;你好吗&quot;</span><br><span class="line"></span><br><span class="line">-&gt; <span class="selector-attr">[<span class="string">&quot;你&quot;</span>，<span class="string">&quot;好&quot;</span>,<span class="string">&quot;吗&quot;</span>]</span></span><br><span class="line"></span><br><span class="line">-&gt; <span class="selector-attr">[101,872,1962,1408,102]</span></span><br></pre></td></tr></table></figure>
+
+<p>we have different ways to tokenization:</p>
+<ul>
+<li><p>word-level tokenizer: split as word, for language splited by space.</p>
+</li>
+<li><p>character-level tokenizer: splited as char, for Chinese, Janpese.</p>
+</li>
+<li><p>subword tokenizer: mixed.</p>
+</li>
+</ul>
+<p>so we can configure tokenizer via:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code=<span class="literal">True</span>,padding_side=<span class="string">&quot;left&quot;</span>,add_eos_token=<span class="literal">True</span>,add_bos_token=<span class="literal">True</span>,use_fast=<span class="literal">False</span>)</span><br><span class="line">tokenizer.pad_token = tokenizer.eos_token</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>key words</th>
+<th>explaination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AutoTokenizer.from_pretrained()</td>
+<td>load tokenizer for huggingface</td>
+</tr>
+<tr>
+<td>model_name</td>
+<td>none</td>
+</tr>
+<tr>
+<td>trust_remote_code</td>
+<td>allow the implementation of remote repository code</td>
+</tr>
+<tr>
+<td>padding_side</td>
+<td>if we padding for input, it will be added at left&#x2F;right side</td>
+</tr>
+<tr>
+<td>add_eos_token &#x2F; add_bos_token</td>
+<td>eos: end-of-sequence &#x2F; bos: begin-of-sequence</td>
+</tr>
+<tr>
+<td>use_fast</td>
+<td>use fast_Tokenizer</td>
+</tr>
+<tr>
+<td>tokenizer.pad_token</td>
+<td>sometimes model does not define pad_token and report error</td>
+</tr>
+</tbody></table>
+<h1 id="test-the-origin-model"><a href="#test-the-origin-model" class="headerlink" title="test the origin model"></a>test the origin model</h1><p>test the model can normally be used or not.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">%%time</span><br><span class="line"><span class="keyword">from</span> transformers <span class="keyword">import</span> set_seed</span><br><span class="line">seed = <span class="number">42</span></span><br><span class="line">set_seed(seed)</span><br><span class="line"></span><br><span class="line">index = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">prompt = dataset[<span class="string">&#x27;test&#x27;</span>][index][<span class="string">&#x27;dialogue&#x27;</span>]</span><br><span class="line">summary = dataset[<span class="string">&#x27;test&#x27;</span>][index][<span class="string">&#x27;summary&#x27;</span>]</span><br><span class="line"></span><br><span class="line">formatted_prompt = <span class="string">f&quot;Instruct: Summarize the following conversation.\n<span class="subst">&#123;prompt&#125;</span>\nOutput:\n&quot;</span></span><br><span class="line">res = gen(original_model,formatted_prompt,<span class="number">100</span>, tokenizer, )</span><br><span class="line"><span class="comment">#print(res[0])</span></span><br><span class="line">output = res[<span class="number">0</span>].split(<span class="string">&#x27;Output:\n&#x27;</span>)[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">dash_line = <span class="string">&#x27;-&#x27;</span>.join(<span class="string">&#x27;&#x27;</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>))</span><br><span class="line"><span class="built_in">print</span>(dash_line)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;INPUT PROMPT:\n<span class="subst">&#123;formatted_prompt&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(dash_line)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;BASELINE HUMAN SUMMARY:\n<span class="subst">&#123;summary&#125;</span>\n&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(dash_line)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;MODEL GENERATION - ZERO SHOT:\n<span class="subst">&#123;output&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>key words</th>
+<th>explaination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%%time</td>
+<td>measure the time that execute the code block, from jupyter</td>
+</tr>
+<tr>
+<td>seed&#x2F;set_seed</td>
+<td>set seed can make sure that the LLM can be re-appear</td>
+</tr>
+<tr>
+<td>index &#x3D; 10</td>
+<td>select a sample</td>
+</tr>
+<tr>
+<td>formatted_prompt &#x3D; f””</td>
+<td>combinate the dialog into a <em>instruct-style</em> input</td>
+</tr>
+<tr>
+<td>res &#x3D; gen()</td>
+<td>invoke the model-generate function, pass the model, prompt, and max generate length</td>
+</tr>
+<tr>
+<td>output &#x3D; …</td>
+<td>extract the content after output as summary text, for output</td>
+</tr>
+<tr>
+<td>dash_line</td>
+<td>none</td>
+</tr>
+</tbody></table>
+<p>and there is a typical gen function:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gen</span>(<span class="params">model, prompt, max_new_tokens=<span class="number">100</span>, tokenizer=<span class="literal">None</span>, device=<span class="string">&#x27;cuda&#x27;</span> <span class="keyword">if</span> torch.cuda.is_available(<span class="params"></span>) <span class="keyword">else</span> <span class="string">&#x27;cpu&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    use specified model and tokenizer to generate text.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    parameter：</span></span><br><span class="line"><span class="string">        model: a transformers model that has loaded （by AutoModelForCausalLM）</span></span><br><span class="line"><span class="string">        prompt: the input  prompt</span></span><br><span class="line"><span class="string">        max_new_tokens: max tokens that generate</span></span><br><span class="line"><span class="string">        tokenizer: tokenizer you use</span></span><br><span class="line"><span class="string">        device: device（by default: &#x27;cuda&#x27; , if can&#x27;t  use gpu,  &#x27;cpu&#x27; instead）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    return：</span></span><br><span class="line"><span class="string">        text that generated（mostly length by 1）</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> tokenizer <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&quot;tokenizer cannot be None.&quot;</span>)</span><br><span class="line"></span><br><span class="line">    model.to(device)</span><br><span class="line">    inputs = tokenizer(prompt, return_tensors=<span class="string">&#x27;pt&#x27;</span>).to(device)</span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        outputs = model.generate(</span><br><span class="line">            **inputs,</span><br><span class="line">            max_new_tokens=max_new_tokens,</span><br><span class="line">            do_sample=<span class="literal">False</span>,</span><br><span class="line">            eos_token_id=tokenizer.eos_token_id,</span><br><span class="line">        )</span><br><span class="line">    <span class="keyword">return</span> tokenizer.batch_decode(outputs, skip_special_tokens=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>next serial blog is <a href="/LLM-tune-section2/">here</a>.</p>
+<p>learn from :</p>
+<p><a target="_blank" rel="noopener" href="https://dassum.medium.com/fine-tune-large-language-model-llm-on-a-custom-dataset-with-qlora-fb60abdeba07">https://dassum.medium.com/fine-tune-large-language-model-llm-on-a-custom-dataset-with-qlora-fb60abdeba07</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/LLM-tune-section1/">https://invoker-pray.github.io/LLM-tune-section1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/LLM-find-tuning/">LLM-find-tuning</a></div><div class="post-share"><div class="social-share" data-image="/img/LLM-tune.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/english-space/" title="english space"><img class="cover" src="/img/english-space.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">english space</div></div><div class="info-2"><div class="info-item-1">for the Grad-Recfor graduate recommend, I need english provement. sadly, my CET-6 score can’t be used for some reson, and I am not sure this year’s CET-6 test can be used for recommend or not. so I need to take a TOEFL or IETLS for that, the exam’s date should be 8.1-8.10, I think. but first, I should prepare for the June CET-6 test. </div></div></div></a><a class="pagination-related" href="/LLM-tune-section2/" title="LLM-tune-section2"><img class="cover" src="/img/LLM-tune.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">LLM-tune-section2</div></div><div class="info-2"><div class="info-item-1">dataset pre-processingwe should format the prompt in a way that the model can recognize. we should refer the huggingface model documentation, to check the format we should transform the original dataset to. for Phi-2, it should be: 1234567where the model generates the text after &quot;.&quot; . To encourage the model to write more concise answers, you can also try the following QA format using &quot;Instruct: &lt;prompt&gt;\nOutput:&quot;Instruct: Write a detailed analogy between mathematics...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/LLM-tune-section2/" title="LLM-tune-section2"><img class="cover" src="/img/LLM-tune.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-30</div><div class="info-item-2">LLM-tune-section2</div></div><div class="info-2"><div class="info-item-1">dataset pre-processingwe should format the prompt in a way that the model can recognize. we should refer the huggingface model documentation, to check the format we should transform the original dataset to. for Phi-2, it should be: 1234567where the model generates the text after &quot;.&quot; . To encourage the model to write more concise answers, you can also try the following QA format using &quot;Instruct: &lt;prompt&gt;\nOutput:&quot;Instruct: Write a detailed analogy between mathematics...</div></div></div></a><a class="pagination-related" href="/LLM-tune-section3/" title="LLM-tune-section3"><img class="cover" src="/img/LLM-tune.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-05-31</div><div class="info-item-2">LLM-tune-section3</div></div><div class="info-2"><div class="info-item-1">evaluate the model qualitativelywe need to evaluate the model’s quality, and sometimes we need to make further adjustments to model’s architecture, hyperparameters, or datasets. we should perform inference using the same input with the PEFT model. 12345678910111213141516171819202122%%timefrom transformers import set_seedset_seed(seed)index = 5dialogue = dataset[&#x27;test&#x27;][index][&#x27;dialogue&#x27;]summary = dataset[&#x27;test&#x27;][index][&#x27;summary&#x27;]prompt =...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">82</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#it-is-time-to-fine-tuning-the-LLM"><span class="toc-number">1.</span> <span class="toc-text">it is time to fine-tuning the LLM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#the-key-step-of-LLM-fine-tuning"><span class="toc-number">2.</span> <span class="toc-text">the key step of LLM fine-tuning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#different-tuning-type"><span class="toc-number">3.</span> <span class="toc-text">different tuning type</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LoRA"><span class="toc-number">3.1.</span> <span class="toc-text">LoRA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QLoRA"><span class="toc-number">3.2.</span> <span class="toc-text">QLoRA</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#environment-prepare"><span class="toc-number">4.</span> <span class="toc-text">environment prepare</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#loading-dataset"><span class="toc-number">5.</span> <span class="toc-text">loading dataset</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#local-dataset-prepare-and-load"><span class="toc-number">5.1.</span> <span class="toc-text">local dataset prepare and load</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#create-bitsandbytes-configuration"><span class="toc-number">6.</span> <span class="toc-text">create bitsandbytes configuration</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#loading-pre-trained-model"><span class="toc-number">7.</span> <span class="toc-text">loading pre-trained model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tokenization"><span class="toc-number">8.</span> <span class="toc-text">tokenization</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#test-the-origin-model"><span class="toc-number">9.</span> <span class="toc-text">test the origin model</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/life-reflection11/" title="life reflection 11"><img src="/img/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 11"/></a><div class="content"><a class="title" href="/life-reflection11/" title="life reflection 11">life reflection 11</a><time datetime="2025-09-09T16:00:00.000Z" title="Created 2025-09-10 00:00:00">2025-09-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection10/" title="life reflection 10"><img src="/img/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 10"/></a><div class="content"><a class="title" href="/life-reflection10/" title="life reflection 10">life reflection 10</a><time datetime="2025-09-07T16:00:00.000Z" title="Created 2025-09-08 00:00:00">2025-09-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/philosophy-homepage/" title="my philosophic passages"><img src="/img/philosophy-homepage.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my philosophic passages"/></a><div class="content"><a class="title" href="/philosophy-homepage/" title="my philosophic passages">my philosophic passages</a><time datetime="2025-09-06T16:00:00.000Z" title="Created 2025-09-07 00:00:00">2025-09-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/edge-detection/" title="edge detection"><img src="/img/edge-detection.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="edge detection"/></a><div class="content"><a class="title" href="/edge-detection/" title="edge detection">edge detection</a><time datetime="2025-08-29T16:00:00.000Z" title="Created 2025-08-30 00:00:00">2025-08-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/PYNQ-create-IP-core/" title="PYNQ create IP core"><img src="/img/PYNQ-create-IP-core.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PYNQ create IP core"/></a><div class="content"><a class="title" href="/PYNQ-create-IP-core/" title="PYNQ create IP core">PYNQ create IP core</a><time datetime="2025-08-28T16:00:00.000Z" title="Created 2025-08-29 00:00:00">2025-08-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
