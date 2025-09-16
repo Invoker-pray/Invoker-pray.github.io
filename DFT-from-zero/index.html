@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>从零开始的DFT工程师！ | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="为什么要开始这个系列开始做这个系列其实还是想要多学一点东西，感觉自己会的还是太少了，完全没有一个正常水平的数字集成电路应届毕业生的水平。而且其实差不多从大三上学期开始后我就状态低迷了一整年 现在的想法是这样的：这个学期选了自然辩证法（前八周）和集成电路前沿讲座（后八周），都是我们学校研究生的课，先多学一点，这样可以省下研一上学期的一点时间，然后多做点东西；尽早招老师开个题，毕设最好是前八周学学基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始的DFT工程师！">
+<meta property="og:url" content="https://invoker-pray.github.io/DFT-from-zero/index.html">
+<meta property="og:site_name" content="Jiao hongbao&#39;s Trash">
+<meta property="og:description" content="为什么要开始这个系列开始做这个系列其实还是想要多学一点东西，感觉自己会的还是太少了，完全没有一个正常水平的数字集成电路应届毕业生的水平。而且其实差不多从大三上学期开始后我就状态低迷了一整年 现在的想法是这样的：这个学期选了自然辩证法（前八周）和集成电路前沿讲座（后八周），都是我们学校研究生的课，先多学一点，这样可以省下研一上学期的一点时间，然后多做点东西；尽早招老师开个题，毕设最好是前八周学学基础">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://invoker-pray.github.io/img/DFT-FROM-ZERO.jpeg">
+<meta property="article:published_time" content="2025-09-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-16T14:57:10.975Z">
+<meta property="article:author" content="Jiao hongbao">
+<meta property="article:tag" content="DFT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invoker-pray.github.io/img/DFT-FROM-ZERO.jpeg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "从零开始的DFT工程师！",
+  "url": "https://invoker-pray.github.io/DFT-from-zero/",
+  "image": "https://invoker-pray.github.io/img/DFT-FROM-ZERO.jpeg",
+  "datePublished": "2025-09-15T16:00:00.000Z",
+  "dateModified": "2025-09-16T14:57:10.975Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiao hongbao",
+      "url": "https://invoker-pray.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/DFT-from-zero/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '从零开始的DFT工程师！',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">103</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/DFT-FROM-ZERO.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">从零开始的DFT工程师！</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">从零开始的DFT工程师！</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-09-15T16:00:00.000Z" title="Created 2025-09-16 00:00:00">2025-09-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-09-16T14:57:10.975Z" title="Updated 2025-09-16 22:57:10">2025-09-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/circuit/">circuit</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="为什么要开始这个系列"><a href="#为什么要开始这个系列" class="headerlink" title="为什么要开始这个系列"></a>为什么要开始这个系列</h1><p>开始做这个系列其实还是想要多学一点东西，感觉自己会的还是太少了，完全没有一个正常水平的数字集成电路应届毕业生的水平。<del>而且其实差不多从大三上学期开始后我就状态低迷了一整年</del></p>
+<p>现在的想法是这样的：这个学期选了自然辩证法（前八周）和集成电路前沿讲座（后八周），都是我们学校研究生的课，先多学一点，这样可以省下研一上学期的一点时间，然后多做点东西；尽早招老师开个题，毕设最好是前八周学学基础知识然后就开始做，寒假做完，在大四下学期找找实习，如果能找到的话就出去实习一个学期，找不到的话就选新中特和半导体器件这些课，给研究生在多一点时间，总体来说就是想多学一点。</p>
+<h1 id="我的计划是？"><a href="#我的计划是？" class="headerlink" title="我的计划是？"></a>我的计划是？</h1><p>我计划面向实习为主，希望实习可以找一个自己喜欢的方向去做，目前觉得比较想去的就是AI处理器验证，DFT DV Engineer这个方向（其实是因为好找实习），然后也多学一些GPU图形化驱动方面的coding.</p>
+<h2 id="AI-处理器验证和DFT-DV-Engineer"><a href="#AI-处理器验证和DFT-DV-Engineer" class="headerlink" title="AI 处理器验证和DFT DV Engineer"></a>AI 处理器验证和DFT DV Engineer</h2><ul>
+<li>AI 处理器验证：主要负责验证功能是否正确，保证在tapeout前没有设计缺陷。</li>
+</ul>
+<p>芯片验证主流的方法学是UVM（Universal Verification Methodology），他提供了一套标准化的框架和库，可以用来搭建验证环境，生成激励，并进行全面的功能覆盖。</p>
+<p>当然有时工作还包含Post-silicon debug，芯片造出来以后发现功能不正确是就要进行流片后调试，定位并分析问题。</p>
+<p><strong><em>对于SoC验证当然需要在多了解一些总线相关知识，这个似乎比较繁杂，尽量多了解一些就可以了。</em></strong></p>
+<ul>
+<li>DFT DV Engineer：Design For Test, Device Verification.</li>
+</ul>
+<p>在芯片设计中提前加入特殊电路以便于在芯片制造和测试阶段高效全面的发现制造缺陷。</p>
+<p><del><strong><em>感觉内容比较多就不在这里写了</em></strong></del></p>
+<h2 id="GPU-C-modeling"><a href="#GPU-C-modeling" class="headerlink" title="GPU C++ modeling"></a>GPU C++ modeling</h2><p>这一项属于架构探索和设计前期的工作，主要职责是构建一个高性能高精度的GPU行为级模型（感觉上来讲比前两个难一些，本科生实习也难找）。</p>
+<p>其内容多数应该是用C++完成行为级（或以上）的软件模型构建，应该需要对体系结构，并发&#x2F;超前等内容有所了解。</p>
+<h1 id="预计应该学习的内容"><a href="#预计应该学习的内容" class="headerlink" title="预计应该学习的内容"></a>预计应该学习的内容</h1><h2 id="验证基础"><a href="#验证基础" class="headerlink" title="验证基础"></a>验证基础</h2><ul>
+<li><p>systemverilog: testbench, interface, assertion.</p>
+</li>
+<li><p>UVM: verification environment, sequence, driver, monitor, coverage.</p>
+</li>
+<li><p>verify process: testplan -&gt; testcase -&gt; coverage analysis -&gt; find bug.</p>
+</li>
+<li><p>SoC verification: AMBA bus(AXI,AHB,APB), peripherals.</p>
+</li>
+</ul>
+<h2 id="DFT"><a href="#DFT" class="headerlink" title="DFT"></a>DFT</h2><ul>
+<li><p>scan chain.</p>
+</li>
+<li><p>ATPG.</p>
+</li>
+<li><p>JTAG, Boundary scan.</p>
+</li>
+<li><p>MBIST(memory build in itself test).</p>
+</li>
+<li><p>ATE bring-up.</p>
+</li>
+<li><p>shmoo.</p>
+</li>
+</ul>
+<h2 id="screenplay"><a href="#screenplay" class="headerlink" title="screenplay"></a>screenplay</h2><p>python, shell, perl.</p>
+<h2 id="硬件调试"><a href="#硬件调试" class="headerlink" title="硬件调试"></a>硬件调试</h2><ul>
+<li><p>FPGA&#x2F;Emulator: vivado&#x2F;Quartus.</p>
+</li>
+<li><p>Post-silicon bring-up.</p>
+</li>
+</ul>
+<h2 id="GPU-C-modeling-1"><a href="#GPU-C-modeling-1" class="headerlink" title="GPU C++ modeling"></a>GPU C++ modeling</h2><ul>
+<li><p>CPU&#x2F;GPU pipeline.</p>
+</li>
+<li><p>trace-driven&#x2F;execution-driven.</p>
+</li>
+<li><p>并行&#x2F;超前计算，SIMD, shader.</p>
+</li>
+</ul>
+<h2 id="software-using"><a href="#software-using" class="headerlink" title="software using"></a>software using</h2><h3 id="verification-tools"><a href="#verification-tools" class="headerlink" title="verification tools"></a>verification tools</h3><ul>
+<li><p>emulator: synopsys VCS &#x2F; Mentor Questasim &#x2F; cadence xcelium.</p>
+</li>
+<li><p>debugger: verdi(waveform?)</p>
+</li>
+<li><p>formal verification: JasperGold.</p>
+</li>
+</ul>
+<h3 id="DFT-tools"><a href="#DFT-tools" class="headerlink" title="DFT tools"></a>DFT tools</h3><ul>
+<li><p>synopsys TetraMAX(ATPG).</p>
+</li>
+<li><p>DFT compiler.</p>
+</li>
+<li><p>mentor tessent.</p>
+</li>
+</ul>
+<h3 id="design-analysis-tools"><a href="#design-analysis-tools" class="headerlink" title="design&#x2F;analysis tools"></a>design&#x2F;analysis tools</h3><p>design compiler, primetime, powerartist&#x2F;PTPX.</p>
+<h3 id="GPU-modeling-tools"><a href="#GPU-modeling-tools" class="headerlink" title="GPU modeling tools."></a>GPU modeling tools.</h3><p>gem5, GPGPU-sim.</p>
+<h1 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h1><p>此处写一个16周和寒假学习时间表，供参考。（此处第一周实际为校历第二周）</p>
+<table>
+<thead>
+<tr>
+<th>week</th>
+<th>content</th>
+<th>link</th>
+<th>tools</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>verilog+systemverilog</td>
+<td><a href="/DFT-from-zero-week1/">week 1</a></td>
+<td>verilog:<br>iverilog + gtkwave<br>vivado<br><br>systemverilog:<br>cadence virtuoso + simvision + incisive<br>slang + UHDM + surlog + yosys + verilator</td>
+</tr>
+<tr>
+<td>2</td>
+<td>makefile&#x2F;python + tcl&#x2F;cmake</td>
+<td><a href="/DFT-from-zero-week2/">week 2</a></td>
+<td>makefile&#x2F;cmake&#x2F;python&#x2F;tcl</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DFT foundation</td>
+<td><a href="/DFT-from-zero-week3/">week 3</a></td>
+<td>verilog&#x2F;systemverilog</td>
+</tr>
+<tr>
+<td>4</td>
+<td>UVM verification<br>(env&#x2F;driver&#x2F;monitor&#x2F;scoreboard)</td>
+<td><a href="/DFT-from-zero-week4/">week 4</a></td>
+<td>UVM lib + systemverilog</td>
+</tr>
+<tr>
+<td>5</td>
+<td>AI accelerator verification<br>pipeline&#x2F;hazard&#x2F;stall&#x2F;forwarding</td>
+<td><a href="/DFT-from-zero-week5/">week 5</a></td>
+<td>verilog+systemverilog</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Assertions &amp;Coverage<br>SVA, functional coverage</td>
+<td><a href="/DFT-from-zero-week6/">week 6</a></td>
+<td>verilog + systemverilog</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GPU C++&#x2F;CUDA<br>kernel&#x2F;memory&#x2F;hierarchy</td>
+<td><a href="/DFT-from-zero-week7">week 7</a></td>
+<td>CUDA Toolkit + Nsight</td>
+</tr>
+<tr>
+<td>8</td>
+<td>insert scan chain in opensource CPU&#x2F;SoC</td>
+<td><a href="/DFT-from-zero-week8/">week 8</a></td>
+<td>verilog + systemverilog</td>
+</tr>
+<tr>
+<td>9</td>
+<td>fault coverage analysis<br>stuck-at&#x2F;trascation-fault</td>
+<td><a href="/DFT-from-zero-week9/">week 9</a></td>
+<td>verilog + systemverilog</td>
+</tr>
+<tr>
+<td>10</td>
+<td>AI accelerator verification:<br>systolic array</td>
+<td><a href="/DFT-from-zero-week10/">week 10</a></td>
+<td>verilog + python + golden model</td>
+</tr>
+<tr>
+<td>11</td>
+<td>GPU C++ project<br>contain shared memory optimization</td>
+<td><a href="/DFT-from-zero-week11/">week11</a></td>
+<td>CUDA Toolkit</td>
+</tr>
+<tr>
+<td>12</td>
+<td>randomized stimulus + coverage-driven verification</td>
+<td><a href="/DFT-from-zero-week12/">week 12</a></td>
+<td>UVM + incisive</td>
+</tr>
+<tr>
+<td>13</td>
+<td>git CI&#x2F;CD + python + tcl auto-verify</td>
+<td><a href="/DFT-from-zero-week13/">week 13</a></td>
+<td>Gitlab CI&#x2F;jenkins&#x2F;GitHub Actions</td>
+</tr>
+<tr>
+<td>14</td>
+<td>verification:<br>MBIST&#x2F;JTAG&#x2F;Boundary scan<br><br>low power verification:<br>UPF&#x2F;CPF&#x2F;clock gating&#x2F;power domain</td>
+<td><a href="/DFT-from-zero-week14/">week 14</a></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>log parser&#x2F;coverage report generator</td>
+<td><a href="/DFT-from-zero-week15/">week 15</a></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>opensource:<br><br>emulator:<br>verilator + iverilog<br>synthesize&amp;STA:<br>yosys, opensta<br>P&amp;R:<br>OpenROAD<br>verification architecture:<br>cocotb&#x2F;UVM-lite</td>
+<td><a href="/DFT-from-zero-week16/">week 16</a></td>
+<td>too much to write, see in the link</td>
+</tr>
+<tr>
+<td>17(option)</td>
+<td>graphic foundation:<br> OpenGL&#x2F;DirectX Vulkan<br> GPU SIMT</td>
+<td><a href="/DFT-from-zero-week17/">week 17</a></td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>GPU C++ performance modeling and analysis</td>
+<td><a href="/DFT-from-zero-week18/">week 18</a></td>
+<td>modeling:<br> GPGPU-sim<br> gem5-gpu<br> Accelsim<br><br> analysis:<br> NVIDIA Nsight Compute<br> Nsight Systems</td>
+</tr>
+<tr>
+<td>19</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>此处我展示一个DFT工程师招聘要求：</p>
+<p><img src="/img/dft-from-zero-1.png" alt="DFT"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/DFT-from-zero/">https://invoker-pray.github.io/DFT-from-zero/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DFT/">DFT</a></div><div class="post-share"><div class="social-share" data-image="/img/DFT-FROM-ZERO.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related  no-desc" href="/life-reflection12/" title="life reflection 12"><img class="cover" src="/img/life-reflection-homepage.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">life reflection 12</div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week1/" title="从零开始的DFT工程师！ week1"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">从零开始的DFT工程师！ week1</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第一期。 本期主要进行verilog和systemverilog的相关软件安装和基本语法复习。 verilog关于运行verilog的软件选择很多，这里选择使用vivado和iverilog+gtkwave. vivado的安装我之前写过，具体是在archlinux（当时的linux内核版本未记录）上进行vivado2024.2版本的安装，详情可见此处，但是由于此后相关库版本更新，需要自行创立软连接来补全相应的库（下载旧版本的库首先需要进行版本管理，这本身就是比较复杂的事，况且很多更新都是更新了实现，接口没有变化）。 iverilog+gtkwave 的下载十分简单，只需用pacman下载即可： 1sudo pacman -S iverilog gtkwave  systemverilog关于systemverilog相关软件的下载就有些麻烦了。相关的软件有：  QuestaSim，支持systemverilog+UVM，coverage，SVA，transaction-level仿真。  Synopsys...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/DFT-from-zero-week1/" title="从零开始的DFT工程师！ week1"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">从零开始的DFT工程师！ week1</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第一期。 本期主要进行verilog和systemverilog的相关软件安装和基本语法复习。 verilog关于运行verilog的软件选择很多，这里选择使用vivado和iverilog+gtkwave. vivado的安装我之前写过，具体是在archlinux（当时的linux内核版本未记录）上进行vivado2024.2版本的安装，详情可见此处，但是由于此后相关库版本更新，需要自行创立软连接来补全相应的库（下载旧版本的库首先需要进行版本管理，这本身就是比较复杂的事，况且很多更新都是更新了实现，接口没有变化）。 iverilog+gtkwave 的下载十分简单，只需用pacman下载即可： 1sudo pacman -S iverilog gtkwave  systemverilog关于systemverilog相关软件的下载就有些麻烦了。相关的软件有：  QuestaSim，支持systemverilog+UVM，coverage，SVA，transaction-level仿真。  Synopsys...</div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week10/" title="从零开始的DFT工程师！ week10"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-26</div><div class="info-item-2">从零开始的DFT工程师！ week10</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第十期。 在这一期中我们将完成AI accelerator的systolic验证小项目，实现一个 4x4 systolic array的验证。 </div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week11/" title="从零开始的DFT工程师！ week11"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-27</div><div class="info-item-2">从零开始的DFT工程师！ week11</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第十一期。 在这一期中，我们将进行一个简单的矩阵乘法优化，并输出CUDA MatMul，完成于baseline的性能对比。 </div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week12/" title="从零开始的DFT工程师！ week12"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-28</div><div class="info-item-2">从零开始的DFT工程师！ week12</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第十二期。 在这一期中我们将完成对于随机激励的结果验证，完善验证平台。 </div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week13/" title="从零开始的DFT工程师！ week13"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-29</div><div class="info-item-2">从零开始的DFT工程师！ week13</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第十三期。 在本期blog中，我们会进行持续集成&#x2F;交付以及自动化测试的学习，主要学习内容是git+CI&#x2F;CD. </div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week14/" title="从零开始的DFT工程师！ week14"><img class="cover" src="/img/DFT-FROM-ZERO.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-30</div><div class="info-item-2">从零开始的DFT工程师！ week14</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第十四期。 在这一期中我们会进行低功耗验证设计的学习，并完成一个clock gating的简单设计。 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">103</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%80%E5%A7%8B%E8%BF%99%E4%B8%AA%E7%B3%BB%E5%88%97"><span class="toc-number">1.</span> <span class="toc-text">为什么要开始这个系列</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%AE%A1%E5%88%92%E6%98%AF%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">我的计划是？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AI-%E5%A4%84%E7%90%86%E5%99%A8%E9%AA%8C%E8%AF%81%E5%92%8CDFT-DV-Engineer"><span class="toc-number">2.1.</span> <span class="toc-text">AI 处理器验证和DFT DV Engineer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPU-C-modeling"><span class="toc-number">2.2.</span> <span class="toc-text">GPU C++ modeling</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%84%E8%AE%A1%E5%BA%94%E8%AF%A5%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">3.</span> <span class="toc-text">预计应该学习的内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E5%9F%BA%E7%A1%80"><span class="toc-number">3.1.</span> <span class="toc-text">验证基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DFT"><span class="toc-number">3.2.</span> <span class="toc-text">DFT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#screenplay"><span class="toc-number">3.3.</span> <span class="toc-text">screenplay</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E8%B0%83%E8%AF%95"><span class="toc-number">3.4.</span> <span class="toc-text">硬件调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPU-C-modeling-1"><span class="toc-number">3.5.</span> <span class="toc-text">GPU C++ modeling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#software-using"><span class="toc-number">3.6.</span> <span class="toc-text">software using</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#verification-tools"><span class="toc-number">3.6.1.</span> <span class="toc-text">verification tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DFT-tools"><span class="toc-number">3.6.2.</span> <span class="toc-text">DFT tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#design-analysis-tools"><span class="toc-number">3.6.3.</span> <span class="toc-text">design&#x2F;analysis tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPU-modeling-tools"><span class="toc-number">3.6.4.</span> <span class="toc-text">GPU modeling tools.</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92"><span class="toc-number">4.</span> <span class="toc-text">学习计划</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/annual-memoir/" title="我的那个夏天结束了"><img src="/img/annual-memoir1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的那个夏天结束了"/></a><div class="content"><a class="title" href="/annual-memoir/" title="我的那个夏天结束了">我的那个夏天结束了</a><time datetime="2025-10-04T16:00:00.000Z" title="Created 2025-10-05 00:00:00">2025-10-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week18/" title="从零开始的DFT工程师！ week18"><img src="/img/DFT-FROM-ZERO.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week18"/></a><div class="content"><a class="title" href="/DFT-from-zero-week18/" title="从零开始的DFT工程师！ week18">从零开始的DFT工程师！ week18</a><time datetime="2025-10-03T16:00:00.000Z" title="Created 2025-10-04 00:00:00">2025-10-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week17/" title="从零开始的DFT工程师！ week17"><img src="/img/DFT-FROM-ZERO.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week17"/></a><div class="content"><a class="title" href="/DFT-from-zero-week17/" title="从零开始的DFT工程师！ week17">从零开始的DFT工程师！ week17</a><time datetime="2025-10-02T16:00:00.000Z" title="Created 2025-10-03 00:00:00">2025-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week16/" title="从零开始的DFT工程师！ week16"><img src="/img/DFT-FROM-ZERO.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week16"/></a><div class="content"><a class="title" href="/DFT-from-zero-week16/" title="从零开始的DFT工程师！ week16">从零开始的DFT工程师！ week16</a><time datetime="2025-10-01T16:00:00.000Z" title="Created 2025-10-02 00:00:00">2025-10-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week15/" title="从零开始的DFT工程师！ week15"><img src="/img/DFT-FROM-ZERO.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week15"/></a><div class="content"><a class="title" href="/DFT-from-zero-week15/" title="从零开始的DFT工程师！ week15">从零开始的DFT工程师！ week15</a><time datetime="2025-09-30T16:00:00.000Z" title="Created 2025-10-01 00:00:00">2025-10-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
