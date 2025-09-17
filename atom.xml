@@ -463,6 +463,31 @@
   </entry>
   
   <entry>
+    <title>LunaAccel</title>
+    <link href="https://invoker-pray.github.io/LunaAccel/"/>
+    <id>https://invoker-pray.github.io/LunaAccel/</id>
+    <published>2025-09-17T16:00:00.000Z</published>
+    <updated>2025-09-17T16:39:48.857Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。&lt;/p&gt;
+&lt;p&gt;比赛结束后，大家可以点击&lt;a href=&quot;https://github.com/Invoker</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="LunaAccel" scheme="https://invoker-pray.github.io/tags/LunaAccel/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始的DFT工程师！ week2</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week2/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week2/</id>
@@ -489,45 +514,19 @@
   </entry>
   
   <entry>
-    <title>LunaAccel</title>
-    <link href="https://invoker-pray.github.io/LunaAccel/"/>
-    <id>https://invoker-pray.github.io/LunaAccel/</id>
-    <published>2025-09-17T16:00:00.000Z</published>
-    <updated>2025-09-17T16:36:48.610Z</updated>
-    
-    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处</a>来查看本期项目。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。&lt;/p&gt;
-&lt;p&gt;比赛结束后，大家可以点击&lt;a href=&quot;https://github.com/Invoker</summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="LunaAccel" scheme="https://invoker-pray.github.io/tags/LunaAccel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始的DFT工程师！ week1</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-week1/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-week1/</id>
+    <title>从零开始的DFT工程师！ 特别篇</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-special/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-special/</id>
     <published>2025-09-16T16:00:00.000Z</published>
-    <updated>2025-09-16T13:09:24.523Z</updated>
+    <updated>2025-09-17T06:59:39.381Z</updated>
     
-    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第一期。</p><p>本期主要进行verilog和systemverilog的相关软件安装和基本语法复习。</p><h1 id="verilog"><a href="#verilog" class="headerlink" title="verilog"></a>verilog</h1><p>关于运行verilog的软件选择很多，这里选择使用vivado和iverilog+gtkwave.</p><p>vivado的安装我之前写过，具体是在archlinux（当时的linux内核版本未记录）上进行vivado2024.2版本的安装，<a href="/FPGA-on-arch">详情可见此处</a>，但是由于此后相关库版本更新，需要自行创立软连接来补全相应的库（下载旧版本的库首先需要进行版本管理，这本身就是比较复杂的事，况且很多更新都是更新了实现，接口没有变化）。</p><p>iverilog+gtkwave 的下载十分简单，只需用pacman下载即可：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S iverilog gtkwave</span><br></pre></td></tr></table></figure><h1 id="systemverilog"><a href="#systemverilog" class="headerlink" title="systemverilog"></a>systemverilog</h1><p>关于systemverilog相关软件的下载就有些麻烦了。相关的软件有：</p><ul><li><p>QuestaSim，支持systemverilog+UVM，coverage，SVA，transaction-level仿真。</p></li><li><p>Synopsys VCS，优势在于性能和大规模的SoC仿真支持，也支持UVM.</p></li><li><p>cadence Xcelium(Incisive)，功能和以上类似，似乎通信和ASIC公司用的多。</p></li></ul><p>但是尴尬的是这三个都是闭源软件，下载比较困难，不过也都是有办法下载的，之后我会慢慢更新三个软件的下载方式。</p><p>此处我有一个cadence软件的虚拟机，包含 cadence virtuoso + simvision + incisive，详情如下：</p><p><img src="/img/dft-from-zero-week1-1.png" alt="cadence"></p><p>虽然incisive是一个较老的版本，virtuoso版本也只有6.1.8-64b，不过简单的需求也已经可以满足了。</p><p>对于开源工具来说，verilator是一个选择，但是当前他对于UVM的支持还不太好，不怎么建议使用；slang和surelog+UHDM是一个新兴的工具，但是目前似乎更多的是实验性质，工业界用的很少，不过还是展示一下下载方式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># archlinux, 6.16.7-arch1-1, linux core</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S git base-devel cmake python</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S yosys verilator</span><br><span class="line"></span><br><span class="line">yay -S slang</span><br><span class="line"></span><br><span class="line">yay -S surelog</span><br><span class="line"></span><br><span class="line">yay -S uhdm</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这些工具的使用我们之后再谈。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="last"><a href="#last" class="headerlink" title="last"></a>last</h1><p>这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：</p><p><embed src='/files/DFT-from-zero1.pdf'    type='application/pdf' width='100%' height="600px"/></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第一期。&lt;/p&gt;
-&lt;p&gt;本期主要进行verilog和systemverilog的相关软件安装和基本语法复习。&lt;/p&gt;
-&lt;h1 id=&quot;verilog&quot;&gt;&lt;a href=&quot;#verilog&quot; class=&quot;headerlink&quot; title=&quot;v</summary>
+    <summary type="html">&lt;h1 id=&quot;last&quot;&gt;&lt;a href=&quot;#last&quot; class=&quot;headerlink&quot; title=&quot;last&quot;&gt;&lt;/a&gt;last&lt;/h1&gt;&lt;p&gt;这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：&lt;/p&gt;
+&lt;p&gt;&lt;embed </summary>
       
     
     
