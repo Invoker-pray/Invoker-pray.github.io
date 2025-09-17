@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2025-09-15T05:57:51.155Z</updated>
+  <updated>2025-09-17T04:17:37.083Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -21,14 +21,18 @@
     <link href="https://invoker-pray.github.io/annual-memoir/"/>
     <id>https://invoker-pray.github.io/annual-memoir/</id>
     <published>2025-10-04T16:00:00.000Z</published>
-    <updated>2025-09-15T05:57:51.155Z</updated>
+    <updated>2025-09-17T04:17:37.083Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a>2025</h1>]]></content>
+    <content type="html"><![CDATA[<audio autoplay loop style="display:none;">  <source src="/files/annual-memoir1.mp3" type="audio/mpeg"></audio><h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a>2025</h1>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;2025&quot;&gt;&lt;a href=&quot;#2025&quot; class=&quot;headerlink&quot; title=&quot;2025&quot;&gt;&lt;/a&gt;2025&lt;/h1&gt;</summary>
+    <summary type="html">&lt;audio autoplay loop style=&quot;display:none;&quot;&gt;
+  &lt;source src=&quot;/files/annual-memoir1.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;h1 id=&quot;2025&quot;&gt;&lt;a href=&quot;#2</summary>
       
     
     
@@ -511,26 +515,28 @@
   </entry>
   
   <entry>
-    <title>从零开始的DFT工程师！</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero/</id>
-    <published>2025-09-15T16:00:00.000Z</published>
-    <updated>2025-09-16T14:57:10.975Z</updated>
+    <title>bilibili audio and video download</title>
+    <link href="https://invoker-pray.github.io/bili-download/"/>
+    <id>https://invoker-pray.github.io/bili-download/</id>
+    <published>2025-09-16T16:00:00.000Z</published>
+    <updated>2025-09-17T04:35:55.629Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="为什么要开始这个系列"><a href="#为什么要开始这个系列" class="headerlink" title="为什么要开始这个系列"></a>为什么要开始这个系列</h1><p>开始做这个系列其实还是想要多学一点东西，感觉自己会的还是太少了，完全没有一个正常水平的数字集成电路应届毕业生的水平。<del>而且其实差不多从大三上学期开始后我就状态低迷了一整年</del></p><p>现在的想法是这样的：这个学期选了自然辩证法（前八周）和集成电路前沿讲座（后八周），都是我们学校研究生的课，先多学一点，这样可以省下研一上学期的一点时间，然后多做点东西；尽早招老师开个题，毕设最好是前八周学学基础知识然后就开始做，寒假做完，在大四下学期找找实习，如果能找到的话就出去实习一个学期，找不到的话就选新中特和半导体器件这些课，给研究生在多一点时间，总体来说就是想多学一点。</p><h1 id="我的计划是？"><a href="#我的计划是？" class="headerlink" title="我的计划是？"></a>我的计划是？</h1><p>我计划面向实习为主，希望实习可以找一个自己喜欢的方向去做，目前觉得比较想去的就是AI处理器验证，DFT DV Engineer这个方向（其实是因为好找实习），然后也多学一些GPU图形化驱动方面的coding.</p><h2 id="AI-处理器验证和DFT-DV-Engineer"><a href="#AI-处理器验证和DFT-DV-Engineer" class="headerlink" title="AI 处理器验证和DFT DV Engineer"></a>AI 处理器验证和DFT DV Engineer</h2><ul><li>AI 处理器验证：主要负责验证功能是否正确，保证在tapeout前没有设计缺陷。</li></ul><p>芯片验证主流的方法学是UVM（Universal Verification Methodology），他提供了一套标准化的框架和库，可以用来搭建验证环境，生成激励，并进行全面的功能覆盖。</p><p>当然有时工作还包含Post-silicon debug，芯片造出来以后发现功能不正确是就要进行流片后调试，定位并分析问题。</p><p><strong><em>对于SoC验证当然需要在多了解一些总线相关知识，这个似乎比较繁杂，尽量多了解一些就可以了。</em></strong></p><ul><li>DFT DV Engineer：Design For Test, Device Verification.</li></ul><p>在芯片设计中提前加入特殊电路以便于在芯片制造和测试阶段高效全面的发现制造缺陷。</p><p><del><strong><em>感觉内容比较多就不在这里写了</em></strong></del></p><h2 id="GPU-C-modeling"><a href="#GPU-C-modeling" class="headerlink" title="GPU C++ modeling"></a>GPU C++ modeling</h2><p>这一项属于架构探索和设计前期的工作，主要职责是构建一个高性能高精度的GPU行为级模型（感觉上来讲比前两个难一些，本科生实习也难找）。</p><p>其内容多数应该是用C++完成行为级（或以上）的软件模型构建，应该需要对体系结构，并发&#x2F;超前等内容有所了解。</p><h1 id="预计应该学习的内容"><a href="#预计应该学习的内容" class="headerlink" title="预计应该学习的内容"></a>预计应该学习的内容</h1><h2 id="验证基础"><a href="#验证基础" class="headerlink" title="验证基础"></a>验证基础</h2><ul><li><p>systemverilog: testbench, interface, assertion.</p></li><li><p>UVM: verification environment, sequence, driver, monitor, coverage.</p></li><li><p>verify process: testplan -&gt; testcase -&gt; coverage analysis -&gt; find bug.</p></li><li><p>SoC verification: AMBA bus(AXI,AHB,APB), peripherals.</p></li></ul><h2 id="DFT"><a href="#DFT" class="headerlink" title="DFT"></a>DFT</h2><ul><li><p>scan chain.</p></li><li><p>ATPG.</p></li><li><p>JTAG, Boundary scan.</p></li><li><p>MBIST(memory build in itself test).</p></li><li><p>ATE bring-up.</p></li><li><p>shmoo.</p></li></ul><h2 id="screenplay"><a href="#screenplay" class="headerlink" title="screenplay"></a>screenplay</h2><p>python, shell, perl.</p><h2 id="硬件调试"><a href="#硬件调试" class="headerlink" title="硬件调试"></a>硬件调试</h2><ul><li><p>FPGA&#x2F;Emulator: vivado&#x2F;Quartus.</p></li><li><p>Post-silicon bring-up.</p></li></ul><h2 id="GPU-C-modeling-1"><a href="#GPU-C-modeling-1" class="headerlink" title="GPU C++ modeling"></a>GPU C++ modeling</h2><ul><li><p>CPU&#x2F;GPU pipeline.</p></li><li><p>trace-driven&#x2F;execution-driven.</p></li><li><p>并行&#x2F;超前计算，SIMD, shader.</p></li></ul><h2 id="software-using"><a href="#software-using" class="headerlink" title="software using"></a>software using</h2><h3 id="verification-tools"><a href="#verification-tools" class="headerlink" title="verification tools"></a>verification tools</h3><ul><li><p>emulator: synopsys VCS &#x2F; Mentor Questasim &#x2F; cadence xcelium.</p></li><li><p>debugger: verdi(waveform?)</p></li><li><p>formal verification: JasperGold.</p></li></ul><h3 id="DFT-tools"><a href="#DFT-tools" class="headerlink" title="DFT tools"></a>DFT tools</h3><ul><li><p>synopsys TetraMAX(ATPG).</p></li><li><p>DFT compiler.</p></li><li><p>mentor tessent.</p></li></ul><h3 id="design-analysis-tools"><a href="#design-analysis-tools" class="headerlink" title="design&#x2F;analysis tools"></a>design&#x2F;analysis tools</h3><p>design compiler, primetime, powerartist&#x2F;PTPX.</p><h3 id="GPU-modeling-tools"><a href="#GPU-modeling-tools" class="headerlink" title="GPU modeling tools."></a>GPU modeling tools.</h3><p>gem5, GPGPU-sim.</p><h1 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h1><p>此处写一个16周和寒假学习时间表，供参考。（此处第一周实际为校历第二周）</p><table><thead><tr><th>week</th><th>content</th><th>link</th><th>tools</th></tr></thead><tbody><tr><td>1</td><td>verilog+systemverilog</td><td><a href="/DFT-from-zero-week1/">week 1</a></td><td>verilog:<br>iverilog + gtkwave<br>vivado<br><br>systemverilog:<br>cadence virtuoso + simvision + incisive<br>slang + UHDM + surlog + yosys + verilator</td></tr><tr><td>2</td><td>makefile&#x2F;python + tcl&#x2F;cmake</td><td><a href="/DFT-from-zero-week2/">week 2</a></td><td>makefile&#x2F;cmake&#x2F;python&#x2F;tcl</td></tr><tr><td>3</td><td>DFT foundation</td><td><a href="/DFT-from-zero-week3/">week 3</a></td><td>verilog&#x2F;systemverilog</td></tr><tr><td>4</td><td>UVM verification<br>(env&#x2F;driver&#x2F;monitor&#x2F;scoreboard)</td><td><a href="/DFT-from-zero-week4/">week 4</a></td><td>UVM lib + systemverilog</td></tr><tr><td>5</td><td>AI accelerator verification<br>pipeline&#x2F;hazard&#x2F;stall&#x2F;forwarding</td><td><a href="/DFT-from-zero-week5/">week 5</a></td><td>verilog+systemverilog</td></tr><tr><td>6</td><td>Assertions &amp;Coverage<br>SVA, functional coverage</td><td><a href="/DFT-from-zero-week6/">week 6</a></td><td>verilog + systemverilog</td></tr><tr><td>7</td><td>GPU C++&#x2F;CUDA<br>kernel&#x2F;memory&#x2F;hierarchy</td><td><a href="/DFT-from-zero-week7">week 7</a></td><td>CUDA Toolkit + Nsight</td></tr><tr><td>8</td><td>insert scan chain in opensource CPU&#x2F;SoC</td><td><a href="/DFT-from-zero-week8/">week 8</a></td><td>verilog + systemverilog</td></tr><tr><td>9</td><td>fault coverage analysis<br>stuck-at&#x2F;trascation-fault</td><td><a href="/DFT-from-zero-week9/">week 9</a></td><td>verilog + systemverilog</td></tr><tr><td>10</td><td>AI accelerator verification:<br>systolic array</td><td><a href="/DFT-from-zero-week10/">week 10</a></td><td>verilog + python + golden model</td></tr><tr><td>11</td><td>GPU C++ project<br>contain shared memory optimization</td><td><a href="/DFT-from-zero-week11/">week11</a></td><td>CUDA Toolkit</td></tr><tr><td>12</td><td>randomized stimulus + coverage-driven verification</td><td><a href="/DFT-from-zero-week12/">week 12</a></td><td>UVM + incisive</td></tr><tr><td>13</td><td>git CI&#x2F;CD + python + tcl auto-verify</td><td><a href="/DFT-from-zero-week13/">week 13</a></td><td>Gitlab CI&#x2F;jenkins&#x2F;GitHub Actions</td></tr><tr><td>14</td><td>verification:<br>MBIST&#x2F;JTAG&#x2F;Boundary scan<br><br>low power verification:<br>UPF&#x2F;CPF&#x2F;clock gating&#x2F;power domain</td><td><a href="/DFT-from-zero-week14/">week 14</a></td><td></td></tr><tr><td>15</td><td>log parser&#x2F;coverage report generator</td><td><a href="/DFT-from-zero-week15/">week 15</a></td><td></td></tr><tr><td>16</td><td>opensource:<br><br>emulator:<br>verilator + iverilog<br>synthesize&amp;STA:<br>yosys, opensta<br>P&amp;R:<br>OpenROAD<br>verification architecture:<br>cocotb&#x2F;UVM-lite</td><td><a href="/DFT-from-zero-week16/">week 16</a></td><td>too much to write, see in the link</td></tr><tr><td>17(option)</td><td>graphic foundation:<br> OpenGL&#x2F;DirectX Vulkan<br> GPU SIMT</td><td><a href="/DFT-from-zero-week17/">week 17</a></td><td></td></tr><tr><td>18</td><td>GPU C++ performance modeling and analysis</td><td><a href="/DFT-from-zero-week18/">week 18</a></td><td>modeling:<br> GPGPU-sim<br> gem5-gpu<br> Accelsim<br><br> analysis:<br> NVIDIA Nsight Compute<br> Nsight Systems</td></tr><tr><td>19</td><td></td><td></td><td></td></tr><tr><td>20</td><td></td><td></td><td></td></tr><tr><td>21</td><td></td><td></td><td></td></tr><tr><td>22</td><td></td><td></td><td></td></tr></tbody></table><p>此处我展示一个DFT工程师招聘要求：</p><p><img src="/img/dft-from-zero-1.png" alt="DFT"></p>]]></content>
+    <content type="html"><![CDATA[<p>一个有趣的小工具。</p><p>感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。</p><h1 id="yt-dlp"><a href="#yt-dlp" class="headerlink" title="yt-dlp"></a>yt-dlp</h1><p>这是一个支持b站的命令行工具，可以提取音频和视频，获取方式很简单，只需要:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install yt-dlp</span><br></pre></td></tr></table></figure><p>使用方式也很简单:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># download video</span></span><br><span class="line"></span><br><span class="line">yt-dlp <span class="string">&quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># audio</span></span><br><span class="line"><span class="comment"># -f ba : best audio</span></span><br><span class="line"><span class="comment"># -x extract audio</span></span><br><span class="line"><span class="comment"># --audio-format mp3 : trans to mp3</span></span><br><span class="line"><span class="comment"># --audio-quality 0 : best quality</span></span><br><span class="line">yt-dlp -f ba --audio-format mp3 --audio-quality 0  <span class="string">&quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果想要对应视频的音频也可以在本地使用<code>ffmpeg</code>工具，这是一个多媒体处理工具，media版开源瑞士军刀了属于是。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ffmpeg -i input.mp4 -q:a 0 -map a output.mp3</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;为什么要开始这个系列&quot;&gt;&lt;a href=&quot;#为什么要开始这个系列&quot; class=&quot;headerlink&quot; title=&quot;为什么要开始这个系列&quot;&gt;&lt;/a&gt;为什么要开始这个系列&lt;/h1&gt;&lt;p&gt;开始做这个系列其实还是想要多学一点东西，感觉自己会的还是太少了，完全没有一个</summary>
+    <summary type="html">&lt;p&gt;一个有趣的小工具。&lt;/p&gt;
+&lt;p&gt;感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。&lt;/p&gt;
+&lt;h1 id=&quot;yt-dlp&quot;&gt;&lt;a href=&quot;#yt-dlp&quot; class=&quot;headerlink&quot; </summary>
       
     
     
     
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    <category term="toys&amp;tools" scheme="https://invoker-pray.github.io/categories/toys-tools/"/>
     
     
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    <category term="toys&amp;tools" scheme="https://invoker-pray.github.io/tags/toys-tools/"/>
     
   </entry>
   
