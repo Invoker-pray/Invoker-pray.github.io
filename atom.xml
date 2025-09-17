@@ -489,19 +489,19 @@
   </entry>
   
   <entry>
-    <title>从零开始的DFT工程师！ 特别篇</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-special/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-special/</id>
-    <published>2025-09-16T16:00:00.000Z</published>
-    <updated>2025-09-17T06:59:39.381Z</updated>
+    <title>LunaAccel</title>
+    <link href="https://invoker-pray.github.io/LunaAccel/"/>
+    <id>https://invoker-pray.github.io/LunaAccel/</id>
+    <published>2025-09-17T16:00:00.000Z</published>
+    <updated>2025-09-17T16:36:48.610Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="last"><a href="#last" class="headerlink" title="last"></a>last</h1><p>这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：</p><p><embed src='/files/DFT-from-zero1.pdf'    type='application/pdf' width='100%' height="600px"/></p>]]></content>
+    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处</a>来查看本期项目。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;last&quot;&gt;&lt;a href=&quot;#last&quot; class=&quot;headerlink&quot; title=&quot;last&quot;&gt;&lt;/a&gt;last&lt;/h1&gt;&lt;p&gt;这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：&lt;/p&gt;
-&lt;p&gt;&lt;embed </summary>
+    <summary type="html">&lt;p&gt;这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。&lt;/p&gt;
+&lt;p&gt;比赛结束后，大家可以点击&lt;a href=&quot;https://github.com/Invoker</summary>
       
     
     
@@ -509,7 +509,7 @@
     <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
     
     
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    <category term="LunaAccel" scheme="https://invoker-pray.github.io/tags/LunaAccel/"/>
     
   </entry>
   
