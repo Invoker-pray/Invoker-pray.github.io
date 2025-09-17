@@ -489,6 +489,31 @@
   </entry>
   
   <entry>
+    <title>从零开始的DFT工程师！ 特别篇</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-special/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-special/</id>
+    <published>2025-09-16T16:00:00.000Z</published>
+    <updated>2025-09-17T06:59:39.381Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="last"><a href="#last" class="headerlink" title="last"></a>last</h1><p>这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：</p><p><embed src='/files/DFT-from-zero1.pdf'    type='application/pdf' width='100%' height="600px"/></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;last&quot;&gt;&lt;a href=&quot;#last&quot; class=&quot;headerlink&quot; title=&quot;last&quot;&gt;&lt;/a&gt;last&lt;/h1&gt;&lt;p&gt;这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：&lt;/p&gt;
+&lt;p&gt;&lt;embed </summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始的DFT工程师！ week1</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week1/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week1/</id>
@@ -511,32 +536,6 @@
     
     
     <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bilibili audio and video download</title>
-    <link href="https://invoker-pray.github.io/bili-download/"/>
-    <id>https://invoker-pray.github.io/bili-download/</id>
-    <published>2025-09-16T16:00:00.000Z</published>
-    <updated>2025-09-17T04:35:55.629Z</updated>
-    
-    <content type="html"><![CDATA[<p>一个有趣的小工具。</p><p>感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。</p><h1 id="yt-dlp"><a href="#yt-dlp" class="headerlink" title="yt-dlp"></a>yt-dlp</h1><p>这是一个支持b站的命令行工具，可以提取音频和视频，获取方式很简单，只需要:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip install yt-dlp</span><br></pre></td></tr></table></figure><p>使用方式也很简单:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># download video</span></span><br><span class="line"></span><br><span class="line">yt-dlp <span class="string">&quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># audio</span></span><br><span class="line"><span class="comment"># -f ba : best audio</span></span><br><span class="line"><span class="comment"># -x extract audio</span></span><br><span class="line"><span class="comment"># --audio-format mp3 : trans to mp3</span></span><br><span class="line"><span class="comment"># --audio-quality 0 : best quality</span></span><br><span class="line">yt-dlp -f ba --audio-format mp3 --audio-quality 0  <span class="string">&quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果想要对应视频的音频也可以在本地使用<code>ffmpeg</code>工具，这是一个多媒体处理工具，media版开源瑞士军刀了属于是。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ffmpeg -i input.mp4 -q:a 0 -map a output.mp3</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;一个有趣的小工具。&lt;/p&gt;
-&lt;p&gt;感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。&lt;/p&gt;
-&lt;h1 id=&quot;yt-dlp&quot;&gt;&lt;a href=&quot;#yt-dlp&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    <category term="toys&amp;tools" scheme="https://invoker-pray.github.io/categories/toys-tools/"/>
-    
-    
-    <category term="toys&amp;tools" scheme="https://invoker-pray.github.io/tags/toys-tools/"/>
     
   </entry>
   
