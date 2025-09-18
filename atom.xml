@@ -463,11 +463,11 @@
   </entry>
   
   <entry>
-    <title>LunaAccel</title>
-    <link href="https://invoker-pray.github.io/LunaAccel/"/>
-    <id>https://invoker-pray.github.io/LunaAccel/</id>
+    <title>GALA Engine</title>
+    <link href="https://invoker-pray.github.io/GALA%20Engine/"/>
+    <id>https://invoker-pray.github.io/GALA%20Engine/</id>
     <published>2025-09-17T16:00:00.000Z</published>
-    <updated>2025-09-17T16:39:48.857Z</updated>
+    <updated>2025-09-18T05:36:55.034Z</updated>
     
     <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目。</p>]]></content>
     
@@ -483,7 +483,7 @@
     <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
     
     
-    <category term="LunaAccel" scheme="https://invoker-pray.github.io/tags/LunaAccel/"/>
+    <category term="GALA Engine" scheme="https://invoker-pray.github.io/tags/GALA-Engine/"/>
     
   </entry>
   
