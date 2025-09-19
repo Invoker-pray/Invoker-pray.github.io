@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2025-09-17T04:17:37.083Z</updated>
+  <updated>2025-09-19T03:52:58.757Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://invoker-pray.github.io/annual-memoir/"/>
     <id>https://invoker-pray.github.io/annual-memoir/</id>
     <published>2025-10-04T16:00:00.000Z</published>
-    <updated>2025-09-17T04:17:37.083Z</updated>
+    <updated>2025-09-19T03:52:58.757Z</updated>
     
     <content type="html"><![CDATA[<audio autoplay loop style="display:none;">  <source src="/files/annual-memoir1.mp3" type="audio/mpeg"></audio><h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a>2025</h1>]]></content>
     
@@ -49,7 +49,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week18/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week18/</id>
     <published>2025-10-03T16:00:00.000Z</published>
-    <updated>2025-09-16T14:57:08.092Z</updated>
+    <updated>2025-09-19T03:52:58.741Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十八期。</p><p>在本期blog中我们将会学习GPU C++性能建模已经性能分析，主要目标是用C++写一个cycle-approximate emulator，能对GPU 单元(shader core, cache, memory controller)进行建模，并且进行相关分析，</p><p>可以选用的建模方法有：</p><ul><li><p>Trace-driven simulation.</p></li><li><p>Execution-driven simulation.</p></li></ul><p>在过程中我们需要学会如何（使用 NVIDIA Nsight Compute&#x2F;Msight Systems）分析：</p><ul><li><p>Warp divergence.</p></li><li><p>Memory coalescing.</p></li><li><p>Occupancy.</p></li></ul>]]></content>
     
@@ -74,7 +74,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week17/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week17/</id>
     <published>2025-10-02T16:00:00.000Z</published>
-    <updated>2025-09-16T14:48:42.252Z</updated>
+    <updated>2025-09-19T03:52:58.738Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十七期。</p><p>本期是作为拓展来写的，作为闲暇一乐，我记得有说法是老黄小时候跟他妈妈说想做图形驱动，这边也是来学学。</p>]]></content>
     
@@ -100,7 +100,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week16/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week16/</id>
     <published>2025-10-01T16:00:00.000Z</published>
-    <updated>2025-09-16T14:41:31.554Z</updated>
+    <updated>2025-09-19T03:52:58.742Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十六期。</p><p>在本期blog，我们将会熟悉一些工具，当然，由于很多闭源工具大家很难搞到手，我们现来认识一下这些工具。</p><table><thead><tr><th>function</th><th>closed-source</th><th>opensource</th></tr></thead><tbody><tr><td>RTL simulator</td><td>Synopsys VCS<br> Cadence Xcelium(Incisive)<br> Siemens Questa&#x2F;Modelsim</td><td>Verilator<br> Icarus Verilog<br> cocotb</td></tr><tr><td>formal verification</td><td>Synopsys VC Formal<br> Cadence JasperGold</td><td>Yosys-SMTBMC<br> Symbiyosys</td></tr><tr><td>Logic Synthesis</td><td>Synopsys Design Compiler<br> Cadence Genus</td><td>Yosys</td></tr><tr><td>STA</td><td>Synopsys<br> PrimeTime<br> Cadence Tempus</td><td>OpenSTA</td></tr><tr><td>SDC</td><td>PrimeTime<br> Tempus</td><td>OpenSTA(partial)</td></tr><tr><td>DFT &amp; ATPG</td><td>Synopsys DFT Compiler<br> Mentor Tessent<br> Cadence Modus</td><td>none</td></tr><tr><td>P &amp; R</td><td>Cadence Innovus<br> Synopsys ICC2<br> Siemens Aprisa</td><td>OpenROAD<br> QFlow</td></tr><tr><td>Power Analysis</td><td>Synopsys<br> PrimePower<br> Cadence Voltus</td><td>OpenROAD(partial)</td></tr><tr><td>simulate accelerate&#x2F;FPGA prototyping</td><td>Synopsys ZeBu<br> Cadence Palladium<br> Mentor Veloce</td><td>vivado &amp; quartus(not opensource but for free)</td></tr><tr><td>DRC&#x2F;LVS</td><td>Mentor Calibre<br> Synopsys IC Validator<br> Cadence Pegasus</td><td>Magic<br> KLayout<br> OpenROAD DRC&#x2F;LVS</td></tr><tr><td>ASIC Flow</td><td>Synopsys Fusion Compiler<br> Cadence Innovus + Genus<br> Simens full flow</td><td>OpenROAD Flow<br> OpenLane</td></tr></tbody></table>]]></content>
     
@@ -130,7 +130,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week15/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week15/</id>
     <published>2025-09-30T16:00:00.000Z</published>
-    <updated>2025-09-16T14:10:34.149Z</updated>
+    <updated>2025-09-19T03:52:58.740Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十五期。</p><p>在这一期中我们将会学习使用python + tcl完成一个自动化的仿真以及coverage报告生成器，模拟真实的验证工作流程。</p>]]></content>
     
@@ -156,7 +156,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week14/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week14/</id>
     <published>2025-09-29T16:00:00.000Z</published>
-    <updated>2025-09-16T14:07:57.367Z</updated>
+    <updated>2025-09-19T03:52:58.739Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十四期。</p><p>在这一期中我们会进行低功耗验证设计的学习，并完成一个clock gating的简单设计。</p>]]></content>
     
@@ -182,7 +182,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week13/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week13/</id>
     <published>2025-09-28T16:00:00.000Z</published>
-    <updated>2025-09-16T14:00:09.708Z</updated>
+    <updated>2025-09-19T03:52:58.741Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十三期。</p><p>在本期blog中，我们会进行持续集成&#x2F;交付以及自动化测试的学习，主要学习内容是git+CI&#x2F;CD.</p>]]></content>
     
@@ -208,7 +208,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week12/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week12/</id>
     <published>2025-09-27T16:00:00.000Z</published>
-    <updated>2025-09-16T13:51:42.663Z</updated>
+    <updated>2025-09-19T03:52:58.741Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十二期。</p><p>在这一期中我们将完成对于随机激励的结果验证，完善验证平台。</p>]]></content>
     
@@ -234,7 +234,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week11/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week11/</id>
     <published>2025-09-26T16:00:00.000Z</published>
-    <updated>2025-09-16T13:48:24.377Z</updated>
+    <updated>2025-09-19T03:52:58.741Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十一期。</p><p>在这一期中，我们将进行一个简单的矩阵乘法优化，并输出CUDA MatMul，完成于baseline的性能对比。</p>]]></content>
     
@@ -260,7 +260,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week10/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week10/</id>
     <published>2025-09-25T16:00:00.000Z</published>
-    <updated>2025-09-16T13:43:45.039Z</updated>
+    <updated>2025-09-19T03:52:58.739Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十期。</p><p>在这一期中我们将完成AI accelerator的systolic验证小项目，实现一个 4x4 systolic array的验证。</p>]]></content>
     
@@ -286,7 +286,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week9/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week9/</id>
     <published>2025-09-24T16:00:00.000Z</published>
-    <updated>2025-09-16T13:38:07.563Z</updated>
+    <updated>2025-09-19T03:52:58.740Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第九期。</p><p>在这一期中我们将完成coverage报告的生成和指标检测。</p>]]></content>
     
@@ -312,7 +312,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week8/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week8/</id>
     <published>2025-09-23T16:00:00.000Z</published>
-    <updated>2025-09-16T13:34:51.219Z</updated>
+    <updated>2025-09-19T03:52:58.740Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第八期。</p><p>在这一期中我们将会在CPU&#x2F;SoC中完成scan chain的插入，并检查scan chain的插入效果。</p>]]></content>
     
@@ -338,7 +338,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week7/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week7/</id>
     <published>2025-09-22T16:00:00.000Z</published>
-    <updated>2025-09-16T13:28:03.083Z</updated>
+    <updated>2025-09-19T03:52:58.740Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第七期。</p><p>在这一期中我们将会完成CUDA工具+Nsight的安装，然后进行简单的CUDA vector add 和性能测试。</p>]]></content>
     
@@ -364,7 +364,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week6/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week6/</id>
     <published>2025-09-21T16:00:00.000Z</published>
-    <updated>2025-09-16T13:23:27.208Z</updated>
+    <updated>2025-09-19T03:52:58.739Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第六期。</p>]]></content>
     
@@ -389,7 +389,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week5/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week5/</id>
     <published>2025-09-20T16:00:00.000Z</published>
-    <updated>2025-09-16T13:20:56.636Z</updated>
+    <updated>2025-09-19T03:52:58.739Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第五期。</p><p>本期我们要学习的内容是寻找AI Accelerator的验证点和完成一个简单的验证方案。</p>]]></content>
     
@@ -415,7 +415,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week4/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week4/</id>
     <published>2025-09-19T16:00:00.000Z</published>
-    <updated>2025-09-16T13:18:30.828Z</updated>
+    <updated>2025-09-19T03:52:58.738Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第四期。</p><p>在这一期中我们将会学习UVM(universal verification methodology)的验证框架和理念，从环境构建开始，完成一个简单的UVM验证。</p>]]></content>
     
@@ -441,7 +441,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week3/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week3/</id>
     <published>2025-09-18T16:00:00.000Z</published>
-    <updated>2025-09-16T13:13:35.681Z</updated>
+    <updated>2025-09-19T03:52:58.738Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第三期。</p><p>本期我们学习的内容是基本的DFT设计方法。在本期内容中我们会学习scan chain，ATPG，BIST等基本原理，以及简单的 systemverilog testbench的编写方法。</p>]]></content>
     
@@ -463,11 +463,36 @@
   </entry>
   
   <entry>
+    <title>mirrorlists</title>
+    <link href="https://invoker-pray.github.io/mirrorlists-docker/"/>
+    <id>https://invoker-pray.github.io/mirrorlists-docker/</id>
+    <published>2025-09-18T16:00:00.000Z</published>
+    <updated>2025-09-19T08:17:30.493Z</updated>
+    
+    <content type="html"><![CDATA[<p>we need to configure the mirrorlists in china, not only for accelerate the<br>download processing, but also for….</p><p>so we can modify the file <code>/etc/docker/daemon.json</code>, add this:</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;https://mirror.baidubce.com&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;we need to configure the mirrorlists in china, not only for accelerate the&lt;br&gt;download processing, but also for….&lt;/p&gt;
+&lt;p&gt;so we can modify</summary>
+      
+    
+    
+    
+    <category term="from my notion space" scheme="https://invoker-pray.github.io/categories/from-my-notion-space/"/>
+    
+    
+    <category term="command lines" scheme="https://invoker-pray.github.io/tags/command-lines/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始的DFT工程师！ week2</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week2/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week2/</id>
     <published>2025-09-17T16:00:00.000Z</published>
-    <updated>2025-09-16T13:08:54.351Z</updated>
+    <updated>2025-09-19T03:52:58.737Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第二期。</p><p>本期主要进行自动化脚本的学习。</p><h1 id="到底选择什么语言完成自动化脚本呢？"><a href="#到底选择什么语言完成自动化脚本呢？" class="headerlink" title="到底选择什么语言完成自动化脚本呢？"></a>到底选择什么语言完成自动化脚本呢？</h1><p>这是一个很重要的问题，一个工程团队能够完成统一风格的代码编写和流畅的上下游合作可比多招一两个天才重要多了。</p><p>根据暑期实习的经历来说（<del>大雾</del>），硬件工程师常用的是makefile和python + tcl，软件工程师常用的是cmake.</p><p>makefile在仿真脚本，回归测试以及小项目的编译流程中被大量使用，比如可以用来编译RTL，运行仿真器，收集log，然后生成报告，虽然比较复杂，但是这也是验证岗的基本要求了。</p><p>cmake较多在C++软件方向被用的较多，硬件flow里很少见。</p><p>python + tcl就主打一个灵活，写回归测试比较方便。</p>]]></content>
     
@@ -493,7 +518,7 @@
     <link href="https://invoker-pray.github.io/GALA%20Engine/"/>
     <id>https://invoker-pray.github.io/GALA%20Engine/</id>
     <published>2025-09-17T16:00:00.000Z</published>
-    <updated>2025-09-18T05:36:55.034Z</updated>
+    <updated>2025-09-19T03:52:58.762Z</updated>
     
     <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目。</p>]]></content>
     
@@ -510,31 +535,6 @@
     
     
     <category term="GALA Engine" scheme="https://invoker-pray.github.io/tags/GALA-Engine/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始的DFT工程师！ 特别篇</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-special/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-special/</id>
-    <published>2025-09-16T16:00:00.000Z</published>
-    <updated>2025-09-17T06:59:39.381Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="last"><a href="#last" class="headerlink" title="last"></a>last</h1><p>这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：</p><p><embed src='/files/DFT-from-zero1.pdf'    type='application/pdf' width='100%' height="600px"/></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;last&quot;&gt;&lt;a href=&quot;#last&quot; class=&quot;headerlink&quot; title=&quot;last&quot;&gt;&lt;/a&gt;last&lt;/h1&gt;&lt;p&gt;这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：&lt;/p&gt;
-&lt;p&gt;&lt;embed </summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
     
   </entry>
   
