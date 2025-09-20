@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2025-09-19T16:15:54.421Z</updated>
+  <updated>2025-09-20T14:19:50.951Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -17,11 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从零开始的DFT工程师！ week18</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-week18/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-week18/</id>
+    <published>2026-01-24T16:00:00.000Z</published>
+    <updated>2025-09-20T14:19:50.951Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十八期。</p><p>在本期blog中我们将会学习GPU C++性能建模已经性能分析，主要目标是用C++写一个cycle-approximate emulator，能对GPU 单元(shader core, cache, memory controller)进行建模，并且进行相关分析，</p><p>可以选用的建模方法有：</p><ul><li><p>Trace-driven simulation.</p></li><li><p>Execution-driven simulation.</p></li></ul><p>在过程中我们需要学会如何（使用 NVIDIA Nsight Compute&#x2F;Msight Systems）分析：</p><ul><li><p>Warp divergence.</p></li><li><p>Memory coalescing.</p></li><li><p>Occupancy.</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第十八期。&lt;/p&gt;
+&lt;p&gt;在本期blog中我们将会学习GPU C++性能建模已经性能分析，主要目标是用C++写一个cycle-approximate emulator，能对GPU 单元(shader core, cache, memory co</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始的DFT工程师！ week17</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-week17/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-week17/</id>
+    <published>2026-01-10T16:00:00.000Z</published>
+    <updated>2025-09-20T14:19:28.426Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十七期。</p><p>本期是作为拓展来写的，作为闲暇一乐，我记得有说法是老黄小时候跟他妈妈说想做图形驱动，这边也是来学学。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第十七期。&lt;/p&gt;
+&lt;p&gt;本期是作为拓展来写的，作为闲暇一乐，我记得有说法是老黄小时候跟他妈妈说想做图形驱动，这边也是来学学。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始的DFT工程师！ week16</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week16/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week16/</id>
     <published>2026-01-03T16:00:00.000Z</published>
-    <updated>2025-09-19T16:15:54.421Z</updated>
+    <updated>2025-09-20T14:19:08.931Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十六期。</p><p>在本期blog，我们将会熟悉一些工具，当然，由于很多闭源工具大家很难搞到手，我们现来认识一下这些工具。</p><table><thead><tr><th>function</th><th>closed-source</th><th>opensource</th></tr></thead><tbody><tr><td>RTL simulator</td><td>Synopsys VCS<br> Cadence Xcelium(Incisive)<br> Siemens Questa&#x2F;Modelsim</td><td>Verilator<br> Icarus Verilog<br> cocotb</td></tr><tr><td>formal verification</td><td>Synopsys VC Formal<br> Cadence JasperGold</td><td>Yosys-SMTBMC<br> Symbiyosys</td></tr><tr><td>Logic Synthesis</td><td>Synopsys Design Compiler<br> Cadence Genus</td><td>Yosys</td></tr><tr><td>STA</td><td>Synopsys<br> PrimeTime<br> Cadence Tempus</td><td>OpenSTA</td></tr><tr><td>SDC</td><td>PrimeTime<br> Tempus</td><td>OpenSTA(partial)</td></tr><tr><td>DFT &amp; ATPG</td><td>Synopsys DFT Compiler<br> Mentor Tessent<br> Cadence Modus</td><td>none</td></tr><tr><td>P &amp; R</td><td>Cadence Innovus<br> Synopsys ICC2<br> Siemens Aprisa</td><td>OpenROAD<br> QFlow</td></tr><tr><td>Power Analysis</td><td>Synopsys<br> PrimePower<br> Cadence Voltus</td><td>OpenROAD(partial)</td></tr><tr><td>simulate accelerate&#x2F;FPGA prototyping</td><td>Synopsys ZeBu<br> Cadence Palladium<br> Mentor Veloce</td><td>vivado &amp; quartus(not opensource but for free)</td></tr><tr><td>DRC&#x2F;LVS</td><td>Mentor Calibre<br> Synopsys IC Validator<br> Cadence Pegasus</td><td>Magic<br> KLayout<br> OpenROAD DRC&#x2F;LVS</td></tr><tr><td>ASIC Flow</td><td>Synopsys Fusion Compiler<br> Cadence Innovus + Genus<br> Simens full flow</td><td>OpenROAD Flow<br> OpenLane</td></tr></tbody></table><h1 id="we-can-install-…"><a href="#we-can-install-…" class="headerlink" title="we can install …"></a>we can install …</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S verilator iverilog  yosys  klayout  gtkwave</span><br><span class="line"></span><br><span class="line"><span class="comment">#source ~/python_venv/bin/activate</span></span><br><span class="line"></span><br><span class="line">pip install cocotb</span><br><span class="line"></span><br><span class="line">yay -S symbiyosys</span><br><span class="line"></span><br><span class="line">yay -S opensta</span><br><span class="line"></span><br><span class="line">yay -S openroad</span><br><span class="line"></span><br><span class="line">yay -S qflow</span><br><span class="line"></span><br><span class="line">yay -S magic</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/efabless/openlane.git</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> openlane</span><br><span class="line"></span><br><span class="line">pip install -r requirements.txt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># run command: export OPENLANE_HOME=/path/to/openlane</span></span><br><span class="line"></span><br><span class="line">openroad -version</span><br><span class="line">magic -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -51,7 +102,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week15/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week15/</id>
     <published>2025-12-27T16:00:00.000Z</published>
-    <updated>2025-09-19T16:15:33.163Z</updated>
+    <updated>2025-09-20T14:18:46.128Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十五期。</p><p>在这一期中我们将会学习使用python + tcl完成一个自动化的仿真以及coverage报告生成器，模拟真实的验证工作流程。</p>]]></content>
     
@@ -77,7 +128,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week14/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week14/</id>
     <published>2025-12-20T16:00:00.000Z</published>
-    <updated>2025-09-19T16:15:18.188Z</updated>
+    <updated>2025-09-20T14:18:25.297Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十四期。</p><p>在这一期中我们会进行低功耗验证设计的学习，并完成一个clock gating的简单设计。</p>]]></content>
     
@@ -103,7 +154,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week13/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week13/</id>
     <published>2025-12-13T16:00:00.000Z</published>
-    <updated>2025-09-19T16:15:05.003Z</updated>
+    <updated>2025-09-20T14:18:04.649Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十三期。</p><p>在本期blog中，我们会进行持续集成&#x2F;交付以及自动化测试的学习，主要学习内容是git+CI&#x2F;CD.</p>]]></content>
     
@@ -129,7 +180,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week12/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week12/</id>
     <published>2025-12-06T16:00:00.000Z</published>
-    <updated>2025-09-19T16:14:48.464Z</updated>
+    <updated>2025-09-20T14:17:30.372Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十二期。</p><p>在这一期中我们将完成对于随机激励的结果验证，完善验证平台。</p>]]></content>
     
@@ -155,7 +206,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week11/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week11/</id>
     <published>2025-11-29T16:00:00.000Z</published>
-    <updated>2025-09-19T16:14:31.665Z</updated>
+    <updated>2025-09-20T14:16:54.672Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十一期。</p><p>在这一期中，我们将进行一个简单的矩阵乘法优化，并输出CUDA MatMul，完成于baseline的性能对比。</p>]]></content>
     
@@ -181,7 +232,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week10/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week10/</id>
     <published>2025-11-22T16:00:00.000Z</published>
-    <updated>2025-09-19T16:14:13.643Z</updated>
+    <updated>2025-09-20T14:13:34.469Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第十期。</p><p>在这一期中我们将完成AI accelerator的systolic验证小项目，实现一个 4x4 systolic array的验证。</p>]]></content>
     
@@ -203,11 +254,37 @@
   </entry>
   
   <entry>
+    <title>从零开始的DFT工程师！ week7</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-week7/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-week7/</id>
+    <published>2025-11-22T16:00:00.000Z</published>
+    <updated>2025-09-20T14:23:03.833Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第七期。</p><p>在这一期中我们将会完成CUDA工具+Nsight的安装，然后进行简单的CUDA vector add 和性能测试。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第七期。&lt;/p&gt;
+&lt;p&gt;在这一期中我们将会完成CUDA工具+Nsight的安装，然后进行简单的CUDA vector add 和性能测试。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始的DFT工程师！ week9</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week9/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week9/</id>
     <published>2025-11-15T16:00:00.000Z</published>
-    <updated>2025-09-19T16:13:55.284Z</updated>
+    <updated>2025-09-20T14:23:44.544Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第九期。</p><p>在这一期中我们将完成coverage报告的生成和指标检测。</p>]]></content>
     
@@ -233,7 +310,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week8/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week8/</id>
     <published>2025-11-08T16:00:00.000Z</published>
-    <updated>2025-09-19T16:13:17.788Z</updated>
+    <updated>2025-09-20T14:23:24.562Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第八期。</p><p>在这一期中我们将会在CPU&#x2F;SoC中完成scan chain的插入，并检查scan chain的插入效果。</p>]]></content>
     
@@ -255,37 +332,11 @@
   </entry>
   
   <entry>
-    <title>从零开始的DFT工程师！ week7</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-week7/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-week7/</id>
-    <published>2025-11-01T16:00:00.000Z</published>
-    <updated>2025-09-19T16:12:56.110Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第七期。</p><p>在这一期中我们将会完成CUDA工具+Nsight的安装，然后进行简单的CUDA vector add 和性能测试。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第七期。&lt;/p&gt;
-&lt;p&gt;在这一期中我们将会完成CUDA工具+Nsight的安装，然后进行简单的CUDA vector add 和性能测试。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始的DFT工程师！ week6</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week6/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week6/</id>
     <published>2025-10-25T16:00:00.000Z</published>
-    <updated>2025-09-19T16:12:41.140Z</updated>
+    <updated>2025-09-20T14:22:39.134Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第六期。</p>]]></content>
     
@@ -306,63 +357,11 @@
   </entry>
   
   <entry>
-    <title>从零开始的DFT工程师！ week5</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-week5/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-week5/</id>
-    <published>2025-10-18T16:00:00.000Z</published>
-    <updated>2025-09-19T16:12:27.897Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第五期。</p><p>本期我们要学习的内容是寻找AI Accelerator的验证点和完成一个简单的验证方案。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第五期。&lt;/p&gt;
-&lt;p&gt;本期我们要学习的内容是寻找AI Accelerator的验证点和完成一个简单的验证方案。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始的DFT工程师！ week4</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-week4/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-week4/</id>
-    <published>2025-10-11T16:00:00.000Z</published>
-    <updated>2025-09-19T16:12:16.106Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第四期。</p><p>在这一期中我们将会学习UVM(universal verification methodology)的验证框架和理念，从环境构建开始，完成一个简单的UVM验证。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第四期。&lt;/p&gt;
-&lt;p&gt;在这一期中我们将会学习UVM(universal verification methodology)的验证框架和理念，从环境构建开始，完成一个简单的UVM验证。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始的DFT工程师！ week3</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week3/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week3/</id>
     <published>2025-10-04T16:00:00.000Z</published>
-    <updated>2025-09-19T16:12:03.927Z</updated>
+    <updated>2025-09-20T14:21:25.054Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第三期。</p><p>本期我们学习的内容是基本的DFT设计方法。在本期内容中我们会学习scan chain，ATPG，BIST等基本原理，以及简单的 systemverilog testbench的编写方法。</p>]]></content>
     
@@ -416,7 +415,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week2/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week2/</id>
     <published>2025-09-27T16:00:00.000Z</published>
-    <updated>2025-09-19T16:11:49.105Z</updated>
+    <updated>2025-09-20T14:21:00.997Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第二期。</p><p>本期主要进行自动化脚本的学习。</p><h1 id="到底选择什么语言完成自动化脚本呢？"><a href="#到底选择什么语言完成自动化脚本呢？" class="headerlink" title="到底选择什么语言完成自动化脚本呢？"></a>到底选择什么语言完成自动化脚本呢？</h1><p>这是一个很重要的问题，一个工程团队能够完成统一风格的代码编写和流畅的上下游合作可比多招一两个天才重要多了。</p><p>根据暑期实习的经历来说（<del>大雾</del>），硬件工程师常用的是makefile和python + tcl，软件工程师常用的是cmake.</p><p>makefile在仿真脚本，回归测试以及小项目的编译流程中被大量使用，比如可以用来编译RTL，运行仿真器，收集log，然后生成报告，虽然比较复杂，但是这也是验证岗的基本要求了。</p><p>cmake较多在C++软件方向被用的较多，硬件flow里很少见。</p><p>python + tcl就主打一个灵活，写回归测试比较方便。</p>]]></content>
     
@@ -442,7 +441,7 @@
     <link href="https://invoker-pray.github.io/DFT-from-zero-week1/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week1/</id>
     <published>2025-09-20T16:00:00.000Z</published>
-    <updated>2025-09-20T13:45:46.818Z</updated>
+    <updated>2025-09-20T14:20:20.008Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第一期。</p><p>本期主要进行verilog和systemverilog的相关软件安装和基本语法复习。</p><h1 id="verilog"><a href="#verilog" class="headerlink" title="verilog"></a>verilog</h1><p>关于运行verilog的软件选择很多，这里选择使用vivado和iverilog+gtkwave.</p><p>vivado的安装我之前写过，具体是在archlinux（当时的linux内核版本未记录）上进行vivado2024.2版本的安装，<a href="/FPGA-on-arch">详情可见此处</a>，但是由于此后相关库版本更新，需要自行创立软连接来补全相应的库（下载旧版本的库首先需要进行版本管理，这本身就是比较复杂的事，况且很多更新都是更新了实现，接口没有变化）。</p><p>我们用一下例子做一个简单的介绍：</p><p><img src="/img/DFT-from-zero-week1-1.png" alt="wrong"></p><p>这里我们发现vivado提示说找不到libtinfo.so.5, 我们已经有的是libtinfo.so.6,去下载一个新的不仅占地方，有些时候还会导致引用模糊相互冲突，这里可以用一个取巧的办法，也就是给libtinfo.so.6 创建一个名为libtinfo.so.5的副本，并指向libtinfo.so.6，如下操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">ln</span> -s /usr/lib/libtinfo.so.6 /usr/lib/libtinfo.so.5</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这样我们就简单的完成了vivado启动必须环境的准备。</p><p><img src="/img/DFT-from-zero-week1-2.png" alt="solved"></p><p>iverilog+gtkwave 的下载十分简单，只需用pacman下载即可：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S iverilog gtkwave</span><br></pre></td></tr></table></figure><h1 id="systemverilog"><a href="#systemverilog" class="headerlink" title="systemverilog"></a>systemverilog</h1><p>关于systemverilog相关软件的下载就有些麻烦了。相关的软件有：</p><ul><li><p>QuestaSim，支持systemverilog+UVM，coverage，SVA，transaction-level仿真。</p></li><li><p>Synopsys VCS，优势在于性能和大规模的SoC仿真支持，也支持UVM.</p></li><li><p>cadence Xcelium(Incisive)，功能和以上类似，似乎通信和ASIC公司用的多。</p></li></ul><p>但是尴尬的是这三个都是闭源软件，下载比较困难，不过也都是有办法下载的，之后我会慢慢更新三个软件的下载方式。</p><p>此处我有一个cadence软件的虚拟机，包含 cadence virtuoso + simvision + incisive，详情如下：</p><p><img src="/img/dft-from-zero-week1-1.png" alt="cadence"></p><p>虽然incisive是一个较老的版本，virtuoso版本也只有6.1.8-64b，不过简单的需求也已经可以满足了。</p><p>对于开源工具来说，verilator是一个选择，但是当前他对于UVM的支持还不太好，不怎么建议使用；slang和surelog+UHDM是一个新兴的工具，但是目前似乎更多的是实验性质，工业界用的很少，不过还是展示一下下载方式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># archlinux, 6.16.7-arch1-1, linux core</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S git base-devel cmake python</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S yosys verilator</span><br><span class="line"></span><br><span class="line">yay -S slang</span><br><span class="line"></span><br><span class="line">yay -S surelog</span><br><span class="line"></span><br><span class="line">yay -S uhdm</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这些工具的使用我们之后再谈。</p><h1 id="verilog-syntax"><a href="#verilog-syntax" class="headerlink" title="verilog syntax"></a>verilog syntax</h1><p>此处我们复习基本的verilog常用的设计语法，testbench写法，以及moore和mealy状态机的简单设计方法。</p><h2 id="module-define"><a href="#module-define" class="headerlink" title="module define"></a>module define</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">module</span> &lt;<span class="keyword">module</span> name&gt;(</span><br><span class="line">    <span class="keyword">input</span> &lt;port <span class="keyword">type</span>&gt; &lt;port name&gt;,</span><br><span class="line">    <span class="keyword">output</span> <span class="keyword">wire</span> led_control.</span><br><span class="line">    <span class="keyword">inout</span> <span class="keyword">reg</span> signal</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;<span class="keyword">function</span> decription&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure><h2 id="data-type"><a href="#data-type" class="headerlink" title="data type"></a>data type</h2><ul><li><p>wire: for signal wire, mostly used for signal that connect modules, must be give value continuously, can not store value.</p></li><li><p>reg: register type, but not have to be real register, it can hold value until its value is changed.</p></li></ul><h2 id="assignment"><a href="#assignment" class="headerlink" title="assignment"></a>assignment</h2><ul><li>assign, used for combination logic.</li></ul><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">assign</span> c = a &amp; b;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>process, used for timing logic.</li></ul><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk) <span class="keyword">begin</span></span><br><span class="line">    d &lt;= a;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>the difference between <code>=</code> and <code>&lt;=</code>: <code>=</code> for blocked assignment, next must be excute when the previous statement completely done; <code>&lt;=</code> for unblocked assignment, all unblocked statement will be executed at a same time.</p><h2 id="timing-logic"><a href="#timing-logic" class="headerlink" title="timing logic"></a>timing logic</h2><ul><li>always: it can be triggered by clockedge.</li></ul><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk) <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>and can be triggered by changes in signal.</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">always</span> @* <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><code>@*</code> means monitor all the signals that appeared in the always block.</p><h1 id="verilog-testbench-syntax"><a href="#verilog-testbench-syntax" class="headerlink" title="verilog testbench syntax"></a>verilog testbench syntax</h1><h2 id="basic-structure"><a href="#basic-structure" class="headerlink" title="basic structure"></a>basic structure</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">module</span> testbench;</span><br><span class="line">    <span class="comment">// define test signal</span></span><br><span class="line">    <span class="keyword">reg</span> clk, rst;</span><br><span class="line">    <span class="keyword">wire</span> out;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// instantiate the measured modules.</span></span><br><span class="line">    <span class="keyword">module</span>-name uut(<span class="variable">.clk</span>(clk), <span class="variable">.rst</span>(rst), <span class="variable">.out</span>(out));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /<span class="keyword">generate</span> clock signal</span><br><span class="line">    <span class="keyword">always</span> <span class="keyword">begin</span></span><br><span class="line">        #<span class="number">5</span> clk = ~clk;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">        clk = <span class="number">0</span>;</span><br><span class="line">        rst = <span class="number">0</span>;</span><br><span class="line">        #<span class="number">10</span> rst = <span class="number">1</span>;</span><br><span class="line">        #<span class="number">20</span> rst = <span class="number">0</span>;</span><br><span class="line">        #<span class="number">1000</span> <span class="built_in">$stop</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure><h2 id="system-task"><a href="#system-task" class="headerlink" title="system task"></a>system task</h2><ul><li>$monitor: print signal(when changed).</li></ul><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">$monitor</span>(<span class="string">&quot;at time %t, rst = %b, out = %b&quot;</span>, <span class="built_in">$time</span>, rst, out);</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>$display: output(instantly) debugging info.</li></ul><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">$display</span>(<span class="string">&quot;signal out = %b&quot;</span>, out);</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>$strobe: low execute priority, so it can print info after timing assignment(after current simulation step).</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">$strobe</span>(<span class="string">&quot;message, reg1 = %b&quot;</span>, reg1);</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="design-for-state-machine"><a href="#design-for-state-machine" class="headerlink" title="design for state machine."></a>design for state machine.</h1><ol><li><p>define state.</p></li><li><p>state trans.</p></li><li><p>according state(and input, mealy) and output.</p></li></ol><h1 id="systemverilog-syntax"><a href="#systemverilog-syntax" class="headerlink" title="systemverilog syntax"></a>systemverilog syntax</h1><p>systemverilog 是用于硬件描述和验证的语言，扩展了传统的verilog，增加了更多用于验证，测试平台搭建，高级数据类型，精确的并发控制等新特性，结合硬件描述和高级语言的特点，被广泛的用于硬件设计以及其验证测试自动化。由于并非课程必修（此处参考XJTU微电子科学与工程，集成电路与计算机科学与技术实验班的培养放案），此处会较为详细地进行介绍。</p><h2 id="data-type-commonly-used"><a href="#data-type-commonly-used" class="headerlink" title="data type(commonly used)"></a>data type(commonly used)</h2><ul><li>logic: in systemverilog, it is used to replace the reg and wire, its value can be 0, 1, x, z.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">logic a, b;</span><br><span class="line">logic [7:0] c;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li><p>bit: one bit.</p></li><li><p>byte: 8 bits.</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">bit d;</span><br><span class="line"></span><br><span class="line">byte e;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>int: 32 bits signed integer.(like integer in verilog).</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int i;</span><br><span class="line"></span><br><span class="line">integer j;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>real: float, user for valid and test.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">real f;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li><p>struct: combine signals.</p></li><li><p>union: signals share common memory, all the sigals’ address is same, so the memory size is decided by the biggest member.</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">struct&#123;</span><br><span class="line">    logic  [7:0] a;</span><br><span class="line">    logic  [15:0] b;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;my_struct;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// 定义一个联合体</span><br><span class="line">    union &#123;</span><br><span class="line">        bit [7:0] byte_data;   // 一个字节的数据</span><br><span class="line">        bit [15:0] word_data;  // 一个字的数据</span><br><span class="line">        bit [31:0] dword_data; // 一个双字的数据</span><br><span class="line">    &#125; data_packet;</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        // 使用 byte_data</span><br><span class="line">        data_packet.byte_data = 8&#x27;hA5;  // 给字节字段赋值</span><br><span class="line">        $display(&quot;byte_data: %h&quot;, data_packet.byte_data);</span><br><span class="line"></span><br><span class="line">        // 使用 word_data</span><br><span class="line">        data_packet.word_data = 16&#x27;h1234;  // 给字字段赋值</span><br><span class="line">        $display(&quot;word_data: %h&quot;, data_packet.word_data);</span><br><span class="line"></span><br><span class="line">        // 使用 dword_data</span><br><span class="line">        data_packet.dword_data = 32&#x27;hDEADBEEF;  // 给双字字段赋值</span><br><span class="line">        $display(&quot;dword_data: %h&quot;, data_packet.dword_data);</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">endmodule</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="module-define-1"><a href="#module-define-1" class="headerlink" title="module define"></a>module define</h2><p>just like verilog, use <code>module</code> and <code>endmodule</code> define a module, use <code>interface</code> to pass signals.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">module my_module(input logic clk, input logic rst, output logic [3:0] out);</span><br><span class="line"></span><br><span class="line">    always_ff @(posedge clk or posedge rst) begin</span><br><span class="line"></span><br><span class="line">        if(rst) out &lt;= 4&#x27;b0;</span><br><span class="line">        else out &lt;= out + 1;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">endmodule</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="process-control"><a href="#process-control" class="headerlink" title="process control"></a>process control</h2><p>systemverilog have <code>always_comb</code> , <code>always_ff</code>, and <code>always latch</code> to decribe combine logic, timing logic, and a latch.</p><p><em><code>always</code> can be used for combine logic in verilog (always @*)</em></p><ul><li>always_comb: for combine logic, do no depend on clock edge.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">always_com begin</span><br><span class="line">    out = a &amp; b;</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>always_ff: for timing logic.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">always_ff @(posedge clk) begin</span><br><span class="line">    out &lt;= a + b;</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>always_latch: a latch, but recommand do not use.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">always_latch begin</span><br><span class="line">    if(en) q = d;</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="constraints-and-interface"><a href="#constraints-and-interface" class="headerlink" title="constraints and interface"></a>constraints and interface</h2><ul><li>constraints, we can limit the value’s range of data-type.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class my_class;  //OOP</span><br><span class="line"></span><br><span class="line">    rand bit [7:0] a;</span><br><span class="line">    constraint c &#123; a != 8b&#x27;0000_0000;&#125;</span><br><span class="line"></span><br><span class="line">endclass</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>interfaces, package the signal sets, for interconnect among modules.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">interface my_interface(input logic clk, input logic rst);</span><br><span class="line">    logic [7:0] data;</span><br><span class="line">endinterface</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">module top(my_interface intf);</span><br><span class="line">    // directly use intf;</span><br><span class="line"></span><br><span class="line">endmodule</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="task-and-function"><a href="#task-and-function" class="headerlink" title="task and function"></a>task and function</h2><ul><li>task, perform certain behavior, can have multiple input and output parameters.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">task my_task(input logic a, input logic b, output logic c);</span><br><span class="line"></span><br><span class="line">    c = a &amp; b;</span><br><span class="line"></span><br><span class="line">endtask</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>function, execute a computation, return result instantly.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function logic my_function(input logic a, b);</span><br><span class="line">    return a &amp; b;</span><br><span class="line">endfunction</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="assert-and-cover"><a href="#assert-and-cover" class="headerlink" title="assert and cover"></a>assert and cover</h2><ul><li>assert: verify signals meet a specific condition or not, if not, an error will be thrown.</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">assert (a == b) else $fatal(&quot;assertion failed.&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>-cover: track whether certain conditions occur.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cover (a == 1);</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="class-and-object"><a href="#class-and-object" class="headerlink" title="class and object"></a>class and object</h2><p>class define:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class my_class;</span><br><span class="line"></span><br><span class="line">    int a;</span><br><span class="line">    function new();</span><br><span class="line">        a = 0;</span><br><span class="line">    endfunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">endclass</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>class instantiate:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">my_class obj = new();</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="cycle-control"><a href="#cycle-control" class="headerlink" title="cycle control"></a>cycle control</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">foreach (arr[i]) begin</span><br><span class="line"></span><br><span class="line">// content of cycle</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="parallel-execution"><a href="#parallel-execution" class="headerlink" title="parallel execution"></a>parallel execution</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">fork</span><br><span class="line">    // task 1</span><br><span class="line">    task1();</span><br><span class="line"></span><br><span class="line">    task2();</span><br><span class="line"></span><br><span class="line">join</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>总之，systemverilog在硬件的设计和验证中提供了一些增强功能，新的数据类型，精确的时序控制，更高级的断言，覆盖，约束机制，以及接口和面向对象编程的支持，都让systemverilog不仅适用于硬件设计，更有很强的验证和测试平台的构建能力。</p><h1 id="demo-of-iverilog-gtkwave"><a href="#demo-of-iverilog-gtkwave" class="headerlink" title="demo of iverilog + gtkwave"></a>demo of iverilog + gtkwave</h1><p>现在我们进行一个iverilog和gtkwave组合技的使用回顾。</p><p>我们写一个counter.v 文件，内容如下：</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">module</span> counter4 (</span><br><span class="line">    <span class="keyword">input</span>        clk,</span><br><span class="line">    <span class="keyword">input</span>        rst_n,</span><br><span class="line">    <span class="keyword">input</span>        en,</span><br><span class="line">    <span class="keyword">output</span> <span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>] q</span><br><span class="line">);</span><br><span class="line">    <span class="keyword">always</span> @(<span class="keyword">posedge</span> clk <span class="keyword">or</span> <span class="keyword">negedge</span> rst_n) <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span> (!rst_n)</span><br><span class="line">            q &lt;= <span class="number">4&#x27;b0000</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (en)</span><br><span class="line">            q &lt;= q + <span class="number">1&#x27;b1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure><p>我们编写tb_counter.v文件如下作为测试文件：</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">`<span class="keyword">timescale</span> 1ns/1ps</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">module</span> tb_counter4;</span><br><span class="line">    <span class="keyword">reg</span> clk;</span><br><span class="line">    <span class="keyword">reg</span> rst_n;</span><br><span class="line">    <span class="keyword">reg</span> en;</span><br><span class="line">    <span class="keyword">wire</span> [<span class="number">3</span>:<span class="number">0</span>] q;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    counter4 uut (</span><br><span class="line">        <span class="variable">.clk</span>(clk),</span><br><span class="line">        <span class="variable">.rst_n</span>(rst_n),</span><br><span class="line">        <span class="variable">.en</span>(en),</span><br><span class="line">        <span class="variable">.q</span>(q)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">initial</span> clk = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">always</span> #<span class="number">5</span> clk = ~clk;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">$dumpfile</span>(<span class="string">&quot;counter.vcd&quot;</span>);</span><br><span class="line">        <span class="built_in">$dumpvars</span>(<span class="number">0</span>, tb_counter4);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        rst_n = <span class="number">0</span>; en = <span class="number">0</span>;</span><br><span class="line">        #<span class="number">12</span>;</span><br><span class="line">        rst_n = <span class="number">1</span>;</span><br><span class="line">        en = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        #<span class="number">100</span>;</span><br><span class="line">        en = <span class="number">0</span>;</span><br><span class="line">        #<span class="number">40</span>;</span><br><span class="line">        en = <span class="number">1</span>;</span><br><span class="line">        #<span class="number">50</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">$finish</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>那么我们现在有了设计文件和测试文件，我们就可以进行编译和运行了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#compile</span></span><br><span class="line">iverilog -o counter_tb counter.v tb_counter.v</span><br><span class="line"></span><br><span class="line"><span class="comment">#generate the VCD waveform</span></span><br><span class="line">vvp counter_tb</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#check waveform</span></span><br><span class="line">gtkwave counter.vcd</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>结果展示如下：</p><p><img src="/img/DFT-from-zero-week1-3.png" alt="result"></p>]]></content>
     
@@ -464,11 +463,63 @@
   </entry>
   
   <entry>
+    <title>从零开始的DFT工程师！ week5</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-week5/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-week5/</id>
+    <published>2025-09-20T16:00:00.000Z</published>
+    <updated>2025-09-20T14:22:18.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第五期。</p><p>本期我们要学习的内容是寻找AI Accelerator的验证点和完成一个简单的验证方案。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第五期。&lt;/p&gt;
+&lt;p&gt;本期我们要学习的内容是寻找AI Accelerator的验证点和完成一个简单的验证方案。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始的DFT工程师！ week4</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-week4/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-week4/</id>
+    <published>2025-09-19T16:00:00.000Z</published>
+    <updated>2025-09-20T14:21:53.656Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第四期。</p><p>在这一期中我们将会学习UVM(universal verification methodology)的验证框架和理念，从环境构建开始，完成一个简单的UVM验证。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第四期。&lt;/p&gt;
+&lt;p&gt;在这一期中我们将会学习UVM(universal verification methodology)的验证框架和理念，从环境构建开始，完成一个简单的UVM验证。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cortex-M3 on FPGA</title>
     <link href="https://invoker-pray.github.io/Cortex-M3-FPGA-1/"/>
     <id>https://invoker-pray.github.io/Cortex-M3-FPGA-1/</id>
     <published>2025-09-19T16:00:00.000Z</published>
-    <updated>2025-09-19T15:15:37.436Z</updated>
+    <updated>2025-09-20T14:25:33.761Z</updated>
     
     
     
@@ -477,55 +528,6 @@
     
     
     <category term="Coretex-M3" scheme="https://invoker-pray.github.io/tags/Coretex-M3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>my journey of master 2</title>
-    <link href="https://invoker-pray.github.io/my-journey-of-master2/"/>
-    <id>https://invoker-pray.github.io/my-journey-of-master2/</id>
-    <published>2025-09-18T16:00:00.000Z</published>
-    <updated>2025-09-19T15:14:44.752Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="为什么这么快又更新了呢"><a href="#为什么这么快又更新了呢" class="headerlink" title="为什么这么快又更新了呢"></a>为什么这么快又更新了呢</h1><p>老师昨天说是我们毕设开题是要等到12月，但是今天上午跟我说，现在有两个题目，一个是为NPU适配不同的网络，同时可以学一些NPU设计方法，比较偏嵌入式方向，另一个是做存算，实现在FPGA上的SoC，让我挑一个做，我选了存算的项目，这个是一个无锡市政府的合作项目，年底验收，之后让师兄带着做，然后毕设也可以接着做这个。</p><p>按师兄的说法是现在先学一学搭建m3<br>SoC的方法，目前先找了2个资料，第一个是b站的视频，<a href="https://www.bilibili.com/video/BV1q14y197iL/?spm_id_from=333.337.search-card.all.click&vd_source=3642c10c04a514030cb5c5c876f3350d">【移知公开课】手把手教你搭建基于Cortex-M3的专用SoC</a>，另一个是一个github项目，<a href="https://github.com/WalkerLau/DetectHumanFaces">基于 ARM Cortex-M3 处理器与 FPGA 的实时人脸检测 SOC</a>.</p><p>那么也就是可以开工学习了，这也算是正式在工程上接触存算了，希望这会是有趣的一次经历。</p><p>关于Cortex-M3 的学习将会在<a href="/Cortex-M3-FPGA-1/">此处</a>持续更新。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;为什么这么快又更新了呢&quot;&gt;&lt;a href=&quot;#为什么这么快又更新了呢&quot; class=&quot;headerlink&quot; title=&quot;为什么这么快又更新了呢&quot;&gt;&lt;/a&gt;为什么这么快又更新了呢&lt;/h1&gt;&lt;p&gt;老师昨天说是我们毕设开题是要等到12月，但是今天上午跟我说，现在有两</summary>
-      
-    
-    
-    
-    <category term="my journey of master" scheme="https://invoker-pray.github.io/categories/my-journey-of-master/"/>
-    
-    
-    <category term="my journey of master" scheme="https://invoker-pray.github.io/tags/my-journey-of-master/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mirrorlists</title>
-    <link href="https://invoker-pray.github.io/mirrorlists-docker/"/>
-    <id>https://invoker-pray.github.io/mirrorlists-docker/</id>
-    <published>2025-09-18T16:00:00.000Z</published>
-    <updated>2025-09-19T08:17:30.493Z</updated>
-    
-    <content type="html"><![CDATA[<p>we need to configure the mirrorlists in china, not only for accelerate the<br>download processing, but also for….</p><p>so we can modify the file <code>/etc/docker/daemon.json</code>, add this:</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;https://mirror.baidubce.com&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;we need to configure the mirrorlists in china, not only for accelerate the&lt;br&gt;download processing, but also for….&lt;/p&gt;
-&lt;p&gt;so we can modify</summary>
-      
-    
-    
-    
-    <category term="from my notion space" scheme="https://invoker-pray.github.io/categories/from-my-notion-space/"/>
-    
-    
-    <category term="command lines" scheme="https://invoker-pray.github.io/tags/command-lines/"/>
     
   </entry>
   
