@@ -437,6 +437,31 @@
   </entry>
   
   <entry>
+    <title>从零开始的DFT工程师！ 特别篇：synopsys 安装</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-synopsys-install/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-synopsys-install/</id>
+    <published>2025-09-22T16:00:00.000Z</published>
+    <updated>2025-09-23T12:12:31.187Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是EDA工具安装特别篇，synopsys verdi 和 VCS的安装记录，网上关于synopsys的安装教程其实也不少了，我这里就简单记录一下我在安装过程中遇到的问题。</p><p>参考安装步骤：<a href="https://zhenhuizhang.tk/post/icsynopsys-xi-lie-ruan-jian-an-zhuang/">https://zhenhuizhang.tk/post/icsynopsys-xi-lie-ruan-jian-an-zhuang/</a></p><h1 id="step-1-archlinux"><a href="#step-1-archlinux" class="headerlink" title="step 1 : archlinux"></a>step 1 : archlinux</h1><p>我首先想到的是在archlinux上安装，这个系统算是我最熟悉用的也最习惯的一个了，hyprland配置的也不错（无用的知识增加了）</p><p>但是实话说问题是很多的，包括但不限于对synopsys的某些32位文件的运行失败，安装vcsmx失败等等，总之算是很难做出来，尤其是似乎synopsys遇到非远古lib的时候很容易出错，正所谓学习知识和使用舒心养眼的现代化工具不可兼得（逃）</p><p>这里有时间再去试试能不能解决这些问题，不过现在还是先去进行下一步了。</p><h1 id="step2-almalinux"><a href="#step2-almalinux" class="headerlink" title="step2 : almalinux"></a>step2 : almalinux</h1><h2 id="familiar-with-RedHat"><a href="#familiar-with-RedHat" class="headerlink" title="familiar with RedHat"></a>familiar with RedHat</h2><p>在centos停止维护的今天redhat系大家用的多的就是rocky和alma，这里选择用alma试一试，先开一个虚拟机尝试能不能完成安装。</p><p>首先第一步当然是创建一个共享文件夹，这一部分我在<a href="/DFT-from-zero-week1/">上一期</a>已经写过详细步骤了，这里需要注意的地方是我对于redhat系不太熟悉，准备VBoxAddition的环境方式如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> dnf update -y <span class="comment"># update dnf env</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> dnf install -y gcc make perl bzip2 tar elfutils-libelf-devel kernel kernel-devel kernel-headers</span><br><span class="line"><span class="comment"># compile env.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查内核版本是否匹配</span></span><br><span class="line"><span class="built_in">uname</span> -r</span><br><span class="line">rpm -q kernel-devel-$(<span class="built_in">uname</span> -r)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果不匹配就需要更新内核</span></span><br><span class="line"><span class="built_in">sudo</span> dnf update -y kernel kernel-devel kernel-headers</span><br><span class="line"><span class="built_in">sudo</span> reboot</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>之后就可以完成vbox addition的编译和共享文件的使用了。</p><h2 id="install-synopsys-verdi-vcs"><a href="#install-synopsys-verdi-vcs" class="headerlink" title="install synopsys verdi &amp; vcs"></a>install synopsys verdi &amp; vcs</h2><p>生成installer非常简单，就不谈了，我们直接往下看发生的问题：</p><ul><li>not found libXss.so.1</li></ul><p>最简单的问题，下载即可：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> dnf install -y epel-release</span><br><span class="line"><span class="built_in">sudo</span> dnf update -y</span><br><span class="line"><span class="built_in">sudo</span> dnf install -y libXScrnSaver</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里是EDA工具安装特别篇，synopsys verdi 和 VCS的安装记录，网上关于synopsys的安装教程其实也不少了，我这里就简单记录一下我在安装过程中遇到的问题。&lt;/p&gt;
+&lt;p&gt;参考安装步骤：&lt;a href=&quot;https://zhenhuizhang.tk/po</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始的DFT工程师！ week1</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week1/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week1/</id>
@@ -511,23 +536,6 @@
     
     
     <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cortex-M3 on FPGA</title>
-    <link href="https://invoker-pray.github.io/Cortex-M3-FPGA-1/"/>
-    <id>https://invoker-pray.github.io/Cortex-M3-FPGA-1/</id>
-    <published>2025-09-19T16:00:00.000Z</published>
-    <updated>2025-09-20T14:25:33.761Z</updated>
-    
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="Coretex-M3" scheme="https://invoker-pray.github.io/tags/Coretex-M3/"/>
     
   </entry>
   
