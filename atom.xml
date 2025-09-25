@@ -260,23 +260,6 @@
   </entry>
   
   <entry>
-    <title>life reflection 12</title>
-    <link href="https://invoker-pray.github.io/life-reflection12/"/>
-    <id>https://invoker-pray.github.io/life-reflection12/</id>
-    <published>2025-09-14T16:00:00.000Z</published>
-    <updated>2025-09-20T14:42:10.360Z</updated>
-    
-    
-    
-    
-    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
-    
-    
-    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
-    
-  </entry>
-  
-  <entry>
     <title>life reflection 11</title>
     <link href="https://invoker-pray.github.io/life-reflection11/"/>
     <id>https://invoker-pray.github.io/life-reflection11/</id>
@@ -500,6 +483,23 @@
     
     
     <category term="SNN simulator" scheme="https://invoker-pray.github.io/tags/SNN-simulator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jiao&#39;s piano practice</title>
+    <link href="https://invoker-pray.github.io/music/"/>
+    <id>https://invoker-pray.github.io/music/</id>
+    <published>2025-08-19T16:00:00.000Z</published>
+    <updated>2025-09-20T14:45:33.729Z</updated>
+    
+    
+    
+    
+    <category term="music" scheme="https://invoker-pray.github.io/categories/music/"/>
+    
+    
+    <category term="music" scheme="https://invoker-pray.github.io/tags/music/"/>
     
   </entry>
   
