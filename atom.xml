@@ -383,34 +383,6 @@
   </entry>
   
   <entry>
-    <title>我的那个夏天结束了</title>
-    <link href="https://invoker-pray.github.io/annual-memoir/"/>
-    <id>https://invoker-pray.github.io/annual-memoir/</id>
-    <published>2025-10-04T16:00:00.000Z</published>
-    <updated>2025-09-20T13:49:29.652Z</updated>
-    
-    <content type="html"><![CDATA[<audio autoplay loop style="display:none;">  <source src="/files/bgm/annual-memoir1.mp3" type="audio/mpeg"></audio><h1 id="2025"><a href="#2025" class="headerlink" title="2025"></a>2025</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;audio autoplay loop style=&quot;display:none;&quot;&gt;
-  &lt;source src=&quot;/files/bgm/annual-memoir1.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
-&lt;/audio&gt;
-
-&lt;h1 id=&quot;2025&quot;&gt;&lt;a href</summary>
-      
-    
-    
-    
-    <category term="annual memoir" scheme="https://invoker-pray.github.io/categories/annual-memoir/"/>
-    
-    
-    <category term="annual memoir" scheme="https://invoker-pray.github.io/tags/annual-memoir/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始的DFT工程师！ week2</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week2/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week2/</id>
@@ -536,6 +508,23 @@
     
     
     <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cortex-M3 on FPGA</title>
+    <link href="https://invoker-pray.github.io/Cortex-M3-FPGA-1/"/>
+    <id>https://invoker-pray.github.io/Cortex-M3-FPGA-1/</id>
+    <published>2025-09-19T16:00:00.000Z</published>
+    <updated>2025-09-20T14:25:33.761Z</updated>
+    
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="Coretex-M3" scheme="https://invoker-pray.github.io/tags/Coretex-M3/"/>
     
   </entry>
   
