@@ -68,23 +68,6 @@
   </entry>
   
   <entry>
-    <title>Cortex-M3 on FPGA</title>
-    <link href="https://invoker-pray.github.io/Cortex-M3-FPGA-1/"/>
-    <id>https://invoker-pray.github.io/Cortex-M3-FPGA-1/</id>
-    <published>2025-09-19T16:00:00.000Z</published>
-    <updated>2025-09-20T14:25:33.761Z</updated>
-    
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="Coretex-M3" scheme="https://invoker-pray.github.io/tags/Coretex-M3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>my journey of master 2</title>
     <link href="https://invoker-pray.github.io/my-journey-of-master2/"/>
     <id>https://invoker-pray.github.io/my-journey-of-master2/</id>
@@ -113,9 +96,9 @@
     <link href="https://invoker-pray.github.io/mirrorlists-docker/"/>
     <id>https://invoker-pray.github.io/mirrorlists-docker/</id>
     <published>2025-09-18T16:00:00.000Z</published>
-    <updated>2025-09-20T14:35:59.822Z</updated>
+    <updated>2025-09-26T12:16:46.313Z</updated>
     
-    <content type="html"><![CDATA[<p>we need to configure the mirrorlists in china, not only for accelerate the<br>download processing, but also for….</p><p>so we can modify the file <code>/etc/docker/daemon.json</code>, add this:</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;https://mirror.baidubce.com&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>we need to configure the mirrorlists in china, not only for accelerate the<br>download processing, but also for….</p><p>so we can modify the file <code>/etc/docker/daemon.json</code>, add this:</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;https://mirror.baidubce.com&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="docker-command-line-homepage"><a href="#docker-command-line-homepage" class="headerlink" title="docker command line homepage"></a>docker command line homepage</h1><p>click <a href="/docker/">here</a> to come back to docker command line homepage.</p>]]></content>
     
     
       
@@ -487,19 +470,50 @@
   </entry>
   
   <entry>
-    <title>jiao&#39;s piano practice</title>
-    <link href="https://invoker-pray.github.io/music/"/>
-    <id>https://invoker-pray.github.io/music/</id>
+    <title>life reflection 8</title>
+    <link href="https://invoker-pray.github.io/life-reflection8/"/>
+    <id>https://invoker-pray.github.io/life-reflection8/</id>
     <published>2025-08-19T16:00:00.000Z</published>
-    <updated>2025-09-20T14:45:33.729Z</updated>
+    <updated>2025-09-20T15:09:47.837Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我了个豆哇怎么已经8月20号中午13-18了"><a href="#我了个豆哇怎么已经8月20号中午13-18了" class="headerlink" title="我了个豆哇怎么已经8月20号中午13:18了"></a>我了个豆哇怎么已经8月20号中午13:18了</h1><p>也是一下子隔了一个月的时间没有来更新我的传统节目了，今天趁着有点时间，来总结一下最近一个月我过的怎么样。</p><h1 id="近期的状态是？"><a href="#近期的状态是？" class="headerlink" title="近期的状态是？"></a>近期的状态是？</h1><p>并不太好。7.18日实习结束后我就休息了五六天，那几天也就是玩玩FGO，抽抽卡，毕竟也是国服快要九周年（日服十周年），在水蕾和学姐池子狠狠地抽卡。水蕾抽的还行，20抽就出了，学姐的池子感觉有点毒，840石头出两宝。</p><p><strong><em>另：日服看到所长以后开小号随便一抽出所长了</em></strong></p><p>以下为抽卡瞬间：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-1.jpg" alt="水蕾1"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-2.jpg" alt="水蕾2"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-3.jpg" alt="所长1"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-4.jpg" alt="所长2"></p><p>8.12去了一趟北京，总的来说也是玩了几天，顺便面个试，8.15晚上回到学校，之后又是休息了5天。</p><h1 id="电赛吉祥物"><a href="#电赛吉祥物" class="headerlink" title="电赛吉祥物"></a>电赛吉祥物</h1><p>这就是前面提到的被拉扯的结果（你别笑，让我先笑）</p><p>先说结果，就是去电赛玩了两天，做了一个半半成品，交上去，然后也没拿个奖。说到底我没有很重视这个事情，主要还是陪同学走个流程。我们做的信号题，中间出现的情况很多，包括但不限于，软件和电脑里不知道什么破解软件炸了导致无法运行，没有相应芯片导致很多功能做不出来，要求1MHz但是我们芯片功能有限做不出来，以及最后最搞笑的芯片ADC和DAC通道冲突的问题，这个可以说是最无可奈何的一件事了，就算准备的再充分，到时候芯片出现这种问题我们也是无法预料的，本来5个指标我们已经完成3个了，但是由于这个问题，导致已经做出来的结果没办法全部呈现在验收阶段，最后只能把能测出来的数据现场又测了一遍，当然是寄了。</p><p>不过怎么说呢，我狠狠锻炼了使用AI的能力（逃）</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-5.png" alt="相关图片"></p><p>这图也不是我做的，主要是其实没怎么拍场照，我们组还是太欢乐了。</p><h1 id="北京行"><a href="#北京行" class="headerlink" title="北京行"></a>北京行</h1><p>这个也算是主线任务了，当然也没有那么主线（乐）。</p><p>2025年我报的三个推免之一，中国科学院计算技术研究所，先说结论，<strong>寄了</strong>。</p><p>不过怎么说呢，也是很欢乐的一件事。在电赛前两天，我收到了入围暑期班（计所预推免）的通知，以及我报的研究所的面试安排通知，当时那段事件计所的欢乐事件应该就是陈老板发的心测吧，给大家展示几个：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-6.png" alt="心测1"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-7.png" alt="心测2"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-8.png" alt="心测3"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-9.png" alt="心测4"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-10.png" alt="心测5"></p><p>我只能说，<strong><em>计所是懂计算机学生的</em></strong></p><p>之后就是线下去一趟北京到计所进行面试了。其实在面试前看群里消息我发现有好多是实验室邀请进入面试的时候就已经感觉自己可能要走流程了，我并不感觉自己实力算有多强，如果有很多实验室邀请进入面试的同学，那我其实大概率要陪跑了，所以其实我也没有很认真的准备面试，主要是以一个度假的心态去北京玩了三天。</p><p>我新买了一个小一点的箱子，本意是希望放到车上两边头顶的架子上，我感觉24寸应该是可以放上去的，但是其实感觉放上去很勉强，最后还是放到1座后面的空间了，我是小丑，应该先搜一下多大的箱子能放上去。去的时候总共带了一个电脑，一个平板，几件衣服，还有一个运动相机（虽然我全程忘了把它拿出来）</p><p>到西站出来坐地铁，刚出来就感觉北京地铁有点奇怪，但是说不上来，因为我也并不是坐过很多城市的地铁（乐），大概半个多小时成功到达知春里北京四环，刚来走了十几分钟就下雨了，没看天气预报真是太坏了，下次我一定看。</p><p>放下东西以后，有高中同学为朕接风洗尘，直接去唱3h的ktv，然后在附近吃了一个贵州什么锅，口味还不错，然后去商场逛了一会，去北航校内买了一个4.5L农夫山泉给接下来几天提供重要的水资源。</p><p>有唱歌的时候的照片（被偷拍力）：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-24.jpg" alt="ktv" title="当时正在全力对抗不好用的点歌小程序，地铁老人手机ing"></p><p>还有书店：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-29.jpg" alt="书店"><br>之后就是愉快的玩耍：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-11.jpg" alt="play1" title="此处为计所大楼"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-12.jpg" alt="play2" title="科行大厦"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-13.jpg" alt="play3" title="搜狐大厦"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-14.jpg" alt="play4" title="可能是共享大楼1"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-15.jpg" alt="play5" title="可能是共享大楼2"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-16.jpg" alt="play6" title="楼下负一层有一个小自选，不知道是不是共享食堂"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-17.jpg" alt="play7" title="这边熟悉的老伙计不少"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-18.jpg" alt="play8" title="说是今年会恢复国内服务？不知道真假"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-19.jpg" alt="play9" title="对面是声学所"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-20.jpg" alt="play10" title="哎，京B，小区门口都会贴京B不能进"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-21.jpg" alt="play11" title="还有AMD"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-22.jpg" alt="play12" title="中关村中学，随手拍的"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-23.jpg" alt="play13" title="散步的时候发现自己走到计所二部去了"></p><p>然后就是回归主线任务，我感觉老师没有很认真的问，就随便问了些问题，对简历简单问了一下，也没有深究，只有一个老师提了问题（）<br>其他老师感觉都在忙着记分（因为最靠近我的老师在电脑上excel在记分数&#x2F;&#x2F;&#x2F;似乎&#x2F;&#x2F;&#x2F;）</p><p>总体面试也是感觉比较欢乐的结束了，不知道有没有实验室邀请进入面试的发力，不过我确实发挥的很差，很多都答不上来，没有很认真的准备是一方面，另一方面是准备的没问到，复习内容就有问题。</p><p>不过也是欢乐的结束了：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-25.jpg" alt="计所1" title="计所发的东西"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-26.jpg" alt="计所2" title="结业证书"></p><p><strong><em>在北京还顺便配了个眼镜，181块钱，也是薅到京爷羊毛了</em></strong></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-27.jpg" alt="眼镜"></p><p>最后是结局展示：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-28.png" alt="结局1" title="失败力"></p><h1 id="回到我的狗窝以后"><a href="#回到我的狗窝以后" class="headerlink" title="回到我的狗窝以后"></a>回到我的狗窝以后</h1><p>8.15晚上也是回到了我的宿舍，走几天才感觉宿舍好，至少空调声音小还比较自由。当晚我直接吃了一个山姆上校2+2，一个芝士牛肉卷，一个黑椒牛肉意面，一个蛋挞和一包鸡块，我直接一个爽吃。</p><p>不过东南门封了几天我是绷不住的，吃个饭啥的还得绕路，不过也算是在今天新生来的时候开了。</p><p>8.18，我接到了清华的邮件通知，说是8.26通知面试安排，月底进行面试。说实话感觉清华那更是没什么希望了，到现在我也没怎么准备面试，总之是有一点点摆烂了，感觉清华的话，问简历，课外知识和课内课程都不会很容易，估计是会狠狠地拷打的，而且清华基本没办法捡漏，不管是博还是硕，应该都很难，现在已经不知道干嘛了。</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-30.jpg" alt="清华"></p><p>当然也不是说没有好事，起码我这次六级还算不错：</p><p><img src="/img/life-reflection/life-reflection-2025-8-20-31.png" alt="六级" title="就是别被卡550了"></p><p><strong><em>现在怎么突然感觉到目前为止没有任何消息的复旦是希望最大的啊绷不住了捏</em></strong></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-32.jpg" alt="推免1"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-33.jpg" alt="推免2"></p><p><img src="/img/life-reflection/life-reflection-2025-8-20-34.jpg" alt="推免3"></p><h1 id="缺钱啊啊啊啊啊啊"><a href="#缺钱啊啊啊啊啊啊" class="headerlink" title="缺钱啊啊啊啊啊啊"></a>缺钱啊啊啊啊啊啊</h1><p><img src="/img/life-reflection/life-reflection-2025-8-20-35.jpg" alt="缺钱"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;我了个豆哇怎么已经8月20号中午13-18了&quot;&gt;&lt;a href=&quot;#我了个豆哇怎么已经8月20号中午13-18了&quot; class=&quot;headerlink&quot; title=&quot;我了个豆哇怎么已经8月20号中午13:18了&quot;&gt;&lt;/a&gt;我了个豆哇怎么已经8月20号中午13:1</summary>
+      
     
     
     
+    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
     
-    <category term="music" scheme="https://invoker-pray.github.io/categories/music/"/>
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>life reflection 7</title>
+    <link href="https://invoker-pray.github.io/life-reflection7/"/>
+    <id>https://invoker-pray.github.io/life-reflection7/</id>
+    <published>2025-07-19T16:00:00.000Z</published>
+    <updated>2025-09-20T15:07:24.043Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="现在是2025年7月20日凌晨0点47分"><a href="#现在是2025年7月20日凌晨0点47分" class="headerlink" title="现在是2025年7月20日凌晨0点47分"></a>现在是2025年7月20日凌晨0点47分</h1><p>我知道熬夜不是个好习惯，但是我这应该是最后一次发誓（起码在假期阶段）不会再熬夜了。</p><p>今天（指7.19），主要是实习结束后完成了材料的提交，然后进行了半天的休息，<del>当然还有半天的思考。</del></p><p>深夜总是能让人emo</p><p>现在已经陷入了对未来的深深思考。</p><h1 id="茶园话事"><a href="#茶园话事" class="headerlink" title="茶园话事"></a>茶园话事</h1><p>在7.16日晚上睡前，闲的没事，于是翻开了outlook邮箱，突然发现茶园给我发过入营通知，但是时间让我很是无奈。在6月17日，我收到了（准确的说是我的邮箱收到了（更准确的说是我的邮件junk收到了））一封入营的通知，上面写了夏令营举办时间是6.19-6.21，但是戏剧性的一幕就此发生了，<strong><em>我6.16-6.19处于发烧中，脑子晕糊糊的，精力都在6.18晚上的最后一门考试上，完全没有时间看邮件，更没有点开junk，导致完全不知情，时候我点开网站查看夏令营结果时，已经因为超时没有确认入营显示未入营了，于是我在不知不觉中丢失了一个宝贵的机会。</em></strong></p><p>当我发现这封邮件的时候，只剩下一个二维码在嘲笑我了。</p><p>如果算上北大那次，我将会成为2025保研名场面&#x2F;2026推免生经历分享中的第一小丑，知乎上开10个问题的那种，给我本就困难而渺茫的保研蒙上了又一层灰。</p><p><img src="/img/life-reflection/life-reflection-2025-7-20-1.png" alt="彻底失败！" title="彻底失败！"></p><h1 id="实习结束！"><a href="#实习结束！" class="headerlink" title="实习结束！"></a>实习结束！</h1><p>漫长的三个星期终于在今天画下句号了。回想起来多数时间其实都在摆烂和闲聊，我摆了是一个原因，我觉得不挂就行，另一方面来讲，客观事件太多了。比如说，录脸和工牌直到第五天才搞定，之前每天都要靠宝哥和朋哥把我们带进来带出去，最夸张的一次，我们等到10点多才进到工位；主机在第四天才批下来，先激活了两个账号，OA账号直到第六天才全部激活，在此之前我们是不能够进行实际工作的，文档补全也做不到;仿真平台在第八天快结束的时候我们才能够链接服务器开始使用，而且仿真有bug，我们修bug就修了两天，结果第11天的时候又出问题了，第12天下午平台才真正修好，排除答辩和ppt的时间，我们只有两天时间做仿真了…</p><p>不过说归说，虽然实习出现的状况很多，但是宝哥朋哥和成总对我们都挺不错的，然后在印象城吃的饭也很不错，伙食很好那两天。</p><p>最后没有实现FPGA上板，不过做成这样也很不错了，敬实习结束！</p><p>附上一些实习的图片，虽然没有很认真拍，也没记录到什么重点：</p><p><img src="/img/life-reflection/life-reflection-2025-7-20-2.png"><br><img src="/img/life-reflection/life-reflection-2025-7-20-3.png"><br><img src="/img/life-reflection/life-reflection-2025-7-20-4.png"><br><img src="/img/life-reflection/life-reflection-2025-7-20-5.png"><br><img src="/img/life-reflection/life-reflection-2025-7-20-6.png"></p><h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>现在对于保外，总感觉希望不是很大了。计算所还没消息，估计是寒武纪给我刷了，因为6.24面试的时候我搞的太烂了，那个时候还没有开始复习，问的东西也答不上来，计所的夏令营的话，看情况吧，7月下旬出入营通知，到时候在看看情况如何。</p><p>清华的话，明天我会报一下预推免，可能八月一上来就会面试，不过也说不好，总之预计要在10多天内复习数C，计组，OS，5月的时候看的论文，CUDA&#x2F;tensorflow编程，如果有时间的话多看看verilog和做一下FPGA项目，这个没啥办法，我面试水平太差了，如果问到了没有提前准备的问题，我就会答的很烂，能行就去，不行就算了，感觉直接开预推免的话，压力确实不小。</p><p>现在最有希望的反而是一直没消息的复旦嘛，毕竟他还不知道我水平，乐。</p><p>现在有一点躺平心态了，但是还是推自己一把吧，万一成了呢。</p><p>（虽然我现在对保研信心都没有那么大了。。。）</p><h1 id="电赛"><a href="#电赛" class="headerlink" title="电赛"></a>电赛</h1><p>这个是比较难搞得，会占八月，到时候看情况吧，感觉没办法的时候就只能牺牲掉它了。</p><p>总之也是希望能够有一个好结果吧。</p><h1 id="发癫"><a href="#发癫" class="headerlink" title="发癫"></a>发癫</h1><p>我的对象在哪里？<br>我的offer在哪里？<br>我的富二代人生在哪里？<br>哎？<br>为什么？<br>我不应该是天才的嘛？<br>为什么？为什么占卜失灵了？</p><p>另：现在头发很长了，想去剪个头发。感觉有点想换个发型，但是还没想好…</p>]]></content>
     
     
-    <category term="music" scheme="https://invoker-pray.github.io/tags/music/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;现在是2025年7月20日凌晨0点47分&quot;&gt;&lt;a href=&quot;#现在是2025年7月20日凌晨0点47分&quot; class=&quot;headerlink&quot; title=&quot;现在是2025年7月20日凌晨0点47分&quot;&gt;&lt;/a&gt;现在是2025年7月20日凌晨0点47分&lt;/h1&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
+    
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
     
   </entry>
   
