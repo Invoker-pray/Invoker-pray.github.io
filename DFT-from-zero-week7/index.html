@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>从零开始的DFT工程师！ week7 | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欢迎来到从零开始的DFT工程师第七期。 本来第三周应该对工具的使用进行熟悉的，但是由于滚arch的时候出一点问题，导致vcs运行时出现linux kernel不支持的问题，这个我看了一下，似乎不是kernel真的不支持，好像是由于哪里的lib改动或者是环境改变导致的。这个问题报错和实际错误好像不符，比较难修，如果修不了就之后改到虚拟机上进行了，这一期就把特别篇提前放到今天了。 在这一期中我们将会完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始的DFT工程师！ week7">
+<meta property="og:url" content="https://invoker-pray.github.io/DFT-from-zero-week7/index.html">
+<meta property="og:site_name" content="Jiao hongbao&#39;s Trash">
+<meta property="og:description" content="欢迎来到从零开始的DFT工程师第七期。 本来第三周应该对工具的使用进行熟悉的，但是由于滚arch的时候出一点问题，导致vcs运行时出现linux kernel不支持的问题，这个我看了一下，似乎不是kernel真的不支持，好像是由于哪里的lib改动或者是环境改变导致的。这个问题报错和实际错误好像不符，比较难修，如果修不了就之后改到虚拟机上进行了，这一期就把特别篇提前放到今天了。 在这一期中我们将会完">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://invoker-pray.github.io/img/cover/DFT-FROM-ZERO-cover.jpeg">
+<meta property="article:published_time" content="2025-09-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-29T15:45:35.128Z">
+<meta property="article:author" content="Jiao hongbao">
+<meta property="article:tag" content="DFT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invoker-pray.github.io/img/cover/DFT-FROM-ZERO-cover.jpeg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "从零开始的DFT工程师！ week7",
+  "url": "https://invoker-pray.github.io/DFT-from-zero-week7/",
+  "image": "https://invoker-pray.github.io/img/cover/DFT-FROM-ZERO-cover.jpeg",
+  "datePublished": "2025-09-30T16:00:00.000Z",
+  "dateModified": "2025-09-29T15:45:35.128Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiao hongbao",
+      "url": "https://invoker-pray.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/DFT-from-zero-week7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '从零开始的DFT工程师！ week7',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">90</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/DFT-FROM-ZERO-cover.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">从零开始的DFT工程师！ week7</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">从零开始的DFT工程师！ week7</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-09-30T16:00:00.000Z" title="Created 2025-10-01 00:00:00">2025-10-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-09-29T15:45:35.128Z" title="Updated 2025-09-29 23:45:35">2025-09-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/circuit/">circuit</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>欢迎来到从零开始的DFT工程师第七期。</p>
+<p>本来第三周应该对工具的使用进行熟悉的，但是由于滚arch的时候出一点问题，导致vcs运行时出现linux kernel不支持的问题，这个我看了一下，似乎不是kernel真的不支持，好像是由于哪里的lib改动或者是环境改变导致的。这个问题报错和实际错误好像不符，比较难修，如果修不了就之后改到虚拟机上进行了，这一期就把特别篇提前放到今天了。</p>
+<p>在这一期中我们将会完成CUDA工具+Nsight的安装，然后进行简单的CUDA编程和性能测试。</p>
+<h1 id="install-CUDA"><a href="#install-CUDA" class="headerlink" title="install CUDA"></a>install CUDA</h1><p>关于nvida其实很早之前就安装过了，详见<a href="/NVIDIA-DRIVER/">此处</a>，在这里面我当时安装了<code>nvidia</code>，<code>nvidia-utils</code>，如果是要使用cuda的话就需要多下一个<code>cuda</code>。这里要注意的是，<code>nvidia-dkms</code>是一个会在内核更新后根据内核重新编译个版本（Dynamic<br>Kernel Module<br>Support），他和<code>nvidia</code>是冲突的（起码在arch）；还有如果使用lts内核，应该下载<code>nvidia-lts</code>.</p>
+<h1 id="install-Nsight-tools"><a href="#install-Nsight-tools" class="headerlink" title="install Nsight tools"></a>install Nsight tools</h1><p>Nsight是一套调试分析的工具，我们一般下载<code>nsys</code>和<code>ncu</code>就可以了。在arch上我们可以</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yay -S cuda-tools</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/DFT-from-zero-week7/">https://invoker-pray.github.io/DFT-from-zero-week7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DFT/">DFT</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/DFT-FROM-ZERO-cover.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/DFT-from-zero-week2/" title="从零开始的DFT工程师！ week2"><img class="cover" src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">从零开始的DFT工程师！ week2</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第二期。 本期主要进行自动化脚本的学习。 到底选择什么语言完成自动化脚本呢？这是一个很重要的问题，一个工程团队能够完成统一风格的代码编写和流畅的上下游合作可比多招一两个天才重要多了。 根据暑期实习的经历来说（大雾），硬件工程师常用的是makefile和python + tcl，软件工程师常用的是cmake. makefile在仿真脚本，回归测试以及小项目的编译流程中被大量使用，比如可以用来编译RTL，运行仿真器，收集log，然后生成报告，虽然比较复杂，但是这也是验证岗的基本要求了。 cmake较多在C++软件方向被用的较多，硬件flow里很少见。 python + tcl就主打一个灵活，写回归测试比较方便。 我们这里就优先完成makefile和python + tcl的学习。 makefile syntax这里有一个看起来很不错的学习网站，会简单的讲解一些make的基本语法，观感上是很不错的tutorial. tcl...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/DFT-from-zero/" title="从零开始的DFT工程师！"><img class="cover" src="/img/cover/DFT-FROM-ZERO-cover.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-16</div><div class="info-item-2">从零开始的DFT工程师！</div></div><div class="info-2"><div class="info-item-1">为什么要开始这个系列开始做这个系列其实还是想要多学一点东西，感觉自己会的还是太少了，完全没有一个正常水平的数字集成电路应届毕业生的水平。而且其实差不多从大三上学期开始后我就状态低迷了一整年 现在的想法是这样的：这个学期选了自然辩证法（前八周）和集成电路前沿讲座（后八周），都是我们学校研究生的课，先多学一点，这样可以省下研一上学期的一点时间，然后多做点东西；尽早招老师开个题，毕设最好是前八周学学基础知识然后就开始做，寒假做完，在大四下学期找找实习，如果能找到的话就出去实习一个学期，找不到的话就选新中特和半导体器件这些课，给研究生在多一点时间，总体来说就是想多学一点。 我的计划是？我计划面向实习为主，希望实习可以找一个自己喜欢的方向去做，目前觉得比较想去的就是AI处理器验证，DFT DV Engineer这个方向（其实是因为好找实习），然后也多学一些GPU图形化驱动方面的coding. AI 处理器验证和DFT DV Engineer AI 处理器验证：主要负责验证功能是否正确，保证在tapeout前没有设计缺陷。  芯片验证主流的方法学是UVM（Universal...</div></div></div></a><a class="pagination-related" href="/DFT-from-zero-synopsys-install/" title="从零开始的DFT工程师！ 特别篇：synopsys 安装"><img class="cover" src="/img/cover/DFT-FROM-ZERO-cover.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-24</div><div class="info-item-2">从零开始的DFT工程师！ 特别篇：synopsys 安装</div></div><div class="info-2"><div class="info-item-1">这里是EDA工具安装特别篇，来进行一个synopsys verdi 和 VCS的安装记录。网上关于synopsys的安装教程其实也不少了，我这里就简单记录一下我在安装过程中遇到的问题。 参考安装步骤：https://zhenhuizhang.tk/post/icsynopsys-xi-lie-ruan-jian-an-zhuang/ step 1 : archlinux我首先想到的是在archlinux上安装，这个系统算是我最熟悉用的也最习惯的一个了，hyprland配置的也不错（无用的知识增加了） 但是实话说问题是很多的，包括但不限于对synopsys的某些32位文件的运行失败，安装vcsmx失败等等，总之算是很难做出来，尤其是似乎synopsys遇到非远古lib的时候很容易出错，正所谓学习知识和使用舒心养眼的现代化工具不可兼得（逃） 这里有时间再去试试能不能解决这些问题，不过现在还是先去进行下一步了。 step2 : almalinuxfamiliar with...</div></div></div></a><a class="pagination-related" href="/DFT-from-zero-special/" title="从零开始的DFT工程师！ 特别篇"><img class="cover" src="/img/cover/DFT-FROM-ZERO-cover.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">从零开始的DFT工程师！ 特别篇</div></div><div class="info-2"><div class="info-item-1">这里是一项补充内容，我让AI看了一下之前写的计划，然后让他提了一些意见，也许会有用。展示如下：  从零开始的DFT工程师！ homepageproject homepage is here. </div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week2/" title="从零开始的DFT工程师！ week2"><img class="cover" src="/img/cover/DFT-FROM-ZERO-cover.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-28</div><div class="info-item-2">从零开始的DFT工程师！ week2</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第二期。 本期主要进行自动化脚本的学习。 到底选择什么语言完成自动化脚本呢？这是一个很重要的问题，一个工程团队能够完成统一风格的代码编写和流畅的上下游合作可比多招一两个天才重要多了。 根据暑期实习的经历来说（大雾），硬件工程师常用的是makefile和python + tcl，软件工程师常用的是cmake. makefile在仿真脚本，回归测试以及小项目的编译流程中被大量使用，比如可以用来编译RTL，运行仿真器，收集log，然后生成报告，虽然比较复杂，但是这也是验证岗的基本要求了。 cmake较多在C++软件方向被用的较多，硬件flow里很少见。 python + tcl就主打一个灵活，写回归测试比较方便。 我们这里就优先完成makefile和python + tcl的学习。 makefile syntax这里有一个看起来很不错的学习网站，会简单的讲解一些make的基本语法，观感上是很不错的tutorial. tcl...</div></div></div></a><a class="pagination-related" href="/DFT-from-zero-week1/" title="从零开始的DFT工程师！ week1"><img class="cover" src="/img/cover/DFT-FROM-ZERO-cover.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-21</div><div class="info-item-2">从零开始的DFT工程师！ week1</div></div><div class="info-2"><div class="info-item-1">欢迎来到从零开始的DFT工程师第一期。 本期主要进行verilog和systemverilog的相关软件安装和基本语法复习。 verilog关于运行verilog的软件选择很多，这里选择使用vivado和iverilog+gtkwave. vivado的安装我之前写过，具体是在archlinux（当时的linux内核版本未记录）上进行vivado2024.2版本的安装，详情可见此处，但是由于此后相关库版本更新，需要自行创立软连接来补全相应的库（下载旧版本的库首先需要进行版本管理，这本身就是比较复杂的事，况且很多更新都是更新了实现，接口没有变化）。 我们用一下例子做一个简单的介绍：  这里我们发现vivado提示说找不到libtinfo.so.5, 我们已经有的是libtinfo.so.6,去下载一个新的不仅占地方，有些时候还会导致引用模糊相互冲突，这里可以用一个取巧的办法，也就是给libtinfo.so.6 创建一个名为libtinfo.so.5的副本，并指向libtinfo.so.6，如下操作： 123sudo ln -s /usr/lib/libtinfo.so.6...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">90</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#install-CUDA"><span class="toc-number">1.</span> <span class="toc-text">install CUDA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#install-Nsight-tools"><span class="toc-number">2.</span> <span class="toc-text">install Nsight tools</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week7/" title="从零开始的DFT工程师！ week7"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week7"/></a><div class="content"><a class="title" href="/DFT-from-zero-week7/" title="从零开始的DFT工程师！ week7">从零开始的DFT工程师！ week7</a><time datetime="2025-09-30T16:00:00.000Z" title="Created 2025-10-01 00:00:00">2025-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week2/" title="从零开始的DFT工程师！ week2"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week2"/></a><div class="content"><a class="title" href="/DFT-from-zero-week2/" title="从零开始的DFT工程师！ week2">从零开始的DFT工程师！ week2</a><time datetime="2025-09-27T16:00:00.000Z" title="Created 2025-09-28 00:00:00">2025-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-synopsys-install/" title="从零开始的DFT工程师！ 特别篇：synopsys 安装"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ 特别篇：synopsys 安装"/></a><div class="content"><a class="title" href="/DFT-from-zero-synopsys-install/" title="从零开始的DFT工程师！ 特别篇：synopsys 安装">从零开始的DFT工程师！ 特别篇：synopsys 安装</a><time datetime="2025-09-23T16:00:00.000Z" title="Created 2025-09-24 00:00:00">2025-09-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-week1/" title="从零开始的DFT工程师！ week1"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！ week1"/></a><div class="content"><a class="title" href="/DFT-from-zero-week1/" title="从零开始的DFT工程师！ week1">从零开始的DFT工程师！ week1</a><time datetime="2025-09-20T16:00:00.000Z" title="Created 2025-09-21 00:00:00">2025-09-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/my-journey-of-master2/" title="my journey of master 2"><img src="/img/cover/my-journey-of-master-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my journey of master 2"/></a><div class="content"><a class="title" href="/my-journey-of-master2/" title="my journey of master 2">my journey of master 2</a><time datetime="2025-09-18T16:00:00.000Z" title="Created 2025-09-19 00:00:00">2025-09-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
