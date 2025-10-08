@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2025-10-04T17:45:16.600Z</updated>
+  <updated>2025-10-08T16:09:13.431Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GPU Programming and Architecture</title>
+    <link href="https://invoker-pray.github.io/GPU_Programming_and_Archtecture/"/>
+    <id>https://invoker-pray.github.io/GPU_Programming_and_Archtecture/</id>
+    <published>2025-10-07T16:00:00.000Z</published>
+    <updated>2025-10-08T16:09:13.431Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是blog搬运之后的不务正业系列第一期。在写隔壁的<em>从零开始的DFT工程师！</em> week7的时候感觉被文档折磨了。我一直觉得很多tutorial不是他写的质量差，而是他在讲很多内容的同时没有给我足够的时间实际操作一下这个具体是什么意思，有很多概念的堆砌，就我个人的角度来说我很难接受只是看这样的文档进行学习，感觉能让人学下去的文档必须是真的把我当傻子一样一步一步教的。我感觉我比较适合跟着一个目标做然后边做边学（<del>最好是有能跑的源码给我壮胆</del>）</p><p>于是关于CUDA和GPU编程的部分我选择直接跳车找课程和可学习的源码，于是我找到了<a href="https://cis5650-fall-2024.github.io/">这个</a>。这个是宾大的一个计算机课程，具体应该是让学生亲自做一做GPU编程，渲染，光追之类的，感觉会是很有意义的样子，于是选择垂直入坑了。</p><h1 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h1><p>官网上写的关于这个课程的知识先决条件是图形学和渲染的知识，我确实学过我们学校的计算机图形学，但是很遗憾的是这门课开设在大三上学期，是我课程压力最大的一段时间，确实是没有学明白，实验很多也是赶着做完的，不过还好官网上有一些快速（？）上手，来帮助理解课程的相关知识。课程主页上给的主要是光追和webgpu，webgpu这个我选择用到的时候再去学（逃），现在先看一看光追。</p><h2 id="ray-tracing-in-one-weekend"><a href="#ray-tracing-in-one-weekend" class="headerlink" title="ray tracing : in one weekend"></a>ray tracing : in one weekend</h2><h2 id="ray-tracing-the-next-weekend"><a href="#ray-tracing-the-next-weekend" class="headerlink" title="ray tracing : the next weekend"></a>ray tracing : the next weekend</h2><h2 id="ray-tracing-the-rest-of-yourlife"><a href="#ray-tracing-the-rest-of-yourlife" class="headerlink" title="ray tracing : the rest of yourlife"></a>ray tracing : the rest of yourlife</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里是blog搬运之后的不务正业系列第一期。在写隔壁的&lt;em&gt;从零开始的DFT工程师！&lt;/em&gt; week7的时候感觉被文档折磨了。我一直觉得很多tutorial不是他写的质量差，而是他在讲很多内容的同时没有给我足够的时间实际操作一下这个具体是什么意思，有很多概念的堆砌，就</summary>
+      
+    
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
+    
+    
+    <category term="GPU Programming and Architecture" scheme="https://invoker-pray.github.io/tags/GPU-Programming-and-Architecture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>occupations</title>
+    <link href="https://invoker-pray.github.io/occupations-homepage/"/>
+    <id>https://invoker-pray.github.io/occupations-homepage/</id>
+    <published>2025-10-07T16:00:00.000Z</published>
+    <updated>2025-10-08T12:11:47.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。</p><table><thead><tr><th>content</th><th>links</th></tr></thead><tbody><tr><td>GPU Programming and Architecture</td><td><a href="/GPU_Programming_and_Archtecture/">click</a></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。&lt;/p&gt;
+&lt;tab</summary>
+      
+    
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/tags/occupations/"/>
+    
+  </entry>
   
   <entry>
     <title>我的那个夏天结束了</title>
@@ -456,63 +505,6 @@
       
       
     <summary type="html">&lt;p&gt;create IP core is an important step during PYNQ’s dev, but vivado does not have the board model by default(at least in the version of viv</summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="PYNQ" scheme="https://invoker-pray.github.io/tags/PYNQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>life reflection 9</title>
-    <link href="https://invoker-pray.github.io/life-reflection9/"/>
-    <id>https://invoker-pray.github.io/life-reflection9/</id>
-    <published>2025-08-27T16:00:00.000Z</published>
-    <updated>2025-09-20T15:10:44.924Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="欢迎来到保研几近结束的后日谈（提前后日谈）"><a href="#欢迎来到保研几近结束的后日谈（提前后日谈）" class="headerlink" title="欢迎来到保研几近结束的后日谈（提前后日谈）"></a>欢迎来到保研几近结束的后日谈（提前后日谈）</h1><p>现在是2025年8月28日晚，现在的情况是9.1完成综测材料提交，9.9书院把德育成绩给书院；9.8开学，然后是把挑战杯加分的事情搞完，估计9月中旬会出保研名单公示，然后就全部都结束了。</p><p>也是终于走到这一步了，大约十几天以后就是开奖的时刻。</p><p><img src="/img/life-reflection/life-reflection-2025-8-28-1.jpg" alt="被提前的时间线" title="被提前的时间线"></p><p><em>看今年的情况是时间线被提前了，9.15截止上报推免名单的话，我们又是9.8开学，那就是说开学一周内必然贴出保研公示名单</em></p><p>今年我这德育分也是烂完了，啥也没干，学科比赛，集体活动，任职，文体比赛奖项啥也没有，如果没有什么优秀团支部加分啥的就是70分干上去了，我只能说班会抵集体活动救我。</p><p>加智育分数的也就是挑战杯那个了，已经跟队长说这个事了，队长说是要跟老师说一声，估计9月可以让我们去签字，这个能加几分我也确实不清楚，我只能说能加分就是赢，加1分我都很高兴了，不过如果按A类国家级来说的话好像可以加2？这个到时候看吧，只要能加分我直接谢天谢地。</p><p><img src="/img/life-reflection/life-reflection-2025-8-28-2.jpg" alt="能加就是赢" title="能加就是赢"></p><p>关于我们保研政策的事请，其实还没个准话，上次有同学问的时候说让我们去问问学部的田老师，但是我们也一直没去问，9月再说吧，希望能给我们多安排几个名额，毕竟我们第一届总得安排的好一点吧，况且这一年半来说课业压力也确实是很大，大二下学期的期末考试实现了15天考10门课且没有复习周的壮举，大三上学期也是30学分专业课让我痛苦万分，最极限的是平时我一点没学的计组只通宵一晚就第二天早八考了，一点没看作业实验全copy的网络也是1.1日复习一天第二天考，我全部没有挂科的时候我感觉我真是个天才（）</p><p><strong><em>电信学部微电子学院你可不能辜负你的第一届荣誉班级的同学们啊</em></strong></p><h1 id="最后结果和去向"><a href="#最后结果和去向" class="headerlink" title="最后结果和去向"></a>最后结果和去向</h1><p>这才是痛苦的开始。经过从今年4月到现在的所有痛苦与折磨之后，最后的结果是我得到了0个offer，之间搞过的计所和清华都失败了。虽然现在已经没有什么作用了，但是我还是想总结一下原因，用来警示后人，以资来者。</p><p>关于计所和清华面试失败的原因，我感觉首先最主要的问题，还是项目少。正像之前电话里老师说的，主要看中的还是电路方面的成果，其他什么比赛，数模，美赛，电赛什么的几乎只有加分来更稳定的获得保研结果的用途。微电子&#x2F;集成电路的老师（指数字方向）几乎只会看电路成果，比如说加速器，FPGA加速，计算矩阵计算优化加速等等，毕竟老师招研究生是来干活的，有这些方面的结果比如说论文期刊啥的是巨大的加分项，现在想来我有一个项目或许还有点机会，如果和我参加同一个实验室面试的人拿这方面的结果（哪怕只有一个，质量也不算很高的项目）来和我竞争的话那我必然是没有任何机会的，因为老师可以从他身上看到干活的能力，从我这里看不到。在参加过面试后才发现课内的东西几乎就不怎么问，只会问一问项目相关的东西看看有没有干活的经历和“能干活”的品质在你身上。<br>关于这个问题怎么解决，就拿微电子&#x2F;集成电路数字方向的项目来说，在大三下学期之前，你没有学完数字逻辑和数字cmos设计，想参与相关项目几乎是不可能的；但是如果大三下学期再去找老师要项目的话，数字方向大多数老师都会觉得，本科生嘛，做个加法器减法器没啥意思，做比较大的项目本科生又做不了，而且有什么结构优化也不是本科生能够做出来的，大概率也是要不到的。那么我认为导致这个问题的原因其实和上面是一样的，也就是老师没能从你身上看到“能干活”的特征。我认为一个可行的方案是，在大二自己买一块FPGA板子，我感觉我现在在用的PYNQ-Z2就很不错，然后自己学一些相关的东西，然后从github，fpga4fun等网站找一些有意思的项目跟着做一下，然后到大三以后把自己做出来的东西给老师看看，展示自己是有能力做东西的，然后可能就更好去要项目，甚至可能的话赶制一篇论文，这样在保研的过程中想必是很占优势的。</p><p>然后还有的问题就是英语要学好一点，我的英语属于是比较短的那一档，不过其实面试的时候英语的发挥感觉是（起码对于面试结果来讲）更重要一点，英语成绩能高就高一点，不行的话就把口语练的顺一点，起码这样还能让老师在面世的时候觉得英语不会很拉后腿。</p><h1 id="开启养生生活"><a href="#开启养生生活" class="headerlink" title="开启养生生活"></a>开启养生生活</h1><p>终于也是把新板子掏出来了，最近沉迷于创造IP核+上传overlay+PYNQ用python控制板子的快乐中，第一次发现原来python宇宙这么强大，时序检测，逻辑控制，程序编写都是可以用python完成的，感觉打开了新世界的大门。</p><p>头好痒，感觉要长脑子了。</p><p><a href="/files/mp4/life-reflection-2025-8-28-1.mp4" title="大四退化后的焦师傅会因为这种低级刺激而兴奋，已经变成草履虫了">大四退化后的焦师傅会因为这种低级刺激而兴奋，已经变成草履虫了</a></p><p>搓一搓IP核喵：<br><img src="/img/life-reflection/life-reflection-2025-8-28-3.png" alt="搓一搓IP核喵" title="搓一搓IP核喵"></p><p>生成的overlay传上去用python实现PYNQ控制喵：<br><img src="/img/life-reflection/life-reflection-2025-8-28-4.png" alt="bit"><br>相关链接：</p><p><a href="/mnist-cnn/">mnist cnn</a><br><a href="/SNN-simulator/">SNN simulator</a><br><a href="/PYNQ-start/">PYNQ start</a></p><p>现在我只能一边玩这个小板子，一边等挑战杯加分，一边等保研名单公示，一边等复旦的面试通知了，总感觉保外似乎已经没什么指望了，啥项目都没有，悲（）<br><del>其实我还会因为能不能保研而悲伤焦虑</del></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;欢迎来到保研几近结束的后日谈（提前后日谈）&quot;&gt;&lt;a href=&quot;#欢迎来到保研几近结束的后日谈（提前后日谈）&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到保研几近结束的后日谈（提前后日谈）&quot;&gt;&lt;/a&gt;欢迎来到保研几近结束的后日谈（提前后日谈）&lt;/</summary>
-      
-    
-    
-    
-    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
-    
-    
-    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>start FPGA project from PYNQ</title>
-    <link href="https://invoker-pray.github.io/PYNQ-start/"/>
-    <id>https://invoker-pray.github.io/PYNQ-start/</id>
-    <published>2025-08-24T16:00:00.000Z</published>
-    <updated>2025-09-20T15:40:53.382Z</updated>
-    
-    <content type="html"><![CDATA[<table><thead><tr><th>content</th><th>portal</th></tr></thead><tbody><tr><td>PYNQ getting started</td><td><a href="https://www.pynq.io/">AMD’s PYNQ.io</a></td></tr><tr><td>PYNQ tutorial</td><td><a href="https://github.com/Xilinx/PYNQ_Workshop">PYNQ tutorial</a></td></tr><tr><td>create IP core</td><td><a href="/PYNQ-create-IP-core/">how to create IP core</a></td></tr></tbody></table><p><strong><em>and there is my study record</em></strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;content&lt;/th&gt;
-&lt;th&gt;portal&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;PYNQ getting started&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.pynq</summary>
       
     
     
