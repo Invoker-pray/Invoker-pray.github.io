@@ -269,13 +269,13 @@
   </entry>
   
   <entry>
-    <title>GALA Engine</title>
+    <title>GAFA Engine</title>
     <link href="https://invoker-pray.github.io/GALA%20Engine/"/>
     <id>https://invoker-pray.github.io/GALA%20Engine/</id>
     <published>2025-09-17T16:00:00.000Z</published>
-    <updated>2025-09-20T14:26:38.078Z</updated>
+    <updated>2025-10-10T05:25:29.268Z</updated>
     
-    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目。</p>]]></content>
+    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目具体内容，此处先写一下关于开发板的上手和实际使用。</p><h1 id="device-prepare"><a href="#device-prepare" class="headerlink" title="device prepare"></a>device prepare</h1><p>本次项目使用<code>AMD Kria KV260 G</code>，作为主体开发板，另外还需要准备的是：一张SD卡，一个usb读卡器，一个micro-usb数据线（用作串口通信），一根网线，一个路由器，一个12V3A电源适配器，一根入户网线。</p><h1 id="image-flash"><a href="#image-flash" class="headerlink" title="image flash"></a>image flash</h1><p>由于在使用官方提供的ubuntu 24.04 LTS镜像时遇到一些问题，这里选择烧录ubuntu22.04版本的镜像，可以在<a href="https://ubuntu.com/download/amd#kria-k26">此处下载</a>。下载完成后，使用<code>xz -d &lt;image.img.xz&gt;</code>完成解压，之后使用balenaether将镜像文件烧录到SD卡中。</p>]]></content>
     
     
       
