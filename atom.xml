@@ -273,9 +273,9 @@
     <link href="https://invoker-pray.github.io/GALA%20Engine/"/>
     <id>https://invoker-pray.github.io/GALA%20Engine/</id>
     <published>2025-09-17T16:00:00.000Z</published>
-    <updated>2025-10-10T05:25:29.268Z</updated>
+    <updated>2025-10-10T05:58:38.293Z</updated>
     
-    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目具体内容，此处先写一下关于开发板的上手和实际使用。</p><h1 id="device-prepare"><a href="#device-prepare" class="headerlink" title="device prepare"></a>device prepare</h1><p>本次项目使用<code>AMD Kria KV260 G</code>，作为主体开发板，另外还需要准备的是：一张SD卡，一个usb读卡器，一个micro-usb数据线（用作串口通信），一根网线，一个路由器，一个12V3A电源适配器，一根入户网线。</p><h1 id="image-flash"><a href="#image-flash" class="headerlink" title="image flash"></a>image flash</h1><p>由于在使用官方提供的ubuntu 24.04 LTS镜像时遇到一些问题，这里选择烧录ubuntu22.04版本的镜像，可以在<a href="https://ubuntu.com/download/amd#kria-k26">此处下载</a>。下载完成后，使用<code>xz -d &lt;image.img.xz&gt;</code>完成解压，之后使用balenaether将镜像文件烧录到SD卡中。</p>]]></content>
+    <content type="html"><![CDATA[<p>这里是尝试进行FPGA项目的第二期，虽然很想实时分享进度，但是由于本次项目是作为作品参与某比赛的，所以此处先给出github链接，暂时闭源，待比赛结束后会进行开源。</p><p>比赛结束后，大家可以点击<a href="https://github.com/Invoker-pray/LunaAccel">此处(尚未公开)</a>来查看本期项目具体内容，此处先写一下关于开发板的上手和实际使用。</p><h1 id="device-prepare"><a href="#device-prepare" class="headerlink" title="device prepare"></a>device prepare</h1><p>本次项目使用<code>AMD Kria KV260 G</code>，作为主体开发板，另外还需要准备的是：一张SD卡，一个usb读卡器，一个micro-usb数据线（用作串口通信），一根网线，一个路由器，一个12V3A电源适配器，一根入户网线。</p><h1 id="image-flash"><a href="#image-flash" class="headerlink" title="image flash"></a>image flash</h1><p>由于在使用官方提供的ubuntu 24.04 LTS镜像时遇到一些问题，这里选择烧录ubuntu22.04版本的镜像，可以在<a href="https://ubuntu.com/download/amd#kria-k26">此处下载</a>。下载完成后，使用<code>xz -d &lt;image.img.xz&gt;</code>完成解压，之后使用balenaether将镜像文件烧录到SD卡中。但是要注意的是在烧录完成后，我们还不能够直接从SD卡启动ubuntu 22.04 LTS（2025.10亲测）。原因是我们还需要进行kria kv260的firmware update， 我们可以从kria som的<a href="https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+SOMs+Starter+Kits#K26-Boot-Firmware-Updates">wiki</a>上找到我们需要的boot firmware update下载链接，这会是一个<code>.bin</code>文件。</p><p>就可以把SD卡插入kv260的卡槽，之后就可以接入micro-usb线和电源。kv260没有开关，因此上电之后会自动启动。</p><p>在启动之前，我们最好预先打开串口通信。</p>]]></content>
     
     
       
