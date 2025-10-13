@@ -248,9 +248,9 @@
     <link href="https://invoker-pray.github.io/my-journey-of-master2/"/>
     <id>https://invoker-pray.github.io/my-journey-of-master2/</id>
     <published>2025-09-18T16:00:00.000Z</published>
-    <updated>2025-10-09T13:56:14.006Z</updated>
+    <updated>2025-10-13T15:26:27.843Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="为什么这么快又更新了呢"><a href="#为什么这么快又更新了呢" class="headerlink" title="为什么这么快又更新了呢"></a>为什么这么快又更新了呢</h1><p>老师昨天说是我们毕设开题是要等到12月，但是今天上午跟我说，现在有两个题目，一个是为NPU适配不同的网络，同时可以学一些NPU设计方法，比较偏嵌入式方向，另一个是做存算，实现在FPGA上的SoC，让我挑一个做，我选了存算的项目，这个是一个无锡市政府的合作项目，年底验收，之后让师兄带着做，然后毕设也可以接着做这个。</p><p>按师兄的说法是现在先学一学搭建m3<br>SoC的方法，目前先找了2个资料，第一个是b站的视频，<a href="https://www.bilibili.com/video/BV1q14y197iL/?spm_id_from=333.337.search-card.all.click&vd_source=3642c10c04a514030cb5c5c876f3350d">【移知公开课】手把手教你搭建基于Cortex-M3的专用SoC</a>，另一个是一个github项目，<a href="https://github.com/WalkerLau/DetectHumanFaces">基于 ARM Cortex-M3 处理器与 FPGA 的实时人脸检测 SOC</a>.</p><p>那么也就是可以开工学习了，这也算是正式在工程上接触存算了，希望这会是有趣的一次经历。</p><p>关于Cortex-M3 的学习将会在<a href="/Cortex-M3-FPGA-1/">此处</a>持续更新。</p><h1 id="10月9日项目设计"><a href="#10月9日项目设计" class="headerlink" title="10月9日项目设计"></a>10月9日项目设计</h1><p>很遗憾的是今天在和同学一起捣鼓kria kv260G这块板子，来为比赛做一个硬件平台准备，做到7点半，然后将近八点的时候去北门拿美团买的12V3A电源适配器的时候突然看到手机说建了个群要讲项目设计，只能拜托同学帮我听然后等等安排了，说是这个之后应该有学长带我们来。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="为什么这么快又更新了呢"><a href="#为什么这么快又更新了呢" class="headerlink" title="为什么这么快又更新了呢"></a>为什么这么快又更新了呢</h1><p>老师昨天说是我们毕设开题是要等到12月，但是今天上午跟我说，现在有两个题目，一个是为NPU适配不同的网络，同时可以学一些NPU设计方法，比较偏嵌入式方向，另一个是做存算，实现在FPGA上的SoC，让我挑一个做，我选了存算的项目，这个是一个无锡市政府的合作项目，年底验收，之后让师兄带着做，然后毕设也可以接着做这个。</p><p>按师兄的说法是现在先学一学搭建m3 SoC的方法，那么也就是可以开工学习了，这也算是正式接触存算了，希望这会是有趣的一次经历。</p><p>关于Cortex-M3 的学习将会在<a href="/Cortex-M3-FPGA-1/">此处</a>持续更新。</p><h1 id="10月9日项目设计"><a href="#10月9日项目设计" class="headerlink" title="10月9日项目设计"></a>10月9日项目设计</h1><p>很遗憾的是今天在和同学一起捣鼓kria kv260G这块板子，来为比赛做一个硬件平台准备，做到7点半，然后将近八点的时候去北门拿美团买的12V3A电源适配器的时候突然看到手机说建了个群要讲项目设计，只能拜托同学帮我听然后等等安排了，说是这个之后应该有学长带我们来。</p>]]></content>
     
     
       
