@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2025-11-28T13:46:17.680Z</updated>
+  <updated>2025-12-22T02:59:01.152Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从零开始的DFT工程师！ 特别篇：远程连接</title>
+    <link href="https://invoker-pray.github.io/DFT-from-zero-server/"/>
+    <id>https://invoker-pray.github.io/DFT-from-zero-server/</id>
+    <published>2025-12-21T16:00:00.000Z</published>
+    <updated>2025-12-22T02:59:01.152Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是特别篇第三期，会主要实现虚拟机的远程访问，需求来自于和同学分享相关软件。</p><h1 id="首先是环境说明"><a href="#首先是环境说明" class="headerlink" title="首先是环境说明"></a>首先是环境说明</h1><p>这里本地虚拟机装载到Virtualbox软件中，虚拟机OS为CentOS，内核版本为3.10.0-1160.119.1.el7.x86_64，通过XRDP实现的windows-&gt;Linuv GUI的连接。</p><h1 id="网络模式"><a href="#网络模式" class="headerlink" title="网络模式"></a>网络模式</h1><p>值得注意的是，网络模式是可能踩到的第一个坑，在NAT模式下，(我这里是)网络模式是只出不进的，也就是可以在虚拟机内部联网下载东西，但是从外部网络无法访问到虚拟机，需要改用Bridged Adapter，选择自己联网的方式(enpxx-&gt;网卡接口，wlp-&gt;wifi)，然后promiscuous mode选择全部，就完成了从外部到虚拟机的访问。</p><h1 id="XRDP和桌面环境"><a href="#XRDP和桌面环境" class="headerlink" title="XRDP和桌面环境"></a>XRDP和桌面环境</h1><p>首先需要安装XRDP:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum install xrdp -y</span><br></pre></td></tr></table></figure><p>一般都有桌面系统的，如果没有的话可以补充下载，gnome&#x2F;mate都可以。</p><p>然后设置xrdp自动启动:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> xrdp</span><br></pre></td></tr></table></figure><p>给同学创建好用户:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> useradd stu</span><br><span class="line"><span class="built_in">sudo</span> passwd stu</span><br></pre></td></tr></table></figure><p>之后进入其目录之后创建桌面启动文件:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">cd</span> /home/stu</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;gnome-session&quot;</span> &gt; .Xclients</span><br><span class="line"><span class="built_in">chmod</span> +x .Xclients</span><br></pre></td></tr></table></figure><p>另外，需要使用软件要进行环境配置，不做赘述。</p><h2 id="可能存在的一些问题"><a href="#可能存在的一些问题" class="headerlink" title="可能存在的一些问题"></a>可能存在的一些问题</h2><ol><li>如果<code>/etc/X11/Xwrapper.config</code>文件不存在，则手动创建即可，内容如下:</li></ol><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">allowed_users</span>=anybody</span><br><span class="line"><span class="attr">needs_root_rights</span>=<span class="literal">no</span></span><br></pre></td></tr></table></figure><ol start="2"><li>防火墙问题</li></ol><p>可以选择放行端口：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=114514/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --reload</span><br></pre></td></tr></table></figure><p>其实作为虚拟机也可以直接全关了（误）:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> setenforce 0 <span class="comment">#临时关闭</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> sed -i <span class="string">&#x27;s/SELINUX=enforcing/SELINUX=permissive/&#x27;</span> /etc/selinux/config <span class="comment">#永久修改(最好不要)</span></span><br></pre></td></tr></table></figure><h1 id="开始连接"><a href="#开始连接" class="headerlink" title="开始连接"></a>开始连接</h1><p>在虚拟机上面显示IP:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname -I</span><br></pre></td></tr></table></figure><p>在windows上通过<code>win+R</code>输入<code>mstsc</code>，填写远程地址为<code>显示的IP:端口</code>，登录即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里是特别篇第三期，会主要实现虚拟机的远程访问，需求来自于和同学分享相关软件。&lt;/p&gt;
+&lt;h1 id=&quot;首先是环境说明&quot;&gt;&lt;a href=&quot;#首先是环境说明&quot; class=&quot;headerlink&quot; title=&quot;首先是环境说明&quot;&gt;&lt;/a&gt;首先是环境说明&lt;/h1&gt;&lt;p&gt;这里本</summary>
+      
+    
+    
+    
+    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
+    
+    
+    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>life reflection 13</title>
+    <link href="https://invoker-pray.github.io/life-reflection13/"/>
+    <id>https://invoker-pray.github.io/life-reflection13/</id>
+    <published>2025-12-02T16:00:00.000Z</published>
+    <updated>2025-12-02T15:31:01.525Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><em>好久不见。</em></strong></p><h1 id="现在是2025年12月12日晚上11点"><a href="#现在是2025年12月12日晚上11点" class="headerlink" title="现在是2025年12月12日晚上11点"></a>现在是2025年12月12日晚上11点</h1><p>得有两个月没写了。</p><p>我只能说确实是享受了两个月保研结束的快乐。这个学期前八周只有四节课，后八周只有一节网上远程课，中间有一个6-14周的实验。本来以为中间会有考试的，结果是三个课有两个都在期末考，一个是做ppt写论文汇报结束，直接就中间一个巨大空档期没有琐事，也是享受了两个月睡到自然醒下床打游戏的生活。</p><p>不过感觉得差不多开始做点事情了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;好久不见。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;现在是2025年12月12日晚上11点&quot;&gt;&lt;a href=&quot;#现在是2025年12月12日晚上11点&quot; class=&quot;headerlink&quot; title=&quot;现在是2025年12月12日晚</summary>
+      
+    
+    
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
+    
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
+    
+  </entry>
   
   <entry>
     <title>从零开始的DFT工程师！ 特别篇：systemverilog</title>
@@ -464,56 +514,6 @@
     
     
     <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>life reflection 10</title>
-    <link href="https://invoker-pray.github.io/life-reflection10/"/>
-    <id>https://invoker-pray.github.io/life-reflection10/</id>
-    <published>2025-09-07T16:00:00.000Z</published>
-    <updated>2025-09-20T15:12:34.975Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="欢迎哥几个回来看我的小破网站"><a href="#欢迎哥几个回来看我的小破网站" class="headerlink" title="欢迎哥几个回来看我的小破网站"></a>欢迎哥几个回来看我的小破网站</h1><p>现在是2025年9月8日晚上22点22分，也是开学第一天。</p><p>大四秋季学期，也算是一个大学生活比较重要的节点了，不过重要不在于我需要去做什么，更在于看看这三年来我得到了什么，四年的本科生活也即将落下帷幕了。</p><p><strong><em>现在正是清算之时</em></strong></p><h1 id="开学！"><a href="#开学！" class="headerlink" title="开学！"></a>开学！</h1><p>也算是本科倒数第二次开学了，虽然这次没什么实感，可能是因为7月8月大部分时间我其实还在学校吧。也算是出去找了找学上，但是当然是不出意外的失败了。当然这个不是什么大事，毕竟是意料之中，真让人绷不住的其实是二进宫回来以后家让偷了，当然这个我会单独一期出来讲的，篇幅估计会比较长，主要是过分精彩且尚未完结，以后一定会有的（逃）。</p><p>这次我觉得就从8月底开始讲起吧。当我回到学校以后也是不出意外的摆烂一个星期，我其实不好说是不是因为没学上的问题，可能也是因为有点累。于是在8月22号，我正式决定干一些事情，这样好调调状态。在那几天也是自己找了一些项目与资料，学习了PYNQ的一些基本知识，还有简单的加速例程，不过要说的分布式集群计算和识别分类，还有存内计算的FPGA模拟也是被搁置了。其实也是开了个头做了一点，不过有些难度做的慢，而且之后进入9月以后我又开始因为推免的事情烦恼，所以也没什么心情去做那些东西了。</p><p>9月1号到今天为止，其实一直都在因为保研名单的事情而四处赛博（当然也有物理）奔走，各处询问套话，其间反转不断，金句频出，可谓步步玄机，我也一定会抽个时间把整个事件写清楚的。</p><p>9月8号，也就是今天，开学第一天，西交小明重新复活，我也是把新学期的课表整出来了（虽然我可以直接看本科教务但是还是小明方便很多了），前8周课表：</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-1.jpg" alt="前八周课表"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-2.jpg" alt="后八周课表"></p><p>除此以外还有一个6-14周的计算机系统综合设计实验，当然合理猜测是因为西一楼在翻新装修导致的拖到了第6周，我总记得去年是第1周就安排了，因为同学跨选告诉我的时候我记得选课还没关。附装修的西一楼：</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-3.jpg" alt="装修的西一楼1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-4.jpg" alt="装修的西一楼2"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-5.jpg" alt="装修的西一楼3"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-6.jpg" alt="装修的西一楼4"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-7.jpg" alt="装修的西二楼1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-8.jpg" alt="装修的西二楼2"></p><p>另：其实最后两张是装修的西二楼。</p><p>除此以外就是项目设计了，这个东西似乎就是一个毕设的开题，当然现在就不用这个重视这个了，等通知再说。（<del>你保研不出来我咋知道我跟谁做啊</del>）</p><p>从剩余学分来说，这下子我的大学生活真的已经到最最末期了。</p><h1 id="一些生活"><a href="#一些生活" class="headerlink" title="一些生活"></a>一些生活</h1><p>这里的话因为上一周发生的事比较多比较乱而且精力也都在推免上面了，所以按时间来说真的过于混乱了，就随便挑几个写一写。</p><h2 id="西电南校区-未来之瞳"><a href="#西电南校区-未来之瞳" class="headerlink" title="西电南校区 + 未来之瞳"></a>西电南校区 + 未来之瞳</h2><p>此时发生于9月7号，舍友在小红书上看了相关的推文，正好也有西电的同学所以就决定开学前出去走走，当然我也是因为保研政策一直不出而急急急，当时只想着快点过完最后一天，所以也就出去走走。</p><p>先附未来之瞳：</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-9.jpg" alt="未来之瞳1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-10.jpg" alt="未来之瞳2"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-11.jpg" alt="未来之瞳3"></p><p>算是一个公园，有一个不大不小的小湖，旁边有大剧院啥的，不过很多还没修好。</p><p>过街以后是一个小商业区，有一个面包店，叫小丫的面包，一楼卖面包，二楼是一个休息的地方，当然也可以吃面包（误）</p><p><del>当时楼上有个屏幕在放哪吒</del></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-12.jpg" alt="网红面包店1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-13.jpg" alt="网红面包店2"></p><p>之后也是在同学的同学的帮助下进入了西电南校区，没刷身份证没预约啥的直接就进去了，好评（）</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-14.jpg" alt="西电南校区"></p><p>也是在人家食堂吃了一碗羊杂面，上次吃还是在上次，消费12.5元：</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-15.jpg" alt="吃上饭了兄弟们" title="豪吃"></p><p>最后当天正好是西电开专业宣讲会，也是混入其中跟新生说我也是自动化的（笑）</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-16.jpg" alt="混入其中"></p><h2 id="雨中兴庆宫"><a href="#雨中兴庆宫" class="headerlink" title="雨中兴庆宫"></a>雨中兴庆宫</h2><p>发生于9月2日，当时同学来和我一起线下双抓教务，学院和学部老师，不过被在装修的西一楼和紧闭的办公室门拒绝了，于是来都来了不能白来，也就去对面兴庆宫转了一下，也是互相倒倒苦水，并同时对并未落实的优待政策而开骂。</p><p><em>鞋子给我都干湿了</em></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-17.jpg" alt="雨中兴庆宫1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-18.jpg" alt="雨中兴庆宫2"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-19.jpg" alt="雨中兴庆宫3"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-24.jpg" alt="雨中兴庆宫4"></p><h2 id="两次小酌"><a href="#两次小酌" class="headerlink" title="两次小酌"></a>两次小酌</h2><p>也是因为发愁而导致小酌频率变高了，9.2和9.4酌了两次，第一次小酌同学对我可能保不上研而震惊，同时我们也交流了一些信息和看法，总之两个人对形势的判断都是比较悲观的。第二次是去听了一个研究生支教团，这是你交搞得活动，是在今年提交材料并进行审核，然后给你推免资格，之后在大四结束后保留研究生入学资格，gap一年去支教。真gap一年的话支教其实算个好选择，体制内也算是基层经历了，不过要到时候拿到教资，也是一个gap换名额的活动。之后听完和兄弟去西南门一个东北菜馆吃饭，2个菜够2个人吃了，虽然上菜慢但是显然不是预制菜，还算不错。</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-20.jpg" alt="小酌1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-21.jpg" alt="小酌2"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-22.jpg" alt="小酌3"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-23.jpg" alt="小酌4"></p><h2 id="本月FGO"><a href="#本月FGO" class="headerlink" title="本月FGO"></a>本月FGO</h2><p>国服fgo也是开了奏章3的前篇和中篇，也是成功把主线推到中篇结束</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-26.jpg" alt="fgo1"></p><p><img src="/img/life-reflection/life-reflection-2025-9-8-25.jpg" alt="fgo2"></p><p>后篇会在9.10更新后开启，也是要把新剧情推完咯。</p><p>也是开了2.4的回忆关，不过咱就是说fgo2.4的回忆次数是不是有点明显比其他多了（）</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-27.jpg" alt="fgo3"></p><h2 id="后手"><a href="#后手" class="headerlink" title="后手"></a>后手</h2><p>也是在同学回学校之后入侵东八把考研资料get到手，感谢兄弟的资助。怎么说呢，直到现在我都不确定到底能不能保上研，不过先把东西拿到手上应该没错（嗯嗯）</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-28.jpg" alt="考研资料" title="感谢兄弟资助"></p><p><strong><em>如果下午出结果保不上研我直接一个启动</em></strong></p><h2 id="LOL大王"><a href="#LOL大王" class="headerlink" title="LOL大王"></a>LOL大王</h2><p>也是战斗之夜滚回来开皮肤了：</p><p><img src="/img/life-reflection/life-reflection-2025-9-8-29.jpg" alt="我是LOL大王"></p><h1 id="说回到现在"><a href="#说回到现在" class="headerlink" title="说回到现在"></a>说回到现在</h1><p>写到这里的时候已经是9月9日上午十点半了，刚刚看到仲英会12点把德育表交到教务处，那么想必今天下午也就是能够拿出排名和保研结果了。</p><p>到底是保研资格到手准备最后一推外校还是开始三个月速通数学英语政治模电数电可能就看今天下午的结果了，我现在先去睡一觉，下午可能出完结果直接爆更下一期。</p><p>就这样，加纳。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;欢迎哥几个回来看我的小破网站&quot;&gt;&lt;a href=&quot;#欢迎哥几个回来看我的小破网站&quot; class=&quot;headerlink&quot; title=&quot;欢迎哥几个回来看我的小破网站&quot;&gt;&lt;/a&gt;欢迎哥几个回来看我的小破网站&lt;/h1&gt;&lt;p&gt;现在是2025年9月8日晚上22点22分，也</summary>
-      
-    
-    
-    
-    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
-    
-    
-    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>my philosophic passages</title>
-    <link href="https://invoker-pray.github.io/philosophy-homepage/"/>
-    <id>https://invoker-pray.github.io/philosophy-homepage/</id>
-    <published>2025-09-06T16:00:00.000Z</published>
-    <updated>2025-09-30T16:15:17.553Z</updated>
-    
-    <content type="html"><![CDATA[<p>此处不定时收录一些人生小感想和小文章。</p><p>但是由于众所周知的原因，我在自由创作的文字工作方面生产效率算是很低下的，而且会因为事中或者事后不满意而迅速删除，或者是直接构思一下感觉是一坨就不写了，所以这个项目更新一定会极其不规律。</p><p><strong><em>PS:今晚要写的就这样子被暂时鸽掉了。</em></strong></p><ul><li><a href="/life-reflection12/">戒 急 用 忍</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;此处不定时收录一些人生小感想和小文章。&lt;/p&gt;
-&lt;p&gt;但是由于众所周知的原因，我在自由创作的文字工作方面生产效率算是很低下的，而且会因为事中或者事后不满意而迅速删除，或者是直接构思一下感觉是一坨就不写了，所以这个项目更新一定会极其不规律。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;e</summary>
-      
-    
-    
-    
-    <category term="philosophy" scheme="https://invoker-pray.github.io/categories/philosophy/"/>
-    
-    
-    <category term="philosophy" scheme="https://invoker-pray.github.io/tags/philosophy/"/>
     
   </entry>
   
