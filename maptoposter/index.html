@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>generate a beautiful map | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="toys and tools homepage这里推荐的是一个比较好玩的项目，是github上面的maptoposter，portal在这里 这个项目可以实现生成不同风格的城市地图。 首先是安装方式，作者提供了uv和python venv两种方式，我一直都是直接用rye的，没有直接且详细接触过uv，就按照pip+venv方式安装，直接运行pip install -r requirements.tx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="generate a beautiful map">
+<meta property="og:url" content="https://invoker-pray.github.io/maptoposter/index.html">
+<meta property="og:site_name" content="Jiao hongbao&#39;s Trash">
+<meta property="og:description" content="toys and tools homepage这里推荐的是一个比较好玩的项目，是github上面的maptoposter，portal在这里 这个项目可以实现生成不同风格的城市地图。 首先是安装方式，作者提供了uv和python venv两种方式，我一直都是直接用rye的，没有直接且详细接触过uv，就按照pip+venv方式安装，直接运行pip install -r requirements.tx">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://invoker-pray.github.io/img/cover/toysandtools-cover.jpg">
+<meta property="article:published_time" content="2026-02-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-02-25T16:36:39.197Z">
+<meta property="article:author" content="Jiao hongbao">
+<meta property="article:tag" content="toys&amp;tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invoker-pray.github.io/img/cover/toysandtools-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "generate a beautiful map",
+  "url": "https://invoker-pray.github.io/maptoposter/",
+  "image": "https://invoker-pray.github.io/img/cover/toysandtools-cover.jpg",
+  "datePublished": "2026-02-24T16:00:00.000Z",
+  "dateModified": "2026-02-25T16:36:39.197Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiao hongbao",
+      "url": "https://invoker-pray.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/maptoposter/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'generate a beautiful map',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">102</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/toysandtools-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">generate a beautiful map</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">generate a beautiful map</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-02-24T16:00:00.000Z" title="Created 2026-02-25 00:00:00">2026-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-02-25T16:36:39.197Z" title="Updated 2026-02-26 00:36:39">2026-02-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/toys-tools/">toys&amp;tools</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="toys-and-tools-homepage"><a href="#toys-and-tools-homepage" class="headerlink" title="toys and tools homepage"></a>toys and tools homepage</h1><p>这里推荐的是一个比较好玩的项目，是github上面的<code>maptoposter</code>，portal在<a target="_blank" rel="noopener" href="https://github.com/originalankur/maptoposter?tab=readme-ov-file">这里</a></p>
+<p>这个项目可以实现生成不同风格的城市地图。</p>
+<p>首先是安装方式，作者提供了uv和python venv两种方式，我一直都是直接用rye的，没有直接且详细接触过uv，就按照pip+venv方式安装，直接运行<code>pip install -r requirements.txt</code>.</p>
+<p>安装完需要的包之后就可以直接开始图片生成大法了，使用方法非常简单，<code>python create_map_poster.py --city &lt;city&gt; --country &lt;country&gt; [options]</code></p>
+<p>[options]这里可以指定主题，<code>-t</code>，这个项目主页展示了样例，现在来自己生成一张，比如说我想要世界第一城东京（2025年也是微弱优势战胜纽约了），就可以这样写：<code>python create_map_poster.py --city tokyo --country japan -t forest</code>，结果如下：</p>
+<p><img src="/img/t&t/maptoposter/tokyo-forest-terminal.png" alt="tokyo forest terminal"></p>
+<p><img src="/img/t&t/maptoposter/tokyo-forest.png" alt="tokyo forest"></p>
+<p>还有其他参数，比如自定义图片中心位置经纬度的参数<code>-lat</code>, <code>-long</code>, 强制修改图片上文字的<code>--country-label</code>, <code>-dc</code>, <code>-dC</code>, 设置图片显示半径的<code>-d</code>, 设置图片大小的<code>-W</code>, <code>-H</code>, 修改字体的<code>--font-family</code>.</p>
+<p>作者还给出了推荐的尺寸：</p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Resolution (px)</th>
+<th>Inches (-W &#x2F; -H)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Instagram Post</td>
+<td>1080 x 1080</td>
+<td>3.6 x 3.6</td>
+</tr>
+<tr>
+<td>Mobile Wallpaper</td>
+<td>1080 x 1920</td>
+<td>3.6 x 6.4</td>
+</tr>
+<tr>
+<td>HD Wallpaper</td>
+<td>1920 x 1080</td>
+<td>6.4 x 3.6</td>
+</tr>
+<tr>
+<td>4K Wallpaper</td>
+<td>3840 x 2160</td>
+<td>12.8 x 7.2</td>
+</tr>
+<tr>
+<td>A4 Print</td>
+<td>2480 x 3508</td>
+<td>8.3 x 11.7</td>
+</tr>
+</tbody></table>
+<p>还有一些推荐用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Japanese</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Tokyo&quot;</span> -C <span class="string">&quot;Japan&quot;</span> -dc <span class="string">&quot;東京&quot;</span> -dC <span class="string">&quot;日本&quot;</span> --font-family <span class="string">&quot;Noto Sans JP&quot;</span> -t japanese_ink</span><br><span class="line"></span><br><span class="line"><span class="comment"># Korean</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Seoul&quot;</span> -C <span class="string">&quot;South Korea&quot;</span> -dc <span class="string">&quot;서울&quot;</span> -dC <span class="string">&quot;대한민국&quot;</span> --font-family <span class="string">&quot;Noto Sans KR&quot;</span> -t midnight_blue</span><br><span class="line"></span><br><span class="line"><span class="comment"># Thai</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Bangkok&quot;</span> -C <span class="string">&quot;Thailand&quot;</span> -dc <span class="string">&quot;กรุงเทพมหานคร&quot;</span> -dC <span class="string">&quot;ประเทศไทย&quot;</span> --font-family <span class="string">&quot;Noto Sans Thai&quot;</span> -t sunset</span><br><span class="line"></span><br><span class="line"><span class="comment"># Arabic</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Dubai&quot;</span> -C <span class="string">&quot;UAE&quot;</span> -dc <span class="string">&quot;دبي&quot;</span> -dC <span class="string">&quot;الإمارات&quot;</span> --font-family <span class="string">&quot;Cairo&quot;</span> -t terracotta</span><br><span class="line"></span><br><span class="line"><span class="comment"># Chinese (Simplified)</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Beijing&quot;</span> -C <span class="string">&quot;China&quot;</span> -dc <span class="string">&quot;北京&quot;</span> -dC <span class="string">&quot;中国&quot;</span> --font-family <span class="string">&quot;Noto Sans SC&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Khmer</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Phnom Penh&quot;</span> -C <span class="string">&quot;Cambodia&quot;</span> -dc <span class="string">&quot;ភ្នំពេញ&quot;</span> -dC <span class="string">&quot;កម្ពុជា&quot;</span> --font-family <span class="string">&quot;Noto Sans Khmer&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Iconic grid patterns</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;New York&quot;</span> -C <span class="string">&quot;USA&quot;</span> -t noir -d 12000           <span class="comment"># Manhattan grid</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Barcelona&quot;</span> -C <span class="string">&quot;Spain&quot;</span> -t warm_beige -d 8000   <span class="comment"># Eixample district</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Waterfront &amp; canals</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Venice&quot;</span> -C <span class="string">&quot;Italy&quot;</span> -t blueprint -d 4000       <span class="comment"># Canal network</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Amsterdam&quot;</span> -C <span class="string">&quot;Netherlands&quot;</span> -t ocean -d 6000  <span class="comment"># Concentric canals</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Dubai&quot;</span> -C <span class="string">&quot;UAE&quot;</span> -t midnight_blue -d 15000     <span class="comment"># Palm &amp; coastline</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Radial patterns</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Paris&quot;</span> -C <span class="string">&quot;France&quot;</span> -t pastel_dream -d 10000   <span class="comment"># Haussmann boulevards</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Moscow&quot;</span> -C <span class="string">&quot;Russia&quot;</span> -t noir -d 12000          <span class="comment"># Ring roads</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Organic old cities</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Tokyo&quot;</span> -C <span class="string">&quot;Japan&quot;</span> -t japanese_ink -d 15000    <span class="comment"># Dense organic streets</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Marrakech&quot;</span> -C <span class="string">&quot;Morocco&quot;</span> -t terracotta -d 5000 <span class="comment"># Medina maze</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Rome&quot;</span> -C <span class="string">&quot;Italy&quot;</span> -t warm_beige -d 8000        <span class="comment"># Ancient layout</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Coastal cities</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;San Francisco&quot;</span> -C <span class="string">&quot;USA&quot;</span> -t sunset -d 10000    <span class="comment"># Peninsula grid</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Sydney&quot;</span> -C <span class="string">&quot;Australia&quot;</span> -t ocean -d 12000      <span class="comment"># Harbor city</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Mumbai&quot;</span> -C <span class="string">&quot;India&quot;</span> -t contrast_zones -d 18000 <span class="comment"># Coastal peninsula</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># River cities</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;London&quot;</span> -C <span class="string">&quot;UK&quot;</span> -t noir -d 15000              <span class="comment"># Thames curves</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Budapest&quot;</span> -C <span class="string">&quot;Hungary&quot;</span> -t copper_patina -d 8000  <span class="comment"># Danube split</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Override center coordinates</span></span><br><span class="line">python create_map_poster.py --city <span class="string">&quot;New York&quot;</span> --country <span class="string">&quot;USA&quot;</span> -lat 40.776676 -long -73.971321 -t noir</span><br><span class="line"></span><br><span class="line"><span class="comment"># List available themes</span></span><br><span class="line">python create_map_poster.py --list-themes</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate posters for every theme</span></span><br><span class="line">python create_map_poster.py -c <span class="string">&quot;Tokyo&quot;</span> -C <span class="string">&quot;Japan&quot;</span> --all-themes</span><br></pre></td></tr></table></figure>
+
+<p>半径建议：4000-6000m用于小城市，8000-12000m用于中等城市，15000-20000m用于大城市。</p>
+<p>同时内置的主题可以在<code>themes</code>下查看。</p>
+<p>总之是一个很有意思的小工具，可以用来制作漂亮的地图，我也做了几个。</p>
+<p><img src="/img/t&t/maptoposter/shanghai.png" alt="shanghai"></p>
+<p><img src="/img/t&t/maptoposter/tokyo-copper_patina.png" alt="tokyo copper_patina"></p>
+<p>toys and tools homepage is <a href="/toys-and-tools-homepage/">here</a>.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/maptoposter/">https://invoker-pray.github.io/maptoposter/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/toys-tools/">toys&amp;tools</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/toysandtools-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/life-reflection10/" title="life reflection 15"><img class="cover" src="/img/cover/life-reflection-homepage.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">life reflection 15</div></div><div class="info-2"><div class="info-item-1">过完年回学校了今年过年实在是太迟了，在家里憋了将近40天，过年后也没多久就来学校了，今天是2026年2月25日，农历初九，基本就算过年结束吧（其实前几年也没有在家过上元宵）。 过年期间其实也没干啥，除夕到初二在家里吃饭，亲戚也没啥可走的，初三到初五在姥姥家（我们那讲姥姥是外婆）住，初六回去。今年过年感觉过于平淡了，就和网上说的刘德华都解冻失败了一样，没什么感触。 向各位老大汇报首先是在阳泉刮了个彩票：  之后是在姥姥家拍的星空，是因为前几天山西放炮放的云都炸没了，所以夜晚天空是比较清晰的，正好有冬天才能看见的猎户座，于是就用原相机和星空相机拍了几张： 蓝调(?)：  星空相机：  还有十一点多拍的：  希望可以今年可以实现的写下愿望单，希望今年可以实现。  首先是顺利做完毕设然后毕业； 然后是今年可以找一个春招实习混一混实习经验，有米赚就更好了； 如果赚到米了一定要好好出去玩，有点想去日本看烟火大会（如果WoH电影今年上半年出的话我直接冲冲冲！）； 要和hxd好好玩。 什么时候有对象啊  </div></div></div></a><a class="pagination-related" href="/toys-and-tools-homepage/" title="toys and tools"><img class="cover" src="/img/cover/toysandtools-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">toys and tools</div></div><div class="info-2"><div class="info-item-1">之前在需要用b站一些资源的时候写过一篇这个： bilibili audio and video download 其实就有过想法写一个好玩的小工具汇总，不过一直没有提上日程。这里也是来写一个汇总主页。  bilibili audio and video download  generate a beautiful map   </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/bili-download/" title="bilibili audio and video download"><img class="cover" src="/img/cover/bili-download.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">bilibili audio and video download</div></div><div class="info-2"><div class="info-item-1">一个有趣的小工具。 感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。 yt-dlp这是一个支持b站的命令行工具，可以提取音频和视频，获取方式很简单，只需要: 12pip install yt-dlp  使用方式也很简单: 1234567891011121314# download videoyt-dlp &quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;# audio# -f ba : best audio# -x extract audio# --audio-format mp3 : trans to mp3# --audio-quality 0 : best qualityyt-dlp -f ba --audio-format mp3 --audio-quality 0 ...</div></div></div></a><a class="pagination-related" href="/toys-and-tools-homepage/" title="toys and tools"><img class="cover" src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">toys and tools</div></div><div class="info-2"><div class="info-item-1">之前在需要用b站一些资源的时候写过一篇这个： bilibili audio and video download 其实就有过想法写一个好玩的小工具汇总，不过一直没有提上日程。这里也是来写一个汇总主页。  bilibili audio and video download  generate a beautiful map   </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">102</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#toys-and-tools-homepage"><span class="toc-number">1.</span> <span class="toc-text">toys and tools homepage</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/life-reflection10/" title="life reflection 15"><img src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 15"/></a><div class="content"><a class="title" href="/life-reflection10/" title="life reflection 15">life reflection 15</a><time datetime="2026-02-24T16:00:00.000Z" title="Created 2026-02-25 00:00:00">2026-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/maptoposter/" title="generate a beautiful map"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="generate a beautiful map"/></a><div class="content"><a class="title" href="/maptoposter/" title="generate a beautiful map">generate a beautiful map</a><time datetime="2026-02-24T16:00:00.000Z" title="Created 2026-02-25 00:00:00">2026-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/toys-and-tools-homepage/" title="toys and tools"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="toys and tools"/></a><div class="content"><a class="title" href="/toys-and-tools-homepage/" title="toys and tools">toys and tools</a><time datetime="2026-02-24T16:00:00.000Z" title="Created 2026-02-25 00:00:00">2026-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection14/" title="life reflection 14"><img src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 14"/></a><div class="content"><a class="title" href="/life-reflection14/" title="life reflection 14">life reflection 14</a><time datetime="2026-02-13T16:00:00.000Z" title="Created 2026-02-14 00:00:00">2026-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/CIM/" title="CIM"><img src="/img/cover/CIM-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CIM"/></a><div class="content"><a class="title" href="/CIM/" title="CIM">CIM</a><time datetime="2026-02-05T16:00:00.000Z" title="Created 2026-02-06 00:00:00">2026-02-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
