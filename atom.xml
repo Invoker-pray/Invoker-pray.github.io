@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2026-03-10T16:27:43.513Z</updated>
+  <updated>2026-03-13T15:46:45.292Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>life reflection 16</title>
+    <link href="https://invoker-pray.github.io/life-reflection16/"/>
+    <id>https://invoker-pray.github.io/life-reflection16/</id>
+    <published>2026-03-12T16:00:00.000Z</published>
+    <updated>2026-03-13T15:46:45.292Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是2026年3月13日晚上，在西一楼428.</p><h1 id="首先要谈的是这个项目设计"><a href="#首先要谈的是这个项目设计" class="headerlink" title="首先要谈的是这个项目设计"></a>首先要谈的是这个项目设计</h1><p>这是很让人无语的一集。具体来说就是，我们专业有一个2学分的项目设计，其实就是类似小毕设，只要做出来一个小玩具即可，这个我印象里面是去年9月就选过题目，之后也是一直没啥消息，我和hxd也是该干嘛干嘛。寒假我也是快乐摆烂+随心所欲UVM学习，没有对毕设和项目设计上什么心。</p><p>啊但是，就在开学第一周周三下午，我突然接到小道消息说项目设计答辩要在第二周进行，紧接着第二天在学院大群里面就开始发通知，让我们填写答辩时间和地点选择，我直接就是一个巨大的问号。我原来以为就我们是被突然袭击了，可是在问了几个人（经典身边统计学）之后发现其实好多人也都是一点没动。</p><p><img src="/img/life-reflection/life-reflection-2026-3-13-1.png" alt="为什么没有提前通知" title="为什么没有提前通知我喵！"></p><p>但是我又不能不做。众所周知，我是个软蛋，于是我一怒之下就怒了一下，遂开始被项目设计痛苦折磨了6天时间，终于写出了一个可以上板实际演示的版本（虽然还有一个小bug）.</p><h1 id="感受时代的巨变"><a href="#感受时代的巨变" class="headerlink" title="感受时代的巨变"></a>感受时代的巨变</h1><p>不得不说，AI真的是太好用了。chatgpt5.4-Thinking帮我讲解存算计算流程，思考存算模型实现方式，Claude帮我检查并修复代码中的bug，gemini-3.1画出答辩所需svg图片，在这三尊大佛的慈悲济世之下，短短6天时间，（由于两位同学需要优先考研复试，导致这个项目除了报告和PPT答辩，这个项目设计几乎100%是我solo完成的）我硬是从完全不理解cim是什么，到完成cim逻辑的计算，克服上板过程中出现的困难，最终实现了一个可以通过demostration的版本。</p><p><strong><em>中间被卡住的部分包括但不限于：完全不了解第一步我要做什么；由于第一次接触完全不了解存算的计算逻辑；无法想像CIM的datapath导致第一步设计完全无法迈出；写完发现input_buffer被重复实例化；仿真完全没问题但是一上板就错；一开始写的全都是适用于仿真但是不利好上板的代码风格导致全部文件第一次推翻重来（指milestone中的hw&#x2F;hw_A）；没有USB-TTL设备来观察输出（此时我已经发现代码是有问题的，测了半天发现无法真正显示结果）导致有一天是在等待USB-TTL快递送到；得到USB-TTL之后发现串口输出全是0（此时距离今日演示和验收仅剩一天半）；最后查看vivado.log发现VCS和vivado读取文件逻辑不同导致文件没有成功读取到；修复完这个问题之后，发现我的16GB电脑无法完成synth&#x2F;impl于是转移到同学的32GB电脑；synth过程中发现居然粗略算起来需要将近400多分钟才能完成synth更遑论impl；居然是因为之前写的是大数组导致本来应该综合成BRAM的部分全变成了lut，导致lut超标500倍（此时距离今日演示验收仅剩一天）；万般无奈之下选择重写mem所有文件，同时调整其上层所有文件的接口结构，并且重新对所有文件进行仿真测试（第二次被推翻重写）；最后发现即便文件读取已经写成了BRAM，zynq 7020依旧无法实现最初的784-&gt;128-&gt;10，最后不得不缩小模型为784-&gt;16-&gt;10，同时降低并行度，成功跑出模型（第三次被推翻重写）；但是结果完全不对（此时距离今日验收仅剩一晚），最后发现问题所在，我的一个python脚本拼接逻辑是错的，最后完成了mnist模型在FPGA上的CIM计算成功部署。（虽然还是有小bug）</em></strong></p><p>这个存算项目的代码可以在<a href="https://github.com/Invoker-pray/MNIST-CIM-FPGA">这里</a>获取（这个小项目居然在第六天的时候有人fork，感谢大佬）。</p><p>另外还有一个值得研究的点，就是答辩老师指出，即便是写的正确的CIM代码，也无法保证vivado优化之后还是CIM逻辑，虽然可以通过修改tcl实现不进行优化，但是这个本身还是值得之后再思考的。</p><p>虽然使用了不少AI，但是项目本身已经不算小了，再加上对CIM未知的摸索，这个项目vivado上板出现的很多第一次接触但是很影响项目的bug，单人处理较多文件的记忆压力，还有3.13需要答辩和演示的时间压力，总之感觉能做来也确实挺奇迹的，尽管结果是依托，但是考虑到个人水平和起点，也算是一次不错的项目设计尝试。<del>可千万别有下次了</del></p><p>最后到西南门东北菜馆完成检查点结算（饿了，需要跑一趟兴庆来回创新港，并没有拍照）。</p><p><em>除了FPGA_A_mini其他的README.md谨慎查看，因为是AI写的。</em></p><p>在赶项目设计进度的这几天，也算更深切的感受到AI工具的强大了。在寒假的时候我还尝鲜装过一次openclaw+telegram，可以实现类似一个AI助手在我的电脑前待命，我只需要通过tg和bot发送指令，他就可以自动在我的电脑上（有些时候通过接入的其他AI）完成我想让它做的操作。</p><p>时代进步的还是太快了。回想起2025年，发布了一个什么书，我记得是政策要求之后加大AI在社会综合工作的比重，预计2035年让AI全面进入社会参与工作。我国政策和春晚的导向还是有一定思考价值的，毕竟政策风口应该是实打实的。之前春晚的地产，互联网，也都是一个接一个的火（尽管现在这两个是不如以前了）。近两年春晚，给我一种央视全仓宇树科技的感觉，先在这里立一个小小的flag，这次应该也是AI+robot起飞的标志，当然如果不对就当我没说好了。</p><p>23年的时候，当时可能还是gpt2.x，当时我还觉得AI就是吹出来的，没什么实际作用，而且当时的AI真的跟20年以前的AI续写小故事差不太多，差距就是chatgpt写出来的200+字以上的文本还算有逻辑，以前的不行，所以当时，23年初-24年末，我的所有课程作业代码包括数据结构，CSAPP等还从来没有参考过AI.</p><p>但是25年的时候，我又用了一次，感觉AI真的不一样了。当时AI已经可以帮我完成比较长的代码不出错误，而到现在，它甚至可以帮我完成CIM这种小圈子领域，这在以前甚至是去年的我看来是不可想象的。当时我认为，AI现在对单个文件理解能力还算可以，但是文件架构一大还得是人类来思考和组织，但是现在我认为不是了。CIM我认为它横跨了四个互相关联但训练数据相对稀缺的子领域，CIM参考文献，较大规模的verilog&#x2F;systemverilog，FPGA验证，AI映射。这些知识还相对细碎，小坑众多，但是AI现在可以快速分析代码定位问题，性能已经很不错了。</p><p>可能在不久之后，AI会全面接管所有的coder（包括互联网程序员，数字逻辑设计和验证等），再过几年就是AI+robot接管社会生产也说不定，毕竟我国版本更新的速度我一向是认可的，2035年AI全面参与社会工作，那是辅助还是取代，我觉得真的不好说。</p><p><em>那么我们00后真是吃尽黑利了，卷生卷死一身病，近视体虚三高气短失眠多少沾几个，等长期高压和久坐沾一个多病沾两个短命。但是完成所有的痛苦学习之后进入社会，被告知你之前卷的都没有任何意义了，之后的人也不需要这样了，那我还真就大概率是吃尽苦难最后也无法融入新时代的人了。（当然如果这一天真的到来，我还是很高兴的，起码意味着人类之后会走向更幸福的生活，虽然极大概率这个人类不包括00&#x2F;10后）</em></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天是2026年3月13日晚上，在西一楼428.&lt;/p&gt;
+&lt;h1 id=&quot;首先要谈的是这个项目设计&quot;&gt;&lt;a href=&quot;#首先要谈的是这个项目设计&quot; class=&quot;headerlink&quot; title=&quot;首先要谈的是这个项目设计&quot;&gt;&lt;/a&gt;首先要谈的是这个项目设计&lt;/h1&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/categories/life-reflection/"/>
+    
+    
+    <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
+    
+  </entry>
   
   <entry>
     <title>Large Models From Here: My Non-Academic AI Knowledge Synthesis</title>
@@ -69,10 +94,10 @@
   
   <entry>
     <title>life reflection 15</title>
-    <link href="https://invoker-pray.github.io/life-reflection10/"/>
-    <id>https://invoker-pray.github.io/life-reflection10/</id>
+    <link href="https://invoker-pray.github.io/life-reflection15/"/>
+    <id>https://invoker-pray.github.io/life-reflection15/</id>
     <published>2026-02-24T16:00:00.000Z</published>
-    <updated>2026-02-25T16:03:18.985Z</updated>
+    <updated>2026-03-13T14:26:12.022Z</updated>
     
     <content type="html"><![CDATA[<h1 id="过完年回学校了"><a href="#过完年回学校了" class="headerlink" title="过完年回学校了"></a>过完年回学校了</h1><p>今年过年实在是太迟了，在家里憋了将近40天，过年后也没多久就来学校了，今天是2026年2月25日，农历初九，基本就算过年结束吧（<del>其实前几年也没有在家过上元宵</del>）。</p><p>过年期间其实也没干啥，除夕到初二在家里吃饭，亲戚也没啥可走的，初三到初五在姥姥家（我们那讲姥姥是外婆）住，初六回去。今年过年感觉过于平淡了，就和网上说的刘德华都解冻失败了一样，没什么感触。</p><h1 id="向各位老大汇报"><a href="#向各位老大汇报" class="headerlink" title="向各位老大汇报"></a>向各位老大汇报</h1><p>首先是在阳泉刮了个彩票：</p><p><img src="/img/life-reflection/life-reflection-2026-2-25-1.jpg" alt="ticket" title="啥也没中喵，生气喵"></p><p>之后是在姥姥家拍的星空，是因为前几天山西放炮放的云都炸没了，所以夜晚天空是比较清晰的，正好有冬天才能看见的猎户座，于是就用原相机和星空相机拍了几张：</p><p>蓝调(?)：</p><p><img src="/img/life-reflection/life-reflection-2026-2-25-2.jpg" alt="sky1"><br><img src="/img/life-reflection/life-reflection-2026-2-25-3.jpg" alt="sky2"></p><p>星空相机：</p><p><img src="/img/life-reflection/life-reflection-2026-2-25-4.jpg" alt="sky3"><br><img src="/img/life-reflection/life-reflection-2026-2-25-5.jpg" alt="sky4"></p><p>还有十一点多拍的：</p><p><img src="/img/life-reflection/life-reflection-2026-2-25-6.jpg" alt="sky5"><br><img src="/img/life-reflection/life-reflection-2026-2-25-7.jpg" alt="sky6"></p><h1 id="希望可以今年可以实现的"><a href="#希望可以今年可以实现的" class="headerlink" title="希望可以今年可以实现的"></a>希望可以今年可以实现的</h1><p><em>写下愿望单，希望今年可以实现。</em></p><ul><li>首先是顺利做完毕设然后毕业；</li><li>然后是今年可以找一个春招实习混一混实习经验，有米赚就更好了；</li><li>如果赚到米了一定要好好出去玩，有点想去日本看烟火大会（如果WoH电影今年上半年出的话我直接冲冲冲！）；</li><li>要和hxd好好玩。</li><li><del>什么时候有对象啊</del></li></ul>]]></content>
     
@@ -483,32 +508,6 @@
     
     
     <category term="life reflection" scheme="https://invoker-pray.github.io/tags/life-reflection/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始的DFT工程师！(2)</title>
-    <link href="https://invoker-pray.github.io/DFT-from-zero-week2/"/>
-    <id>https://invoker-pray.github.io/DFT-from-zero-week2/</id>
-    <published>2025-09-27T16:00:00.000Z</published>
-    <updated>2026-02-01T07:15:29.483Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到从零开始的DFT工程师第二期。</p><p>本期主要进行自动化脚本的学习。</p><h1 id="到底选择什么语言完成自动化脚本呢？"><a href="#到底选择什么语言完成自动化脚本呢？" class="headerlink" title="到底选择什么语言完成自动化脚本呢？"></a>到底选择什么语言完成自动化脚本呢？</h1><p>这是一个很重要的问题，一个工程团队能够完成统一风格的代码编写和流畅的上下游合作可比多招一两个天才重要多了。</p><p>根据暑期实习的经历来说（<del>大雾</del>），硬件工程师常用的是makefile和python + tcl，软件工程师常用的是cmake.</p><p>makefile在仿真脚本，回归测试以及小项目的编译流程中被大量使用，比如可以用来编译RTL，运行仿真器，收集log，然后生成报告，虽然比较复杂，但是这也是验证岗的基本要求了。</p><p>cmake较多在C++软件方向被用的较多，硬件flow里很少见。</p><p>python + tcl就主打一个灵活，写回归测试比较方便。</p><p>我们这里就优先完成makefile和python + tcl的学习。</p><h1 id="makefile-syntax"><a href="#makefile-syntax" class="headerlink" title="makefile syntax"></a>makefile syntax</h1><p>这里有一个看起来很不错的<a href="https://makefiletutorial.com/#getting-started">学习网站</a>，会简单的讲解一些make的基本语法，观感上是很不错的tutorial.</p><h1 id="tcl-syntax"><a href="#tcl-syntax" class="headerlink" title="tcl syntax"></a>tcl syntax</h1><p>关于tcl的资源没有makefile那么多（再次感叹一下网上公开cs资源数量之多），不过还是能够找到一些，<a href="https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0">这里</a>给出一个观感不错的网站。</p><h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><p>至于python，想必语法不是什么问题，只需要看一下常用库函数的用法感觉也就差不多够用了，这里就不多bb了。</p><h1 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h1><p>这是一个用于CI(continuous integration)和CD(continuous delivery)的工具，可以用来自动跑代码，编译，仿真并生成报告。</p><p>最简单的下载方式是：<code>docker pull jenkins/jenkins:jdk21</code></p><h1 id="从零开始的DFT工程师！-homepage"><a href="#从零开始的DFT工程师！-homepage" class="headerlink" title="从零开始的DFT工程师！ homepage"></a>从零开始的DFT工程师！ homepage</h1><p>project homepage is <a href="/DFT-from-zero/">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;欢迎来到从零开始的DFT工程师第二期。&lt;/p&gt;
-&lt;p&gt;本期主要进行自动化脚本的学习。&lt;/p&gt;
-&lt;h1 id=&quot;到底选择什么语言完成自动化脚本呢？&quot;&gt;&lt;a href=&quot;#到底选择什么语言完成自动化脚本呢？&quot; class=&quot;headerlink&quot; title=&quot;到底选择什么语言</summary>
-      
-    
-    
-    
-    <category term="circuit" scheme="https://invoker-pray.github.io/categories/circuit/"/>
-    
-    
-    <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
     
   </entry>
   
