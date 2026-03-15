@@ -119,127 +119,6 @@
   </entry>
   
   <entry>
-    <title>是时候来点大东西了</title>
-    <link href="https://invoker-pray.github.io/LMFH-llm-from-here/"/>
-    <id>https://invoker-pray.github.io/LMFH-llm-from-here/</id>
-    <published>2026-03-09T16:00:00.000Z</published>
-    <updated>2026-03-10T16:29:34.621Z</updated>
-    
-    <content type="html"><![CDATA[<ol start="5"><li>LLM From Here</li></ol><p>既然系列名已经是 Large Models From Here，这部分最好单独作为后半主线。</p><p>适合放：</p><p>LLM 基本概念够用解释</p><p>base &#x2F; instruct &#x2F; chat model 的区别</p><p>token &#x2F; context &#x2F; embedding &#x2F; RAG &#x2F; agent</p><p>什么问题该上大模型，什么问题不该</p><p>API vs open-source vs finetune</p><p>应用开发而不是“训练一个基础模型”</p><p>这部分要尽量保持“够用”，不要写成大而空的科普。</p><h1 id="Large-Models-From-Here-homepage"><a href="#Large-Models-From-Here-homepage" class="headerlink" title="Large Models From Here homepage"></a>Large Models From Here homepage</h1><p>click <a href="/LMFH/">here</a> to homepage.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;LLM From Here&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;既然系列名已经是 Large Models From Here，这部分最好单独作为后半主线。&lt;/p&gt;
-&lt;p&gt;适合放：&lt;/p&gt;
-&lt;p&gt;LLM 基本概念够用解释&lt;/p&gt;
-&lt;p&gt;base &amp;#</summary>
-      
-    
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/categories/LMFH/"/>
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/tags/LMFH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>灵魂三问之我要干嘛？</title>
-    <link href="https://invoker-pray.github.io/LMFH-for-task/"/>
-    <id>https://invoker-pray.github.io/LMFH-for-task/</id>
-    <published>2026-03-09T16:00:00.000Z</published>
-    <updated>2026-03-10T16:29:04.773Z</updated>
-    
-    <content type="html"><![CDATA[<ol start="3"><li>Task Guides</li></ol><p>这是“为了干活”的部分，应该是你站里最实用的部分。</p><p>按任务分页面，比如：</p><p>跑通一个分类任务</p><p>看懂一个论文 repo</p><p>改一个已有训练脚本</p><p>用 huggingface 模型做推理</p><p>做一个最小 RAG demo</p><p>快速评估一个大模型 API 是否够用</p><p>这部分最符合“应用主义”。</p><h1 id="Large-Models-From-Here-homepage"><a href="#Large-Models-From-Here-homepage" class="headerlink" title="Large Models From Here homepage"></a>Large Models From Here homepage</h1><p>click <a href="/LMFH/">here</a> to homepage.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;Task Guides&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这是“为了干活”的部分，应该是你站里最实用的部分。&lt;/p&gt;
-&lt;p&gt;按任务分页面，比如：&lt;/p&gt;
-&lt;p&gt;跑通一个分类任务&lt;/p&gt;
-&lt;p&gt;看懂一个论文 repo&lt;/p&gt;
-&lt;p&gt;改一个已有训练脚本</summary>
-      
-    
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/categories/LMFH/"/>
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/tags/LMFH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>偶尔需要一点前人的智慧</title>
-    <link href="https://invoker-pray.github.io/LMFH-pitfalls/"/>
-    <id>https://invoker-pray.github.io/LMFH-pitfalls/</id>
-    <published>2026-03-09T16:00:00.000Z</published>
-    <updated>2026-03-10T16:29:16.433Z</updated>
-    
-    <content type="html"><![CDATA[<ol start="4"><li>Pitfalls &#x2F; Debugging</li></ol><p>专门收集坑。</p><p>适合放：</p><p>我反复踩的 PyTorch 坑</p><p>CUDA &#x2F; 驱动 &#x2F; 环境地狱</p><p>loss 不降排查清单</p><p>训练跑崩排查清单</p><p>notebook 能跑脚本不能跑</p><p>别人 repo 在我机器上死掉的常见原因</p><p>这部分会非常有复用价值。</p><h1 id="Large-Models-From-Here-homepage"><a href="#Large-Models-From-Here-homepage" class="headerlink" title="Large Models From Here homepage"></a>Large Models From Here homepage</h1><p>click <a href="/LMFH/">here</a> to homepage.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;Pitfalls &amp;#x2F; Debugging&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;专门收集坑。&lt;/p&gt;
-&lt;p&gt;适合放：&lt;/p&gt;
-&lt;p&gt;我反复踩的 PyTorch 坑&lt;/p&gt;
-&lt;p&gt;CUDA &amp;#x2F; 驱动 &amp;#x2F; 环境地狱&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/categories/LMFH/"/>
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/tags/LMFH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我们要如何使用王之宝库？</title>
-    <link href="https://invoker-pray.github.io/LMFH-survival-kit/"/>
-    <id>https://invoker-pray.github.io/LMFH-survival-kit/</id>
-    <published>2026-03-09T16:00:00.000Z</published>
-    <updated>2026-03-10T16:28:49.469Z</updated>
-    
-    <content type="html"><![CDATA[<ol start="2"><li>PyTorch Survival Kit</li></ol><p>这个一定要单列，因为你自己已经明确它是反复痛苦来源。</p><p>适合放：</p><p>tensor &#x2F; module &#x2F; dataset &#x2F; dataloader 最小理解</p><p>训练循环最小模板</p><p>eval &#x2F; no_grad &#x2F; device &#x2F; checkpoint</p><p>shape、dtype、cuda 相关常见坑</p><p>一个最小可运行项目模板</p><p>注意名字不要太教材化，Survival Kit 很适合你的气质。</p><h1 id="Large-Models-From-Here-homepage"><a href="#Large-Models-From-Here-homepage" class="headerlink" title="Large Models From Here homepage"></a>Large Models From Here homepage</h1><p>click <a href="/LMFH/">here</a> to homepage.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;PyTorch Survival Kit&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这个一定要单列，因为你自己已经明确它是反复痛苦来源。&lt;/p&gt;
-&lt;p&gt;适合放：&lt;/p&gt;
-&lt;p&gt;tensor &amp;#x2F; module &amp;#x2F; dataset &amp;#x2</summary>
-      
-    
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/categories/LMFH/"/>
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/tags/LMFH/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始的DFT工程师！(5)</title>
     <link href="https://invoker-pray.github.io/DFT-from-zero-week5/"/>
     <id>https://invoker-pray.github.io/DFT-from-zero-week5/</id>
@@ -530,6 +409,105 @@
     
     
     <category term="DFT" scheme="https://invoker-pray.github.io/tags/DFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rust startup</title>
+    <link href="https://invoker-pray.github.io/rust-startup/"/>
+    <id>https://invoker-pray.github.io/rust-startup/</id>
+    <published>2025-10-17T16:00:00.000Z</published>
+    <updated>2025-10-18T12:42:40.048Z</updated>
+    
+    <content type="html"><![CDATA[<p>是时候开始一些新玩意了。rust我对他的印象是：<code>rust的编译器已经帮领导骂过我了</code>。（误）</p><p>rust应该是一个安全性高，性能可以做到接近cpp的语言，只是听说编译会比较慢，这里也是来试一下看看怎么个事。</p><h1 id="install"><a href="#install" class="headerlink" title="install"></a>install</h1><p>我这里是arch，所以可以通过：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S rust</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这会自动安装rustc，cargo，rustfmt等工具，也可以使用官方安装器：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> pacman -S rustup</span><br><span class="line"></span><br><span class="line">rustup default stable</span><br><span class="line"></span><br><span class="line"><span class="comment"># rustup update</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># rustup component add rustfmt clippy</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><del>然后给我的neovim配置一个自动语法风格整合也是很重要的（划掉）</del></p><p>这个对于已经装过<code>mason</code>的来说就很简单了，只需要打开nvim然后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">:MasonInstall rustfmt rust-analyzer</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>完成安装。如果没有自动添加路径就可以在rc文件里面添加：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$HOME</span>/.local/share/nvim/mason/bin:<span class="variable">$PATH</span>&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;是时候开始一些新玩意了。rust我对他的印象是：&lt;code&gt;rust的编译器已经帮领导骂过我了&lt;/code&gt;。（误）&lt;/p&gt;
+&lt;p&gt;rust应该是一个安全性高，性能可以做到接近cpp的语言，只是听说编译会比较慢，这里也是来试一下看看怎么个事。&lt;/p&gt;
+&lt;h1 id=&quot;ins</summary>
+      
+    
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
+    
+    
+    <category term="rust" scheme="https://invoker-pray.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>arch on mac</title>
+    <link href="https://invoker-pray.github.io/arch-on-mac-t2/"/>
+    <id>https://invoker-pray.github.io/arch-on-mac-t2/</id>
+    <published>2025-10-11T16:00:00.000Z</published>
+    <updated>2025-10-12T06:21:21.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于我的电脑键盘有几个键坏了，带出去的时候会很难用，所以这几天也是在白嫖同学的电脑来用（）。我这个硬盘在UEFI&amp;GPT的系统主板上可以正常启动，按道理来说已经完全可以够我在几乎所有的现代电脑启动了，但是最近却遭遇了在macbook上的启动失败。在macbook上的启动会有奇怪的问题，从mac启动时触控板和键盘是无法正常使用的，不过usb外接可以。虽然我很少会在mac上启动这个系统，但是存在这个问题确实会让我十分不爽。经过小小的研究之后发现，无法正常使用的原因是mac（尤其是前几年的版本和带有Touchbar的版本）使用了果子的安全T2芯片，mac自带的键盘，触控板，IO等都是通过这个T2控制的，一般的linux内核不会默认支持这个芯片，就会导致这个问题。</p><h1 id="添加-linux-t2-内核"><a href="#添加-linux-t2-内核" class="headerlink" title="添加 linux-t2 内核"></a>添加 linux-t2 内核</h1><p>想要解决这个问题应该不会很难，理论上最简单的方法就是安装一个支持T2芯片的内核就可以了。不过令人悲伤的是<code>pacman</code>和<code>yay</code>似乎没有t2内核的库，那么我们只好下载源码进行编译了。（有一种我在使用gentoo的感觉）</p><p>首先下载一个源码，我找的是<a href="https://github.com/NoaHimesaka1873/linux-t2-arch">这个</a>，t2linux 的补丁编译麻烦的步骤有点多，这个简单一点，完成<code>makepkg -si</code>以后就只需要<code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code>和<code>sudo mkinitcoip -P</code>就可以了。完成以后加载需要的模块：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> modprobe apple-bce</span><br><span class="line"><span class="built_in">sudo</span> modprobe apple-ib-t2-hid</span><br><span class="line"></span><br><span class="line"><span class="comment">#echo -e &quot;apple-bce\napple-ib-t2-hid&quot; | sudo tee /etc/modules-load.d/t2.conf</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>重启完成之后就可以检查是否成功：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">lsmod | grep apple</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>还可以添加风扇和音频支持：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/t2linux/t2fanrd.git</span><br><span class="line"><span class="built_in">cd</span> t2fanrd</span><br><span class="line">makepkg -si</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> --now t2fanrd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/t2linux/apple-t2-audio-config.git</span><br><span class="line"><span class="built_in">cd</span> apple-t2-audio-config</span><br><span class="line">makepkg -si</span><br></pre></td></tr></table></figure><p>此外还有一些可供参考的网站：</p><ul><li><a href="https://wiki.t2linux.org/distributions/arch/installation/?utm_source=chatgpt.com">t2linuxwiki</a></li></ul><h1 id="t2-ISO"><a href="#t2-ISO" class="headerlink" title="t2 ISO"></a>t2 ISO</h1><p>当然还有t2版本的ISO支持在安装系统的时候就完成内核安装，不过我很久没有用过archinstall了，听说是这个东西有修改过，不知道有没有官方提供可选的t2内核，不过我们其实可以查看这个官方的网站<a href="https://t2linux.org/">t2linux</a>.</p><h1 id="play-with-arch-homepage"><a href="#play-with-arch-homepage" class="headerlink" title="play with arch homepage"></a>play with arch homepage</h1><p>click <a href="/Play-with-arch-home-page/">here</a> to come back to <em>play with arch</em><br>homepage.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;由于我的电脑键盘有几个键坏了，带出去的时候会很难用，所以这几天也是在白嫖同学的电脑来用（）。我这个硬盘在UEFI&amp;amp;GPT的系统主板上可以正常启动，按道理来说已经完全可以够我在几乎所有的现代电脑启动了，但是最近却遭遇了在macbook上的启动失败。在macbook上的</summary>
+      
+    
+    
+    
+    <category term="from my notion space" scheme="https://invoker-pray.github.io/categories/from-my-notion-space/"/>
+    
+    
+    <category term="play with arch" scheme="https://invoker-pray.github.io/tags/play-with-arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GPU Programming and Architecture</title>
+    <link href="https://invoker-pray.github.io/GPU_Programming_and_Archtecture/"/>
+    <id>https://invoker-pray.github.io/GPU_Programming_and_Archtecture/</id>
+    <published>2025-10-07T16:00:00.000Z</published>
+    <updated>2025-10-11T16:40:04.357Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是blog搬运之后的不务正业系列第一期。在写隔壁的<em>从零开始的DFT工程师！</em> week7的时候感觉被文档折磨了。我一直觉得很多tutorial不是他写的质量差，而是他在讲很多内容的同时没有给我足够的时间实际操作一下这个具体是什么意思，有很多概念的堆砌，就我个人的角度来说我很难接受只是看这样的文档进行学习，感觉能让人学下去的文档必须是真的把我当傻子一样一步一步教的。我感觉我比较适合跟着一个目标做然后边做边学（<del>最好是有能跑的源码给我壮胆</del>）</p><p>于是关于CUDA和GPU编程的部分我选择直接跳车找课程和可学习的源码，于是我找到了<a href="https://cis5650-fall-2024.github.io/">这个</a>。这个是宾大的一个计算机课程，具体应该是让学生亲自做一做GPU编程，渲染，光追之类的，感觉会是很有意义的样子，于是选择垂直入坑了。</p><h1 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h1><p>官网上写的关于这个课程的知识先决条件是图形学和渲染的知识，我确实学过我们学校的计算机图形学，但是很遗憾的是这门课开设在大三上学期，是我课程压力最大的一段时间，确实是没有学明白，实验很多也是赶着做完的，不过还好官网上有一些快速（？）上手，来帮助理解课程的相关知识。课程主页上给的主要是光追和webgpu，webgpu这个我选择用到的时候再去学（逃），现在先看一看光追。</p><h2 id="ray-tracing-in-one-weekend"><a href="#ray-tracing-in-one-weekend" class="headerlink" title="ray tracing : in one weekend"></a>ray tracing : in one weekend</h2><p>对着敲了一遍，也是明白简单的光追原理了（<del>大概</del>）。<a href="/files/occupations/GPU_Programming_and_Archtecture/raytracer_inoneweekend.zip">这里是我对着教程敲出来的代码</a></p><p>另外我其实没有看github上面提供的源码，只看了提供的教程，教程中有些地方有些小小的错误：</p><p>listing 50: sqrt(p)<br>这里教程中写的是sqrt(p):<br><img src="/img/occupations/GPU_Programming_and_Archtecture/listing50.png" alt="listing50"><br>但是实际上根据之前写的代码应该是这样的：<br><img src="/img/occupations/GPU_Programming_and_Archtecture/correct-listing50.png" alt="correct-listing50"></p><p>也是成功跑出来几个图：</p><p><img src="/img/occupations/GPU_Programming_and_Archtecture/defocus_blur.png" alt="defocus blur"><br><img src="/img/occupations/GPU_Programming_and_Archtecture/final_render.png" alt="final render"></p><p><del><em>渲染这么一张图还挺久的，我最后渲染的是50采样点，感觉也得十来分钟，500采样点的估计得快一个小时。</em></del></p><p>cite: <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html"><em>Ray Tracing in One Weekend</em></a></p><h2 id="ray-tracing-the-next-weekend"><a href="#ray-tracing-the-next-weekend" class="headerlink" title="ray tracing : the next weekend"></a>ray tracing : the next weekend</h2><p>cite: <a href="https://raytracing.github.io/books/RayTracingTheNextWeek.html"><em>Ray Tracing: The Next Week</em></a></p><h2 id="ray-tracing-the-rest-of-yourlife"><a href="#ray-tracing-the-rest-of-yourlife" class="headerlink" title="ray tracing : the rest of yourlife"></a>ray tracing : the rest of yourlife</h2><p>cite: <a href="https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html"><em>Ray Tracing: The Rest of Your Life</em></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里是blog搬运之后的不务正业系列第一期。在写隔壁的&lt;em&gt;从零开始的DFT工程师！&lt;/em&gt; week7的时候感觉被文档折磨了。我一直觉得很多tutorial不是他写的质量差，而是他在讲很多内容的同时没有给我足够的时间实际操作一下这个具体是什么意思，有很多概念的堆砌，就</summary>
+      
+    
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
+    
+    
+    <category term="GPU Programming and Architecture" scheme="https://invoker-pray.github.io/tags/GPU-Programming-and-Architecture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>occupations</title>
+    <link href="https://invoker-pray.github.io/occupations-homepage/"/>
+    <id>https://invoker-pray.github.io/occupations-homepage/</id>
+    <published>2025-10-07T16:00:00.000Z</published>
+    <updated>2025-10-08T12:11:47.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。</p><table><thead><tr><th>content</th><th>links</th></tr></thead><tbody><tr><td>GPU Programming and Architecture</td><td><a href="/GPU_Programming_and_Archtecture/">click</a></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。&lt;/p&gt;
+&lt;tab</summary>
+      
+    
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/tags/occupations/"/>
     
   </entry>
   
