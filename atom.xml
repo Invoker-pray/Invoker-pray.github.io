@@ -94,35 +94,6 @@
   </entry>
   
   <entry>
-    <title>我们要如何使用王之宝库？</title>
-    <link href="https://invoker-pray.github.io/LMFH-survival-kit/"/>
-    <id>https://invoker-pray.github.io/LMFH-survival-kit/</id>
-    <published>2026-03-09T16:00:00.000Z</published>
-    <updated>2026-03-10T16:28:49.469Z</updated>
-    
-    <content type="html"><![CDATA[<ol start="2"><li>PyTorch Survival Kit</li></ol><p>这个一定要单列，因为你自己已经明确它是反复痛苦来源。</p><p>适合放：</p><p>tensor &#x2F; module &#x2F; dataset &#x2F; dataloader 最小理解</p><p>训练循环最小模板</p><p>eval &#x2F; no_grad &#x2F; device &#x2F; checkpoint</p><p>shape、dtype、cuda 相关常见坑</p><p>一个最小可运行项目模板</p><p>注意名字不要太教材化，Survival Kit 很适合你的气质。</p><h1 id="Large-Models-From-Here-homepage"><a href="#Large-Models-From-Here-homepage" class="headerlink" title="Large Models From Here homepage"></a>Large Models From Here homepage</h1><p>click <a href="/LMFH/">here</a> to homepage.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;PyTorch Survival Kit&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这个一定要单列，因为你自己已经明确它是反复痛苦来源。&lt;/p&gt;
-&lt;p&gt;适合放：&lt;/p&gt;
-&lt;p&gt;tensor &amp;#x2F; module &amp;#x2F; dataset &amp;#x2</summary>
-      
-    
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/categories/LMFH/"/>
-    
-    
-    <category term="LMFH" scheme="https://invoker-pray.github.io/tags/LMFH/"/>
-    
-  </entry>
-  
-  <entry>
     <title>你醒啦，手术很成功喵</title>
     <link href="https://invoker-pray.github.io/LMFH-re-entry/"/>
     <id>https://invoker-pray.github.io/LMFH-re-entry/</id>
@@ -512,6 +483,31 @@
     
     
     <category term="GPU Programming and Architecture" scheme="https://invoker-pray.github.io/tags/GPU-Programming-and-Architecture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>occupations</title>
+    <link href="https://invoker-pray.github.io/occupations-homepage/"/>
+    <id>https://invoker-pray.github.io/occupations-homepage/</id>
+    <published>2025-10-07T16:00:00.000Z</published>
+    <updated>2025-10-08T12:11:47.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。</p><table><thead><tr><th>content</th><th>links</th></tr></thead><tbody><tr><td>GPU Programming and Architecture</td><td><a href="/GPU_Programming_and_Archtecture/">click</a></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。&lt;/p&gt;
+&lt;tab</summary>
+      
+    
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
+    
+    
+    <category term="occupations" scheme="https://invoker-pray.github.io/tags/occupations/"/>
     
   </entry>
   
