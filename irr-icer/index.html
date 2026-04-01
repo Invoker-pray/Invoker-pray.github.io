@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>to become an irreplaceable icer! | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="从「DFT工程师」到「不可替代的IC人」：Blog重构计划 写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？答案：能做判断和决策的人，而不是翻译spec为代码的人。   一、现状盘点：我已经走到了哪里回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：    已完成 内容 属于哪个能力维度    Week 1 Verilog&#x2F;SV环境搭建 + 语法复">
+<meta property="og:type" content="article">
+<meta property="og:title" content="to become an irreplaceable icer!">
+<meta property="og:url" content="https://invoker-pray.github.io/irr-icer/index.html">
+<meta property="og:site_name" content="Jiao hongbao&#39;s Trash">
+<meta property="og:description" content="从「DFT工程师」到「不可替代的IC人」：Blog重构计划 写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？答案：能做判断和决策的人，而不是翻译spec为代码的人。   一、现状盘点：我已经走到了哪里回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：    已完成 内容 属于哪个能力维度    Week 1 Verilog&#x2F;SV环境搭建 + 语法复">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://invoker-pray.github.io/img/cover/irr-icer.jpg">
+<meta property="article:published_time" content="2026-03-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-01T11:37:36.526Z">
+<meta property="article:author" content="Jiao hongbao">
+<meta property="article:tag" content="irr-icer">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invoker-pray.github.io/img/cover/irr-icer.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "to become an irreplaceable icer!",
+  "url": "https://invoker-pray.github.io/irr-icer/",
+  "image": "https://invoker-pray.github.io/img/cover/irr-icer.jpg",
+  "datePublished": "2026-03-31T16:00:00.000Z",
+  "dateModified": "2026-04-01T11:37:36.526Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiao hongbao",
+      "url": "https://invoker-pray.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/irr-icer/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'to become an irreplaceable icer!',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/irr-icer.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">to become an irreplaceable icer!</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">to become an irreplaceable icer!</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-04-01T11:37:36.526Z" title="Updated 2026-04-01 19:37:36">2026-04-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/irr-icer/">irr-icer</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="从「DFT工程师」到「不可替代的IC人」：Blog重构计划"><a href="#从「DFT工程师」到「不可替代的IC人」：Blog重构计划" class="headerlink" title="从「DFT工程师」到「不可替代的IC人」：Blog重构计划"></a>从「DFT工程师」到「不可替代的IC人」：Blog重构计划</h1><blockquote>
+<p>写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？<br>答案：能做判断和决策的人，而不是翻译spec为代码的人。</p>
+</blockquote>
+<hr>
+<h2 id="一、现状盘点：我已经走到了哪里"><a href="#一、现状盘点：我已经走到了哪里" class="headerlink" title="一、现状盘点：我已经走到了哪里"></a>一、现状盘点：我已经走到了哪里</h2><p>回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：</p>
+<table>
+<thead>
+<tr>
+<th>已完成</th>
+<th>内容</th>
+<th>属于哪个能力维度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Week 1</td>
+<td>Verilog&#x2F;SV环境搭建 + 语法复习</td>
+<td>编码基础（会被AI替代的层）</td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td>Makefile&#x2F;Python&#x2F;TCL 自动化脚本</td>
+<td>工程效率（有价值但不稀缺）</td>
+</tr>
+<tr>
+<td>Week 3</td>
+<td>UVM环境搭建 + 第一个测试</td>
+<td>验证编码（会被AI替代的层）</td>
+</tr>
+<tr>
+<td>Week 4</td>
+<td>UVM进阶：callback&#x2F;TLM&#x2F;RAL</td>
+<td>验证编码 + 方法学入门</td>
+</tr>
+<tr>
+<td>Week 5</td>
+<td>SystemC基础</td>
+<td>软硬件协同的种子</td>
+</tr>
+<tr>
+<td>特别篇</td>
+<td>Synopsys安装&#x2F;Verdi&#x2F;远程连接&#x2F;SV语法</td>
+<td>工具使用</td>
+</tr>
+<tr>
+<td>课外</td>
+<td>GPU Programming(宾大课程+光追)</td>
+<td>体系结构的种子</td>
+</tr>
+<tr>
+<td>课外</td>
+<td>Chisel 入门</td>
+<td>硬件设计新范式</td>
+</tr>
+<tr>
+<td>在研</td>
+<td>CIM SoC (FPGA) &#x2F; RISC-V GPGPU</td>
+<td>实际项目经验</td>
+</tr>
+</tbody></table>
+<p><strong>诚实的评估</strong>：前5周主要在”编码基础”和”工具使用”层面，这些是必要的，但恰恰是AI最容易替代的部分。好消息是，你已经有了种子——SystemC是软硬件协同的入口，GPU编程是体系结构理解的入口，CIM项目是PPA直觉的入口。</p>
+<hr>
+<h2 id="二、四大能力支柱：重新定义学习目标"><a href="#二、四大能力支柱：重新定义学习目标" class="headerlink" title="二、四大能力支柱：重新定义学习目标"></a>二、四大能力支柱：重新定义学习目标</h2><p>以后的每一篇 blog，都应该能归入以下至少一个支柱：</p>
+<h3 id="支柱-A：体系结构深层理解"><a href="#支柱-A：体系结构深层理解" class="headerlink" title="支柱 A：体系结构深层理解"></a>支柱 A：体系结构深层理解</h3><blockquote>
+<p>不是背状态机，而是理解 <strong>为什么这样设计</strong></p>
+</blockquote>
+<p><strong>你的缺口</strong>：只学过计组，没学过体系结构。<br><strong>你的优势</strong>：正在做CIM SoC和RISC-V相关项目，学了CUDA，有硬件直觉。</p>
+<p><strong>具体要补的内容（按优先级）</strong>：</p>
+<ol>
+<li><p><strong>Memory Hierarchy 的 Why</strong></p>
+<ul>
+<li>为什么现代处理器cache层次是这样的？cache coherence到底在解决什么问题？</li>
+<li>从你的CIM项目出发：存算一体的本质就是在挑战传统memory hierarchy，你比别人更有切入点。</li>
+<li>推荐：CMU 18-447 &#x2F; ETH Design of Digital Circuits 的相关章节，不需要全看，按需查。</li>
+</ul>
+</li>
+<li><p><strong>并行架构的 Trade-off</strong></p>
+<ul>
+<li>SIMT vs SIMD vs Dataflow，为什么GPU选了SIMT？为什么AI加速器倾向Dataflow？</li>
+<li>从你的CUDA学习出发：写完kernel之后回过头理解warp scheduler的设计决策。</li>
+<li>推荐：读NVIDIA的GPU Architecture Whitepaper（Ampere&#x2F;Hopper），配合你写的CUDA kernel理解。</li>
+</ul>
+</li>
+<li><p><strong>指令集与微架构的解耦</strong></p>
+<ul>
+<li>从你的RISC-V项目出发：RISC-V的扩展指令集设计哲学，custom extension怎么做。</li>
+<li>推荐：RISC-V Spec 的 Volume 1 前几章（精读），Patterson &amp; Hennessy 按需翻。</li>
+</ul>
+</li>
+</ol>
+<p><strong>Blog 怎么写</strong>：每篇不是笔记搬运，而是回答一个 <strong>Why 问题</strong>。比如”为什么CIM架构要这样设计数据通路？”，而不是”CIM的数据通路是什么样的”。</p>
+<h3 id="支柱-B：PPA-直觉与物理感知"><a href="#支柱-B：PPA-直觉与物理感知" class="headerlink" title="支柱 B：PPA 直觉与物理感知"></a>支柱 B：PPA 直觉与物理感知</h3><blockquote>
+<p>你写的RTL最终要变成门和版图，对timing&#x2F;power&#x2F;area的直觉决定了你是coder还是designer</p>
+</blockquote>
+<p><strong>你的缺口</strong>：没跑过综合，没接触过后端flow。<br><strong>你的优势</strong>：CIM项目有FPGA实现，这是绝佳的练手场。</p>
+<p><strong>具体要补的内容</strong>：</p>
+<ol>
+<li><p><strong>综合基础</strong>（最优先）</p>
+<ul>
+<li>用 Design Compiler 或 Yosys 综合你自己写过的 RTL</li>
+<li>学会看 timing report 和 area report</li>
+<li>核心直觉：什么样的 RTL 写法会导致 timing 收不敛？什么写法面积大？</li>
+</ul>
+</li>
+<li><p><strong>时序约束基础</strong></p>
+<ul>
+<li>学会写基本的 SDC（create_clock, set_input_delay, set_output_delay）</li>
+<li>理解 setup&#x2F;hold violation 在实际综合中的表现</li>
+</ul>
+</li>
+<li><p><strong>功耗感知</strong></p>
+<ul>
+<li>动态功耗 vs 静态功耗，clock gating 的原理和实现</li>
+<li>从你的CIM项目出发：低功耗设计在存算一体里为什么特别重要？</li>
+</ul>
+</li>
+</ol>
+<p><strong>Blog 怎么写</strong>：以你的实际项目为载体。比如把你CIM项目里的一个模块拿出来综合一下，记录”我改了这一行RTL，timing从-0.2ns变成+0.1ns”的过程，这种实证性的内容比任何教科书都有说服力。</p>
+<h3 id="支柱-C：验证方法学——“怎么想”"><a href="#支柱-C：验证方法学——“怎么想”" class="headerlink" title="支柱 C：验证方法学——“怎么想”"></a>支柱 C：验证方法学——“怎么想”</h3><blockquote>
+<p>最好的验证工程师不是写最多testbench的人，而是”能想到别人想不到的bug场景”的人</p>
+</blockquote>
+<p><strong>你的缺口</strong>：UVM语法学了，但还没真正做过一个从testplan到coverage closure的完整流程。<br><strong>你的优势</strong>：UVM基础已经有了，callback&#x2F;TLM&#x2F;RAL都碰过。</p>
+<p><strong>从 Week 6 开始，验证部分的学习重心应该转向</strong>：</p>
+<ol>
+<li><p><strong>Testplan 思维训练</strong></p>
+<ul>
+<li>拿一个你熟悉的模块（比如CIM里的一个控制器），不写代码，先写testplan</li>
+<li>问自己：哪些功能点需要覆盖？边界条件在哪？什么情况下这个模块会死锁？</li>
+<li>这个过程中，AI帮不了你——因为它不了解你的设计意图。</li>
+</ul>
+</li>
+<li><p><strong>Coverage-Driven Verification 实战</strong></p>
+<ul>
+<li>定义 functional coverage model：不是”所有信号都toggle过”，而是”所有有意义的功能场景都被执行过”</li>
+<li>学会看 coverage report，找 coverage hole，针对性补测试</li>
+</ul>
+</li>
+<li><p><strong>Formal Verification 入门</strong></p>
+<ul>
+<li>SVA（SystemVerilog Assertion）你已经在Week5计划里了，要真正用起来</li>
+<li>Formal 的思维方式和仿真完全不同：你在描述”什么是对的”，而不是”给一组激励看结果”</li>
+<li>推荐：JasperGold 的 tutorial，或者开源的 SymbiYosys</li>
+<li>这个方向特别值得深入——AI写testbench容易，但写正确的property很难</li>
+</ul>
+</li>
+<li><p><strong>Bug 分析与 Debug 思维</strong></p>
+<ul>
+<li>每次遇到bug，不只是修，而是记录：这个bug的root cause是什么？它属于哪类问题？什么样的coverage或assertion能提前抓住它？</li>
+<li>积累久了，你会形成”bug直觉”——这是无法被AI替代的核心能力</li>
+</ul>
+</li>
+</ol>
+<p><strong>Blog 怎么写</strong>：记录完整的验证故事，不是”我搭了一个UVM环境”，而是”我验证了X模块，testplan是这样设计的，coverage model是这样定义的，最后在Y场景下发现了一个Z类型的bug”。</p>
+<h3 id="支柱-D：软硬件协同设计"><a href="#支柱-D：软硬件协同设计" class="headerlink" title="支柱 D：软硬件协同设计"></a>支柱 D：软硬件协同设计</h3><blockquote>
+<p>站在软硬件的边界上工作，这是你技术栈的最大隐藏优势</p>
+</blockquote>
+<p><strong>你的缺口</strong>：各技能点分散，还没有一个项目把它们串起来。<br><strong>你的优势</strong>：C&#x2F;C++、Python&#x2F;PyTorch、SystemVerilog&#x2F;UVM、SystemC、CUDA、Chisel 你都碰过——这个技术栈的广度在同龄人里非常少见。</p>
+<p><strong>具体发展方向</strong>：</p>
+<ol>
+<li><p><strong>Performance Modeling</strong>（和你的研究直接相关）</p>
+<ul>
+<li>用 SystemC TLM 或 C++ 搭建你 CIM 架构的性能模型</li>
+<li>核心问题：在真正做 RTL 之前，能否用高层模型预测性能瓶颈？</li>
+</ul>
+</li>
+<li><p><strong>CUDA ↔ 硬件加速器的映射</strong></p>
+<ul>
+<li>你学 CUDA 不只是为了写 GPU kernel，而是理解”一个并行算法怎么映射到硬件”</li>
+<li>未来可以做：给你的 CIM 加速器写一个软件 driver&#x2F;runtime，类似 CUDA 对 GPU 做的事</li>
+</ul>
+</li>
+<li><p><strong>AI 工具集成到你的工作流</strong></p>
+<ul>
+<li>用 LLM 辅助生成 UVM testbench boilerplate → 你来做 testplan 和 coverage 决策</li>
+<li>用 LLM 辅助写 RTL 初版 → 你来做架构选择和 timing optimization</li>
+<li>把这个过程记录下来，本身就是很好的 blog 内容</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三、Blog-系列重构方案"><a href="#三、Blog-系列重构方案" class="headerlink" title="三、Blog 系列重构方案"></a>三、Blog 系列重构方案</h2><h3 id="改名与定位"><a href="#改名与定位" class="headerlink" title="改名与定位"></a>改名与定位</h3><p>原系列「从零开始的DFT工程师」可以继续保留作为子系列，但整体 blog 技术板块建议升级为一个更大的框架。建议的组织方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">技术板块（主页）</span><br><span class="line">├── 🏗️ 从零开始的DFT工程师（原系列，继续更新）</span><br><span class="line">│   ├── Week 1-5（已完成，保持原样）</span><br><span class="line">│   ├── Week 6+（继续，但每篇标注涉及哪个支柱）</span><br><span class="line">│   └── 特别篇（工具安装等，保持原样）</span><br><span class="line">│</span><br><span class="line">├── 🧠 体系结构笔记（支柱A，新系列）</span><br><span class="line">│   ├── 从CIM理解Memory Hierarchy</span><br><span class="line">│   ├── GPU架构：从CUDA kernel到Warp Scheduler</span><br><span class="line">│   ├── RISC-V扩展指令集设计</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── ⚡ PPA实证录（支柱B，新系列）</span><br><span class="line">│   ├── 第一次综合：我的RTL到底多大多慢</span><br><span class="line">│   ├── Timing Closure实战</span><br><span class="line">│   ├── Clock Gating与低功耗设计</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── 🔍 验证思维（支柱C，从DFT系列分化）</span><br><span class="line">│   ├── 我的第一个完整Testplan</span><br><span class="line">│   ├── Coverage-Driven的完整流程</span><br><span class="line">│   ├── Formal Verification入门</span><br><span class="line">│   ├── Bug故事集</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">├── 🔗 软硬件协同（支柱D，新系列）</span><br><span class="line">│   ├── SystemC性能建模实战</span><br><span class="line">│   ├── CUDA学习路线（已有，可迁入）</span><br><span class="line">│   ├── 给加速器写软件栈</span><br><span class="line">│   └── ...</span><br><span class="line">│</span><br><span class="line">└── 🤖 AI辅助IC设计（贯穿性主题）</span><br><span class="line">    ├── 用LLM写RTL：哪些能用，哪些不能</span><br><span class="line">    ├── AI辅助验证的workflow</span><br><span class="line">    └── ...</span><br></pre></td></tr></table></figure>
+
+<h3 id="原-DFT-系列-Week-6-的调整"><a href="#原-DFT-系列-Week-6-的调整" class="headerlink" title="原 DFT 系列 Week 6+ 的调整"></a>原 DFT 系列 Week 6+ 的调整</h3><p>原计划 Week 6 往后是 auto UVM test、AI accelerator pipeline、systolic array等。建议调整如下：</p>
+<table>
+<thead>
+<tr>
+<th>原计划</th>
+<th>调整后</th>
+<th>变化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Week 6: auto UVM test</td>
+<td>Week 6: 用AI辅助生成UVM boilerplate + <strong>你亲手写testplan</strong></td>
+<td>从”学怎么写”变成”学怎么想”</td>
+</tr>
+<tr>
+<td>Week 7: AI accelerator pipeline</td>
+<td>Week 7: 设计一个简单pipeline + <strong>综合它，看timing和area</strong></td>
+<td>加入支柱B</td>
+</tr>
+<tr>
+<td>Week 8: systolic array</td>
+<td>Week 8: systolic array设计 + <strong>写performance model对比RTL</strong></td>
+<td>加入支柱D</td>
+</tr>
+<tr>
+<td>Week 9: systolic array验证</td>
+<td>Week 9: <strong>完整的coverage-driven验证流程</strong></td>
+<td>支柱C的核心实战</td>
+</tr>
+<tr>
+<td>Week 10: log parser</td>
+<td>Week 10: 用Python做coverage分析 + <strong>AI辅助debug workflow</strong></td>
+<td>工具 + AI集成</td>
+</tr>
+<tr>
+<td>Week 11: DFT scan&#x2F;MBIST&#x2F;JTAG</td>
+<td>保持，但加上 <strong>“为什么需要DFT”的架构视角</strong></td>
+<td>加入支柱A</td>
+</tr>
+<tr>
+<td>Week 12: RTL2GDSII</td>
+<td>保持，这本身就是支柱B的核心内容</td>
+<td>已对齐</td>
+</tr>
+</tbody></table>
+<h3 id="每篇-Blog-的写作模板建议"><a href="#每篇-Blog-的写作模板建议" class="headerlink" title="每篇 Blog 的写作模板建议"></a>每篇 Blog 的写作模板建议</h3><p>以后每篇技术文章，开头标注：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">支柱: [A/B/C/D 中的一个或多个]</span><br><span class="line">本篇核心问题: &quot;为什么XXX？&quot; 或 &quot;如何判断XXX？&quot;</span><br><span class="line">AI能做的部分: [列出哪些是AI辅助完成的]</span><br><span class="line"><span class="section">AI做不了的部分: [列出哪些是你自己的判断和决策]</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p>这样做的好处：</p>
+<ol>
+<li>强迫自己思考每篇文章的价值在哪里</li>
+<li>读者能看到你在做什么层次的思考</li>
+<li>积累久了，你的blog本身就是能力证明</li>
+</ol>
+<hr>
+<h2 id="四、具体行动计划（接下来-3-个月）"><a href="#四、具体行动计划（接下来-3-个月）" class="headerlink" title="四、具体行动计划（接下来 3 个月）"></a>四、具体行动计划（接下来 3 个月）</h2><h3 id="Month-1：补体系结构-验证思维转型"><a href="#Month-1：补体系结构-验证思维转型" class="headerlink" title="Month 1：补体系结构 + 验证思维转型"></a>Month 1：补体系结构 + 验证思维转型</h3><p><strong>体系结构（支柱A）</strong>：</p>
+<ul>
+<li>读 NVIDIA Ampere&#x2F;Hopper Architecture Whitepaper，写一篇 blog 回答”GPU为什么用SIMT”</li>
+<li>结合你的 CUDA 学习，每写一个 kernel 都记录”这个优化在硬件层面意味着什么”</li>
+</ul>
+<p><strong>验证思维（支柱C）</strong>：</p>
+<ul>
+<li>挑一个你CIM项目里的模块，不写代码，先写一份完整的 testplan（Word&#x2F;Markdown都行）</li>
+<li>然后基于 testplan 搭建 coverage model，记录整个思考过程</li>
+</ul>
+<p><strong>继续 DFT 系列</strong>：</p>
+<ul>
+<li>Week 6 按调整后的计划推进</li>
+</ul>
+<h3 id="Month-2：PPA直觉建立-软硬件协同起步"><a href="#Month-2：PPA直觉建立-软硬件协同起步" class="headerlink" title="Month 2：PPA直觉建立 + 软硬件协同起步"></a>Month 2：PPA直觉建立 + 软硬件协同起步</h3><p><strong>PPA（支柱B）</strong>：</p>
+<ul>
+<li>用 Design Compiler 或 Yosys 综合你写过的一个 RTL 模块</li>
+<li>写一篇 “我的第一次综合” blog，记录 timing report 怎么看、area report 怎么解读</li>
+</ul>
+<p><strong>软硬件协同（支柱D）</strong>：</p>
+<ul>
+<li>用 SystemC TLM 给你的 CIM 设计搭一个 cycle-approximate 性能模型</li>
+<li>对比 RTL 仿真结果和 SystemC 模型的预测，记录差异</li>
+</ul>
+<p><strong>继续 DFT 系列</strong>：</p>
+<ul>
+<li>Week 7-8（pipeline + systolic array + 综合 + 性能建模）</li>
+</ul>
+<h3 id="Month-3：整合-AI工作流"><a href="#Month-3：整合-AI工作流" class="headerlink" title="Month 3：整合 + AI工作流"></a>Month 3：整合 + AI工作流</h3><p><strong>整合</strong>：</p>
+<ul>
+<li>Week 9-10 做一个完整的 coverage-driven 验证闭环</li>
+<li>记录一个完整的 “bug故事”：从发现到定位到修复到防御</li>
+</ul>
+<p><strong>AI 工作流</strong>：</p>
+<ul>
+<li>记录你用 LLM 辅助 IC 设计的真实体验</li>
+<li>哪些场景有效（boilerplate生成、文档查询、代码审查）</li>
+<li>哪些场景无效（架构决策、timing分析、corner case发现）</li>
+<li>这本身就是非常有价值的 blog 内容，因为很少有IC从业者在系统性地做这件事</li>
+</ul>
+<hr>
+<h2 id="五、一句话总结"><a href="#五、一句话总结" class="headerlink" title="五、一句话总结"></a>五、一句话总结</h2><p><strong>以前的 DFT 系列在回答”怎么用”，以后的 blog 要同时回答”为什么”和”怎么判断”。</strong></p>
+<p>“怎么用”这个问题，AI 回答得越来越好。</p>
+<p>“为什么这样设计”和”这个方案行不行”，在可预见的未来，还是得你自己来。</p>
+<hr>
+<p><em>Last updated: 2026-03-21</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/irr-icer/">https://invoker-pray.github.io/irr-icer/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/irr-icer/">irr-icer</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/irr-icer.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/openclaw-try/" title="try openclaw"><img class="cover" src="/img/cover/toysandtools-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">try openclaw</div></div><div class="info-2"><div class="info-item-1">然后就是最近比较火的openclaw，当然也要尝试一手。  install首先安装必要的依赖：npm install -g node-addon-api node-gyp 安装openclaw的方法有三种，首先是arch用户可以通过yay -S openclaw-git通过AUR下载，但是AUR带有git后缀的一般是源码编译，一般来说会比较慢。 不过openclaw本质上是nodejs应用，所以其实应该只是npm安装。 第二种就是直接通过npm&#x2F;pnpm安装，npm install -g openclaw@latest需要调整nodejs版本为22.16+. 第三种是，ollama现在官方支持使用openclaw，只要ollama launch openclaw就可以完成安装和使用。 考虑到openclaw本身也需要烧token，还是选择使用ollama local model + openclaw. 其实都需要nodejs...</div></div></div></a><a class="pagination-related" href="/life-reflection17/" title="life reflection 17"><img class="cover" src="/img/cover/life-reflection-homepage.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">life reflection 17</div></div><div class="info-2"><div class="info-item-1">欢迎回来。现在是2026年4月1日。  还是先来谈一下近况，首先是毕设。 毕业设计毕业设计的内容是，设计一个数字存算一体阵列架构，并且进行FPGA设计验证。 我首先来说几句官话：  当前，以YOLO、SSD为代表的深度学习目标检测算法在不断提升检测精度的同时，也面临着计算密集与内存访问瓶颈的严峻挑战。在传统冯·诺依曼架构中，处理器与存储器分离，数据在两者之间频繁搬运，导致巨大的功耗开销与延迟，严重制约了系统算力与能效比的提升。这一问题在边缘计算场景中尤为突出——由于对功耗和实时性要求极为苛刻，传统架构已难以满足实际需求。存算一体（Computing-in-Memory, CIM）技术通过将计算功能嵌入存储器内部，直接利用存储单元完成运算，从根本上消除了数据搬运开销，被视为突破“内存墙”瓶颈的革命性路径。  在当前背景之下，设计存算阵列的意义在于，通过在存储单元中原位实现卷积的乘加运算，降低因为数据搬运产生的动态功耗，为低功耗边缘智能设备提供高性能的计算核心。 在3月17日的时候我创建了一个github...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E3%80%8CDFT%E5%B7%A5%E7%A8%8B%E5%B8%88%E3%80%8D%E5%88%B0%E3%80%8C%E4%B8%8D%E5%8F%AF%E6%9B%BF%E4%BB%A3%E7%9A%84IC%E4%BA%BA%E3%80%8D%EF%BC%9ABlog%E9%87%8D%E6%9E%84%E8%AE%A1%E5%88%92"><span class="toc-number">1.</span> <span class="toc-text">从「DFT工程师」到「不可替代的IC人」：Blog重构计划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%8E%B0%E7%8A%B6%E7%9B%98%E7%82%B9%EF%BC%9A%E6%88%91%E5%B7%B2%E7%BB%8F%E8%B5%B0%E5%88%B0%E4%BA%86%E5%93%AA%E9%87%8C"><span class="toc-number">1.1.</span> <span class="toc-text">一、现状盘点：我已经走到了哪里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9B%9B%E5%A4%A7%E8%83%BD%E5%8A%9B%E6%94%AF%E6%9F%B1%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="toc-number">1.2.</span> <span class="toc-text">二、四大能力支柱：重新定义学习目标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-A%EF%BC%9A%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%B7%B1%E5%B1%82%E7%90%86%E8%A7%A3"><span class="toc-number">1.2.1.</span> <span class="toc-text">支柱 A：体系结构深层理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-B%EF%BC%9APPA-%E7%9B%B4%E8%A7%89%E4%B8%8E%E7%89%A9%E7%90%86%E6%84%9F%E7%9F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">支柱 B：PPA 直觉与物理感知</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-C%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95%E5%AD%A6%E2%80%94%E2%80%94%E2%80%9C%E6%80%8E%E4%B9%88%E6%83%B3%E2%80%9D"><span class="toc-number">1.2.3.</span> <span class="toc-text">支柱 C：验证方法学——“怎么想”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-D%EF%BC%9A%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.2.4.</span> <span class="toc-text">支柱 D：软硬件协同设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Blog-%E7%B3%BB%E5%88%97%E9%87%8D%E6%9E%84%E6%96%B9%E6%A1%88"><span class="toc-number">1.3.</span> <span class="toc-text">三、Blog 系列重构方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E5%90%8D%E4%B8%8E%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.3.1.</span> <span class="toc-text">改名与定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F-DFT-%E7%B3%BB%E5%88%97-Week-6-%E7%9A%84%E8%B0%83%E6%95%B4"><span class="toc-number">1.3.2.</span> <span class="toc-text">原 DFT 系列 Week 6+ 的调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E7%AF%87-Blog-%E7%9A%84%E5%86%99%E4%BD%9C%E6%A8%A1%E6%9D%BF%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.3.</span> <span class="toc-text">每篇 Blog 的写作模板建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B7%E4%BD%93%E8%A1%8C%E5%8A%A8%E8%AE%A1%E5%88%92%EF%BC%88%E6%8E%A5%E4%B8%8B%E6%9D%A5-3-%E4%B8%AA%E6%9C%88%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">四、具体行动计划（接下来 3 个月）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-1%EF%BC%9A%E8%A1%A5%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-%E9%AA%8C%E8%AF%81%E6%80%9D%E7%BB%B4%E8%BD%AC%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">Month 1：补体系结构 + 验证思维转型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-2%EF%BC%9APPA%E7%9B%B4%E8%A7%89%E5%BB%BA%E7%AB%8B-%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E8%B5%B7%E6%AD%A5"><span class="toc-number">1.4.2.</span> <span class="toc-text">Month 2：PPA直觉建立 + 软硬件协同起步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-3%EF%BC%9A%E6%95%B4%E5%90%88-AI%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">1.4.3.</span> <span class="toc-text">Month 3：整合 + AI工作流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%80%BB%E7%BB%93"><span class="toc-number">1.5.</span> <span class="toc-text">五、一句话总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
