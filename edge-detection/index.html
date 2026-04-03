@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>edge detection | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="尝试复现第一弹：最最亲爱的视觉图像处理（）这里是学习PYNQ尝试复现项目的第一期，今天找了一个边缘检测的项目，原链接为：https:&#x2F;&#x2F;github.com&#x2F;Sahanasannagoudar&#x2F;Edge-detection-using-PYNQ-Z2-board#，这个项目在PYNQ上实现了sobel边缘检测算法，是一个软硬件协同全栈开发，从C++ HLS到底层FPGA硬件编译的全部流程，想必是很">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>edge detection | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="尝试复现第一弹：最最亲爱的视觉图像处理（）这里是学习PYNQ尝试复现项目的第一期，今天找了一个边缘检测的项目，原链接为：https:&#x2F;&#x2F;github.com&#x2F;Sahanasannagoudar&#x2F;Edge-detection-using-PYNQ-Z2-board#，这个项目在PYNQ上实现了sobel边缘检测算法，是一个软硬件协同全栈开发，从C++ HLS到底层FPGA硬件编译的全部流程，想必是很">
 <meta property="og:type" content="article">
 <meta property="og:title" content="edge detection">
 <meta property="og:url" content="https://invoker-pray.github.io/edge-detection/index.html">
@@ -26,7 +26,7 @@
       "url": "https://invoker-pray.github.io/"
     }
   ]
-}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/edge-detection/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/edge-detection/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
     (() => {
       
     const saveToLocal = {
@@ -72,7 +72,7 @@
         document.head.appendChild(link)
       }),
       addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
+        if (!true && key.startsWith('pjax')) return
         const globalFn = parent.globalFn || {}
         globalFn[key] = globalFn[key] || {}
         globalFn[key][name || Object.keys(globalFn[key]).length] = fn
@@ -90,7 +90,7 @@
       const activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
         }
       }
 
@@ -116,12 +116,12 @@
     detectApple()
   
     })()
-  </script><script>const GLOBAL_CONFIG = {
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"/search.json","preload":true,"top_n_per_article":-1,"unescape":true,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
   translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
   copy: {
     success: 'Copy Successful',
     error: 'Copy Failed',
@@ -140,14 +140,14 @@
     month: 'months ago'
   },
   copyright: undefined,
-  lightbox: 'null',
+  lightbox: 'fancybox',
   Snackbar: undefined,
   infinitegrid: {
     js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
     buttonText: 'Load More'
   },
   isPhotoFigcaption: false,
-  islazyloadPlugin: false,
+  islazyloadPlugin: true,
   isAnchor: false,
   percent: {
     toc: true,
@@ -159,8 +159,29 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
-</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/edge-detection.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">edge detection</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">edge detection</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-08-29T16:00:00.000Z" title="Created 2025-08-30 00:00:00">2025-08-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-09-20T15:58:44.414Z" title="Updated 2025-09-20 23:58:44">2025-09-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/circuit/">circuit</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="尝试复现第一弹：最最亲爱的视觉图像处理（）"><a href="#尝试复现第一弹：最最亲爱的视觉图像处理（）" class="headerlink" title="尝试复现第一弹：最最亲爱的视觉图像处理（）"></a>尝试复现第一弹：最最亲爱的视觉图像处理（）</h1><p>这里是学习PYNQ尝试复现项目的第一期，今天找了一个边缘检测的项目，原链接为：<code>https://github.com/Sahanasannagoudar/Edge-detection-using-PYNQ-Z2-board#</code>，这个项目在PYNQ上实现了sobel边缘检测算法，是一个软硬件协同全栈开发，从C++ HLS到底层FPGA硬件编译的全部流程，想必是很适合用来学习的（？）</p>
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/edge-detection.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">edge detection</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">edge detection</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-08-29T16:00:00.000Z" title="Created 2025-08-30 00:00:00">2025-08-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-09-20T15:58:44.414Z" title="Updated 2025-09-20 23:58:44">2025-09-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/circuit/">circuit</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">4.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>20mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:180,&quot;messagePrev&quot;:&quot;本文最后更新于&quot;,&quot;messageNext&quot;:&quot;天前，部分内容可能已过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2025-09-20 23:58:44&quot;}" hidden></div><h1 id="尝试复现第一弹：最最亲爱的视觉图像处理（）"><a href="#尝试复现第一弹：最最亲爱的视觉图像处理（）" class="headerlink" title="尝试复现第一弹：最最亲爱的视觉图像处理（）"></a>尝试复现第一弹：最最亲爱的视觉图像处理（）</h1><p>这里是学习PYNQ尝试复现项目的第一期，今天找了一个边缘检测的项目，原链接为：<code>https://github.com/Sahanasannagoudar/Edge-detection-using-PYNQ-Z2-board#</code>，这个项目在PYNQ上实现了sobel边缘检测算法，是一个软硬件协同全栈开发，从C++ HLS到底层FPGA硬件编译的全部流程，想必是很适合用来学习的（？）</p>
 <p>我们需要实现在PYNQ板子上面运行sobel edge detection算法，同时应该充分利用FPGA的并行特性，进行快速的图像处理，尽量降低延迟和能耗。</p>
 <h1 id="复现第一步：使用-vitis-HLS-创建IP核"><a href="#复现第一步：使用-vitis-HLS-创建IP核" class="headerlink" title="复现第一步：使用 vitis HLS 创建IP核"></a>复现第一步：使用 vitis HLS 创建IP核</h1><p>创建IP核经典的三种方式，verilog，block，HLS，这里项目使用的是HLS完成IP核的创建。</p>
 <p>但是由于在2024.2版本中AMD似乎弃用了vitis -mode hls 和相关的HLS Tcl模式，而是将HLS并入vitis IDE和Pyhton API里，所以目前似乎应该用v++进行HLS编译，并且用python替代tcl完成项目的构建。</p>
@@ -222,14 +243,155 @@
 <figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set_property ip_repo_paths ~/vitis-projects/edge_detection/ip_sobel/ [current_project]</span><br><span class="line"></span><br><span class="line">update_ip_catalog</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>由于我们设定项目是<code>UserIP</code>文件夹下，所以我们可以在左侧的<code>IP Catalog</code>下的<code>UserIP</code>项目下找到我们设计的IP核。</p>
-<p><img src="/img/edge-detection/edge-detection1.png" alt="IP Catalog"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/edge-detection/edge-detection1.png" alt="IP Catalog"></p>
 <p>这就是打包好的IP：</p>
-<p><img src="/img/edge-detection/edge-detection2.png" alt="IP show"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/edge-detection/edge-detection2.png" alt="IP show"></p>
 <h2 id="进行-Block-Design"><a href="#进行-Block-Design" class="headerlink" title="进行 Block Design"></a>进行 Block Design</h2><p>完成 block design 如下：</p>
 <embed src='/files/edge-detection/sobel_edge_detection_block_design.pdf' type='application/pdf' width="100%" height="600px" />
 
 <p>关于block design 我对原项目略作修改，改为了使用2个AXI interconnect.</p>
 <h2 id="bitstream"><a href="#bitstream" class="headerlink" title="bitstream"></a>bitstream</h2><p>我们可以通过BD轻松的生成wrapper文件，之后写好约束文件，就可以生成bitstream文件了。</p>
 <p>此处由于我们只使用DDR相关的，就只写DDR的约束即可，官方文档直接改就好了。</p>
-<h1 id="PYNQ板上控制"><a href="#PYNQ板上控制" class="headerlink" title="PYNQ板上控制"></a>PYNQ板上控制</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/edge-detection/">https://invoker-pray.github.io/edge-detection/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/edge-detection/">edge detection</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/edge-detection.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/PYNQ-create-IP-core/" title="PYNQ create IP core"><img class="cover" src="/img/cover/PYNQ-create-IP-core.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">PYNQ create IP core</div></div><div class="info-2"><div class="info-item-1">create IP core is an important step during PYNQ’s dev, but vivado does not have the board model by default(at least in the version of vivado 2024.2)…. as PYNQ-Z2 for example, one way to do that is to choose the chip instead of board, use the xc7z020clg400-1.(-1 means the highest speed but most expensive, it can be used under the highest clock frequency, -2 means standard speed, -3 means the lowest speed.) another way to create PYNQ-Z2 project is to download the official package, from...</div></div></div></a><a class="pagination-related" href="/philosophy-homepage/" title="my philosophic passages"><img class="cover" src="/img/cover/philosophy-homepage.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">my philosophic passages</div></div><div class="info-2"><div class="info-item-1">此处不定时收录一些人生小感想和小文章。 但是由于众所周知的原因，我在自由创作的文字工作方面生产效率算是很低下的，而且会因为事中或者事后不满意而迅速删除，或者是直接构思一下感觉是一坨就不写了，所以这个项目更新一定会极其不规律。 PS:今晚要写的就这样子被暂时鸽掉了。  戒 急 用 忍  </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E5%A4%8D%E7%8E%B0%E7%AC%AC%E4%B8%80%E5%BC%B9%EF%BC%9A%E6%9C%80%E6%9C%80%E4%BA%B2%E7%88%B1%E7%9A%84%E8%A7%86%E8%A7%89%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%88%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">尝试复现第一弹：最最亲爱的视觉图像处理（）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%8D%E7%8E%B0%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%BD%BF%E7%94%A8-vitis-HLS-%E5%88%9B%E5%BB%BAIP%E6%A0%B8"><span class="toc-number">2.</span> <span class="toc-text">复现第一步：使用 vitis HLS 创建IP核</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%8E%9Fcpp%E4%BB%A3%E7%A0%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90"><span class="toc-number">2.1.</span> <span class="toc-text">对于原cpp代码的一些分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#High-Level-Synthesis"><span class="toc-number">2.2.</span> <span class="toc-text">High Level Synthesis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP%E6%A0%B8%E6%89%93%E5%8C%85"><span class="toc-number">2.3.</span> <span class="toc-text">IP核打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%8C%E5%90%AF%E5%8A%A8%EF%BC%81"><span class="toc-number">2.4.</span> <span class="toc-text">自动化，启动！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IP-%E9%9B%86%E6%88%90%E4%BA%8E%E5%B7%A5%E7%A8%8B%E5%86%85"><span class="toc-number">3.</span> <span class="toc-text">IP 集成于工程内</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8HLS%E8%87%AA%E8%AE%BE%E7%9A%84IP%E6%A0%B8"><span class="toc-number">3.1.</span> <span class="toc-text">导入我们使用HLS自设的IP核</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C-Block-Design"><span class="toc-number">3.2.</span> <span class="toc-text">进行 Block Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bitstream"><span class="toc-number">3.3.</span> <span class="toc-text">bitstream</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PYNQ%E6%9D%BF%E4%B8%8A%E6%8E%A7%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">PYNQ板上控制</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<h1 id="PYNQ板上控制"><a href="#PYNQ板上控制" class="headerlink" title="PYNQ板上控制"></a>PYNQ板上控制</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/edge-detection/">https://invoker-pray.github.io/edge-detection/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/edge-detection/">edge detection</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/edge-detection.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/PYNQ-create-IP-core/" title="PYNQ create IP core"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/PYNQ-create-IP-core.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">PYNQ create IP core</div></div><div class="info-2"><div class="info-item-1">create IP core is an important step during PYNQ’s dev, but vivado does not have the board model by default(at least in the version of vivado 2024.2)…. as PYNQ-Z2 for example, one way to do that is to choose the chip instead of board, use the xc7z020clg400-1.(-1 means the highest speed but most expensive, it can be used under the highest clock frequency, -2 means standard speed, -3 means the lowest speed.) another way to create PYNQ-Z2 project is to download the official package, from...</div></div></div></a><a class="pagination-related" href="/philosophy-homepage/" title="my philosophic passages"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/philosophy-homepage.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">my philosophic passages</div></div><div class="info-2"><div class="info-item-1">此处不定时收录一些人生小感想和小文章。 但是由于众所周知的原因，我在自由创作的文字工作方面生产效率算是很低下的，而且会因为事中或者事后不满意而迅速删除，或者是直接构思一下感觉是一坨就不写了，所以这个项目更新一定会极其不规律。 PS:今晚要写的就这样子被暂时鸽掉了。  戒 急 用 忍  </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Invoker-pray" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E5%A4%8D%E7%8E%B0%E7%AC%AC%E4%B8%80%E5%BC%B9%EF%BC%9A%E6%9C%80%E6%9C%80%E4%BA%B2%E7%88%B1%E7%9A%84%E8%A7%86%E8%A7%89%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%88%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">尝试复现第一弹：最最亲爱的视觉图像处理（）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%8D%E7%8E%B0%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%BD%BF%E7%94%A8-vitis-HLS-%E5%88%9B%E5%BB%BAIP%E6%A0%B8"><span class="toc-number">2.</span> <span class="toc-text">复现第一步：使用 vitis HLS 创建IP核</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%8E%9Fcpp%E4%BB%A3%E7%A0%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90"><span class="toc-number">2.1.</span> <span class="toc-text">对于原cpp代码的一些分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#High-Level-Synthesis"><span class="toc-number">2.2.</span> <span class="toc-text">High Level Synthesis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP%E6%A0%B8%E6%89%93%E5%8C%85"><span class="toc-number">2.3.</span> <span class="toc-text">IP核打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%8C%E5%90%AF%E5%8A%A8%EF%BC%81"><span class="toc-number">2.4.</span> <span class="toc-text">自动化，启动！</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IP-%E9%9B%86%E6%88%90%E4%BA%8E%E5%B7%A5%E7%A8%8B%E5%86%85"><span class="toc-number">3.</span> <span class="toc-text">IP 集成于工程内</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8HLS%E8%87%AA%E8%AE%BE%E7%9A%84IP%E6%A0%B8"><span class="toc-number">3.1.</span> <span class="toc-text">导入我们使用HLS自设的IP核</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C-Block-Design"><span class="toc-number">3.2.</span> <span class="toc-text">进行 Block Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bitstream"><span class="toc-number">3.3.</span> <span class="toc-text">bitstream</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PYNQ%E6%9D%BF%E4%B8%8A%E6%8E%A7%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">PYNQ板上控制</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a href="/link/">友情链接</a> | 用 ❤ 和 Verilog 构建</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"}
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark_dimmed' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Invoker-pray/Invoker-pray.github.io',
+      'data-repo-id': 'R_kgD00eSbpg',
+      'data-category-id': 'DIC_kwD00eSbps4C58pQ',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !true) {
+    if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><script defer src="/js/custom.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true 
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章标题或内容..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

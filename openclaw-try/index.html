@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>try openclaw | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="然后就是最近比较火的openclaw，当然也要尝试一手。  install首先安装必要的依赖：npm install -g node-addon-api node-gyp 安装openclaw的方法有三种，首先是arch用户可以通过yay -S openclaw-git通过AUR下载，但是AUR带有git后缀的一般是源码编译，一般来说会比较慢。 不过openclaw本质上是nodejs应用，所以其">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>try openclaw | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="然后就是最近比较火的openclaw，当然也要尝试一手。  install首先安装必要的依赖：npm install -g node-addon-api node-gyp 安装openclaw的方法有三种，首先是arch用户可以通过yay -S openclaw-git通过AUR下载，但是AUR带有git后缀的一般是源码编译，一般来说会比较慢。 不过openclaw本质上是nodejs应用，所以其">
 <meta property="og:type" content="article">
 <meta property="og:title" content="try openclaw">
 <meta property="og:url" content="https://invoker-pray.github.io/openclaw-try/index.html">
@@ -26,7 +26,7 @@
       "url": "https://invoker-pray.github.io/"
     }
   ]
-}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/openclaw-try/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/openclaw-try/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
     (() => {
       
     const saveToLocal = {
@@ -72,7 +72,7 @@
         document.head.appendChild(link)
       }),
       addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
+        if (!true && key.startsWith('pjax')) return
         const globalFn = parent.globalFn || {}
         globalFn[key] = globalFn[key] || {}
         globalFn[key][name || Object.keys(globalFn[key]).length] = fn
@@ -90,7 +90,7 @@
       const activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
         }
       }
 
@@ -116,12 +116,12 @@
     detectApple()
   
     })()
-  </script><script>const GLOBAL_CONFIG = {
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"/search.json","preload":true,"top_n_per_article":-1,"unescape":true,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
   translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
   copy: {
     success: 'Copy Successful',
     error: 'Copy Failed',
@@ -140,14 +140,14 @@
     month: 'months ago'
   },
   copyright: undefined,
-  lightbox: 'null',
+  lightbox: 'fancybox',
   Snackbar: undefined,
   infinitegrid: {
     js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
     buttonText: 'Load More'
   },
   isPhotoFigcaption: false,
-  islazyloadPlugin: false,
+  islazyloadPlugin: true,
   isAnchor: false,
   percent: {
     toc: true,
@@ -159,8 +159,29 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
-</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/toysandtools-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">try openclaw</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">try openclaw</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-03-17T14:25:03.348Z" title="Updated 2026-03-17 22:25:03">2026-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/toys-tools/">toys&amp;tools</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>然后就是最近比较火的openclaw，当然也要尝试一手。</p>
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/toysandtools-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">try openclaw</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">try openclaw</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-03-17T14:25:03.348Z" title="Updated 2026-03-17 22:25:03">2026-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/toys-tools/">toys&amp;tools</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>11mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:180,&quot;messagePrev&quot;:&quot;本文最后更新于&quot;,&quot;messageNext&quot;:&quot;天前，部分内容可能已过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2026-03-17 22:25:03&quot;}" hidden></div><p>然后就是最近比较火的openclaw，当然也要尝试一手。</p>
 <hr>
 <h1 id="install"><a href="#install" class="headerlink" title="install"></a>install</h1><p>首先安装必要的依赖：<code>npm install -g node-addon-api node-gyp</code></p>
 <p>安装openclaw的方法有三种，首先是arch用户可以通过<code>yay -S openclaw-git</code>通过AUR下载，但是AUR带有git后缀的一般是源码编译，一般来说会比较慢。</p>
@@ -175,10 +196,10 @@
 <p>之后再运行<code>openclaw onboard</code>打开openclaw.</p>
 <p>第一次打开会有提示选择onboarding mode，选择manual可以获得更大的自由度。</p>
 <p>我因为运行过<code>ollama launch openclaw</code>并且选择了本子的<code>qwen3.5</code>模型所以会有一个提示：</p>
-<p><img src="/img/t&t/openclaw-try/qwen3.5-config.png" alt="qwen3.5-config"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/qwen3.5-config.png" alt="qwen3.5-config"></p>
 <p>但是还是选择reset(full reset, config + creds + sessions + workspace).</p>
 <p>由于我们使用的是本地ollama模型来接入openclaw，所以在<code>what do you want to set up?</code>界面选择<code>local gateway(this machine)</code>；在之后的model&#x2F;auth provider中选择ollama作为provider:</p>
-<p><img src="/img/t&t/openclaw-try/qwen3.5-config.png" alt="provider"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/qwen3.5-config.png" alt="provider"></p>
 <p>在ollama的配置中，选择local，因为openclaw只要能听懂我说的话+会发指令即可（别太笨就行，至少我现在这么认为）</p>
 <p>如果直接继续的话系统会自动下载<code>glm-4.7-flash</code>，而且不能自由选择模型。但是这是一个30B-A3B MoE模型，体积不小，如果你的电脑可以运行这个模型也可以直接下一步。我的电脑跑不起来，所以还是换成我已经下好用过的<code>qwen3.5</code>.</p>
 <p>关闭openclaw，然后检查<code>.openclaw</code>下的配置文件后发现，文件里没有<code>glm</code>之类，说明下载glm模型应该是openclaw内部的编码，所以输入：</p>
@@ -191,9 +212,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -r <span class="string">&quot;glm&quot;</span> ~/.nvm/versions/node/v22.16.0/lib/node_modules/openclaw/ --include=<span class="string">&quot;*.js&quot;</span> -l | xargs sed -i <span class="string">&#x27;s/glm-4\.7-flash/qwen3.5:latest/g&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>然后重新运行<code>openclaw onboard</code>，走过以上流程，就可以选择模型了：</p>
-<p><img src="/img/t&t/openclaw-try/select-model.png" alt="select model"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/select-model.png" alt="select model"></p>
 <p><code>gateway port</code>按照默认18789，<code>gateway bind</code>选择回环（127.0.0.1）；之后会选择gateway auth，由于我们是本地模型，所以选择password.</p>
-<p><img src="/img/t&t/openclaw-try/tailscale.png" alt="tailscale"><br>本地不需要tailscale，所以<code>tailscale</code>选择off.</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/tailscale.png" alt="tailscale"><br>本地不需要tailscale，所以<code>tailscale</code>选择off.</p>
 <p><em>tailscale是一个VPN工具，可以让设备在不同网络下像局域网一样互相访问。</em></p>
 <p><em>off: 只有本机可以访问openclaw;<br>serve: 通过tailscale让手机和其他设备也能访问这台电脑上的openclaw；<br>funnel: 暴露到公网，不安全，任何人都可以访问。</em></p>
 <p>关于密码，本地直接选择enter password now.</p>
@@ -201,7 +222,7 @@
 <h1 id="set-telegram-bot"><a href="#set-telegram-bot" class="headerlink" title="set telegram bot"></a>set telegram bot</h1><p>下一步是选择chat channel，我个人比较喜欢telegram和google chat，这里展示telegram.</p>
 <p>首先是创建一个bot.</p>
 <p>我们打开telegram，找到<code>@BotFather</code>，对他发送一个<code>/newbot</code>创建新的bot.</p>
-<p><img src="/img/t&t/openclaw-try/createtgbot.png" alt="tgbot"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/createtgbot.png" alt="tgbot"></p>
 <p>然后记住这个token，把token喂给openclaw就完成了。</p>
 <p>如果想要修改bot，可以发送<code>/mybots</code>进行对应修改。</p>
 <hr>
@@ -210,16 +231,16 @@
 <p><code>pair</code>就是默认只有被授权用户使用，其他的还有<code>allowlist</code>白名单，允许特定用户使用；<code>public</code>所有人都可以给bot发消息。这里选择pair就好。</p>
 <p>下一步是选择search provider，这个用国外的需要API key + visa，但是我的visa卡是0额度的先充钱再花钱，所以就不选了，暂时跳过，不必要。</p>
 <p>之后是skill配置界面：</p>
-<p><img src="/img/t&t/openclaw-try/skill-configuration.png" alt="skill configuration"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/skill-configuration.png" alt="skill configuration"></p>
 <p>这里看一眼还有什么功能是可用的。</p>
-<p><img src="/img/t&t/openclaw-try/skills.png" alt="skill"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/skills.png" alt="skill"></p>
 <p>很多我也不认识，问下AI:</p>
 <blockquote>
 <p>效率工具<br>1password — 密码管理器集成，让 AI 帮你管理密码<br>summarize — 自动总结文章&#x2F;文档内容<br>开发相关<br>github — 通过 gh CLI 操作 GitHub，管理 issues、PR、代码审查<br>oracle — Oracle 数据库操作<br>mcporter — MCP 服务器管理工具<br>内容创作<br>blogwatcher — 监控博客&#x2F;RSS 更新<br>nano-banana-pro — 高级文本编辑<br>nano-pdf — PDF 处理和阅读<br>bsidian — 连接 Obsidian 笔记库<br>媒体处理<br>camsnap — 摄像头拍照<br>gifgrep — GIF 搜索和处理<br>openai-whisper — 语音转文字（OpenAI Whisper）<br>songsee &#x2F; sonoscli — 音乐播放控制（Sonos）<br>openhue — 飞利浦 Hue 智能灯控制<br>数据&#x2F;搜索<br>gemini — Google Gemini AI 集成<br>goplaces — 地点搜索<br>xurl — URL 处理和网页抓取<br>系统工具<br>blucli — 蓝牙设备管理<br>clawhub — openclaw 生态工具<br>eightctl — 系统控制<br>himalaya — 邮件客户端<br>ordercli — 订单管理<br>sag — 系统管理<br>wacli — WhatsApp CLI<br>gog — 游戏平台（GOG）集成</p>
 </blockquote>
 <p>选择自己需要的就好。</p>
 <p>还有一些hooks提供额外功能：</p>
-<p><img src="/img/t&t/openclaw-try/hooks.png" alt="hooks"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/hooks.png" alt="hooks"></p>
 <p>同样选自己需要的即可，我选择了后两个，记录我输入的command和开新对话和reset时的上下文。</p>
 <p>之后会自动安装gateway service；安装完毕之后会选择启动方式，<code>TUI</code>就是terminal直接用，<code>Web UI</code>就是浏览器打开，这里选择<code>TUI</code>.</p>
 <hr>
@@ -269,14 +290,14 @@
 <p>之后刷新终端再次尝试：<code>curl -v http://localhost:11434</code>成功出现ollama is running.</p>
 <p>说明本地连接成功。</p>
 <h2 id="real-test"><a href="#real-test" class="headerlink" title="real test"></a>real test</h2><p>终端输入<code>openclaw dashboard</code>打开控制台界面（或者是<code>openclaw dashboard --no-open</code>），我这里给出dashboard URL端口是18789，在firefox打开如下：</p>
-<p><img src="/img/t&t/openclaw-try/dashboard.png" alt="dashboard"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/dashboard.png" alt="dashboard"></p>
 <p>输入密码进入dashboard界面。</p>
 <p>如果是要终端交互，输入<code>openclaw tui</code>.</p>
 <p>我这里打开终端交互，<code>openclaw tui</code>:</p>
-<p><img src="/img/t&t/openclaw-try/test-tui.png" alt="test-tui"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/test-tui.png" alt="test-tui"></p>
 <p>然后我们尝试tgbot.</p>
 <p>我现在在<code>~/temp.sh</code>中写入：<code>Ciallo～(∠・ω&lt; )⌒★</code></p>
-<p><img src="/img/t&t/openclaw-try/test-tgbot1.png" alt="test-tgbot1"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/test-tgbot1.png" alt="test-tgbot1"></p>
 <p>然后对bot说：<code>请阅读我~/temp.sh中的内容并发送给我</code></p>
 <p>bot的回复是：</p>
 <blockquote>
@@ -284,7 +305,7 @@
 </blockquote>
 <p>我们在终端输入：<code>openclaw pairing approve telegram zzzzzz</code></p>
 <p>重新发送：</p>
-<p><img src="/img/t&t/openclaw-try/test-tgbot2.png" alt="test-tgbot2"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/t&t/openclaw-try/test-tgbot2.png" alt="test-tgbot2"></p>
 <p>这样我们就实现了一个不用花钱接入外部ai模型API的本地模型驱动的openclaw，再配合我们上一期的<a href="/codex-try/">try codex</a>，就可以实现我们手机上发一句指令，自己的电脑远程执行指令（编写代码）了。</p>
 <hr>
 <h1 id="一些常用命令"><a href="#一些常用命令" class="headerlink" title="一些常用命令"></a>一些常用命令</h1><table>
@@ -378,5 +399,146 @@
 <p>如果看到<code>gpu_count=1</code>就说明成功。</p>
 <h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><p>qwen3.5对于16GB电脑真的很卡，我只好<code>nvim .openclaw/openclaw.json</code>，然后<code>:%s/qwen3\.5:latest/qwen2.5:7b/g</code>…</p>
 <h1 id="toys-and-tools-homepage"><a href="#toys-and-tools-homepage" class="headerlink" title="toys and tools homepage"></a>toys and tools homepage</h1><p>toys and tools homepage is <a href="/toys-and-tools-homepage/">here</a>.</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/openclaw-try/">https://invoker-pray.github.io/openclaw-try/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/toys-tools/">toys&amp;tools</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/toysandtools-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/gameboy-on-FPGA/" title="gameboy on FPGA"><img class="cover" src="/img/cover/gameboy-on-FPGA-cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">gameboy on FPGA</div></div><div class="info-2"><div class="info-item-1">github上面有一个叫gamebub的项目，作者通过chisel(scala)写成，可以在Xilinx XC7A100T FPGA上运行一个支持gameboy&#x2F;GBC&#x2F;GBA的复古游戏掌机系统，感觉是非常有意思也很锻炼能力的一个项目。这里决定通过写systemverilog，在Xilinx Zynq7020&#x2F;kria KV260上完成这个gameboy的复现。 当然也有可能写不下去跳车学chisel. </div></div></div></a><a class="pagination-related" href="/irr-icer/" title="to become an irreplaceable icer!"><img class="cover" src="/img/cover/irr-icer.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">to become an irreplaceable icer!</div></div><div class="info-2"><div class="info-item-1">从「DFT工程师」到「不可替代的IC人」：Blog重构计划 写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？答案：能做判断和决策的人，而不是翻译spec为代码的人。   一、现状盘点：我已经走到了哪里回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：    已完成 内容 属于哪个能力维度    Week 1 Verilog&#x2F;SV环境搭建 + 语法复习 编码基础（会被AI替代的层）   Week 2 Makefile&#x2F;Python&#x2F;TCL 自动化脚本 工程效率（有价值但不稀缺）   Week 3 UVM环境搭建 + 第一个测试 验证编码（会被AI替代的层）   Week 4 UVM进阶：callback&#x2F;TLM&#x2F;RAL 验证编码 + 方法学入门   Week 5 SystemC基础 软硬件协同的种子   特别篇 Synopsys安装&#x2F;Verdi&#x2F;远程连接&#x2F;SV语法 工具使用   课外 GPU...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/bili-download/" title="bilibili audio and video download"><img class="cover" src="/img/cover/bili-download.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">bilibili audio and video download</div></div><div class="info-2"><div class="info-item-1">一个有趣的小工具。 感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。 yt-dlp这是一个支持b站的命令行工具，可以提取音频和视频，获取方式很简单，只需要: 12pip install yt-dlp  使用方式也很简单: 123456789101112131415# download videoyt-dlp &quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;# audio# -f ba : best audio# -x extract audio# --audio-format mp3 : trans to mp3# --audio-quality 0 : best quality# --merge-output-format mp4 : I just need mp4!!!(need ffmpeg)yt-dlp -f ba --audio-format mp3 --audio-quality 0 ...</div></div></div></a><a class="pagination-related" href="/codex-try/" title="try codex"><img class="cover" src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-16</div><div class="info-item-2">try codex</div></div><div class="info-2"><div class="info-item-1">也是来尝试使用先进的AI工具了。这次尝试使用一手codex. install首先是通过nvm管理需要的npm(nodejs)环境，因为我这里有同时使用很多不同版本nodejs的需求。 先下载nvm: 1curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash  然后在.zshrc中添加路径（如果没有自动添加的话）： 1234export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion  测试一下安装成功： 1nvm...</div></div></div></a><a class="pagination-related" href="/maptoposter/" title="generate a beautiful map"><img class="cover" src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">generate a beautiful map</div></div><div class="info-2"><div class="info-item-1">toys and tools homepage这里推荐的是一个比较好玩的项目，是github上面的maptoposter，portal在这里 这个项目可以实现生成不同风格的城市地图。 首先是安装方式，作者提供了uv和python venv两种方式，我一直都是直接用rye的，没有直接且详细接触过uv，就按照pip+venv方式安装，直接运行pip install -r requirements.txt. 安装完需要的包之后就可以直接开始图片生成大法了，使用方法非常简单，python create_map_poster.py --city &lt;city&gt; --country &lt;country&gt; [options] [options]这里可以指定主题，-t，这个项目主页展示了样例，现在来自己生成一张，比如说我想要世界第一城东京（2025年也是微弱优势战胜纽约了），就可以这样写：python create_map_poster.py --city tokyo --country japan -t...</div></div></div></a><a class="pagination-related" href="/toys-and-tools-homepage/" title="toys and tools"><img class="cover" src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">toys and tools</div></div><div class="info-2"><div class="info-item-1">之前在需要用b站一些资源的时候写过一篇这个： bilibili audio and video download 其实就有过想法写一个好玩的小工具汇总，不过一直没有提上日程。这里也是来写一个汇总主页。  bilibili audio and video download  generate a beautiful map  try codex  try openclaw   </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#install"><span class="toc-number">1.</span> <span class="toc-text">install</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#configure-openclaw"><span class="toc-number">2.</span> <span class="toc-text">configure openclaw</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set-telegram-bot"><span class="toc-number">3.</span> <span class="toc-text">set telegram bot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#continue-openclaw-onboard"><span class="toc-number">4.</span> <span class="toc-text">continue openclaw onboard</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set-systemd"><span class="toc-number">5.</span> <span class="toc-text">set systemd</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#test"><span class="toc-number">6.</span> <span class="toc-text">test</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#problem1-pnpm%E6%B1%A1%E6%9F%93"><span class="toc-number">6.1.</span> <span class="toc-text">problem1: pnpm污染</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#problem2-proxy"><span class="toc-number">6.2.</span> <span class="toc-text">problem2: proxy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#real-test"><span class="toc-number">6.3.</span> <span class="toc-text">real test</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">一些常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text">我的用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="toc-number">9.</span> <span class="toc-text">其他问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-number">10.</span> <span class="toc-text">后续</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#toys-and-tools-homepage"><span class="toc-number">11.</span> <span class="toc-text">toys and tools homepage</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/openclaw-try/">https://invoker-pray.github.io/openclaw-try/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/toys-tools/">toys&amp;tools</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/toysandtools-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/gameboy-on-FPGA/" title="gameboy on FPGA"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/gameboy-on-FPGA-cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">gameboy on FPGA</div></div><div class="info-2"><div class="info-item-1">github上面有一个叫gamebub的项目，作者通过chisel(scala)写成，可以在Xilinx XC7A100T FPGA上运行一个支持gameboy&#x2F;GBC&#x2F;GBA的复古游戏掌机系统，感觉是非常有意思也很锻炼能力的一个项目。这里决定通过写systemverilog，在Xilinx Zynq7020&#x2F;kria KV260上完成这个gameboy的复现。 当然也有可能写不下去跳车学chisel. </div></div></div></a><a class="pagination-related" href="/irr-icer/" title="to become an irreplaceable icer!"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/irr-icer.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">to become an irreplaceable icer!</div></div><div class="info-2"><div class="info-item-1">从「DFT工程师」到「不可替代的IC人」：Blog重构计划 写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？答案：能做判断和决策的人，而不是翻译spec为代码的人。   一、现状盘点：我已经走到了哪里回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：    已完成 内容 属于哪个能力维度    Week 1 Verilog&#x2F;SV环境搭建 + 语法复习 编码基础（会被AI替代的层）   Week 2 Makefile&#x2F;Python&#x2F;TCL 自动化脚本 工程效率（有价值但不稀缺）   Week 3 UVM环境搭建 + 第一个测试 验证编码（会被AI替代的层）   Week 4 UVM进阶：callback&#x2F;TLM&#x2F;RAL 验证编码 + 方法学入门   Week 5 SystemC基础 软硬件协同的种子   特别篇 Synopsys安装&#x2F;Verdi&#x2F;远程连接&#x2F;SV语法 工具使用   课外 GPU...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/bili-download/" title="bilibili audio and video download"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/bili-download.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">bilibili audio and video download</div></div><div class="info-2"><div class="info-item-1">一个有趣的小工具。 感觉很久都没有下载b站视频到本地了，最近发现加jj已经不能下载了，还要下载软件，很生气，于是找了一个有趣的小工具来完成下载。 yt-dlp这是一个支持b站的命令行工具，可以提取音频和视频，获取方式很简单，只需要: 12pip install yt-dlp  使用方式也很简单: 123456789101112131415# download videoyt-dlp &quot;https://www.bilibili.com/video/BVXXXXXXXXXX&quot;# audio# -f ba : best audio# -x extract audio# --audio-format mp3 : trans to mp3# --audio-quality 0 : best quality# --merge-output-format mp4 : I just need mp4!!!(need ffmpeg)yt-dlp -f ba --audio-format mp3 --audio-quality 0 ...</div></div></div></a><a class="pagination-related" href="/codex-try/" title="try codex"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-16</div><div class="info-item-2">try codex</div></div><div class="info-2"><div class="info-item-1">也是来尝试使用先进的AI工具了。这次尝试使用一手codex. install首先是通过nvm管理需要的npm(nodejs)环境，因为我这里有同时使用很多不同版本nodejs的需求。 先下载nvm: 1curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash  然后在.zshrc中添加路径（如果没有自动添加的话）： 1234export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion  测试一下安装成功： 1nvm...</div></div></div></a><a class="pagination-related" href="/maptoposter/" title="generate a beautiful map"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">generate a beautiful map</div></div><div class="info-2"><div class="info-item-1">toys and tools homepage这里推荐的是一个比较好玩的项目，是github上面的maptoposter，portal在这里 这个项目可以实现生成不同风格的城市地图。 首先是安装方式，作者提供了uv和python venv两种方式，我一直都是直接用rye的，没有直接且详细接触过uv，就按照pip+venv方式安装，直接运行pip install -r requirements.txt. 安装完需要的包之后就可以直接开始图片生成大法了，使用方法非常简单，python create_map_poster.py --city &lt;city&gt; --country &lt;country&gt; [options] [options]这里可以指定主题，-t，这个项目主页展示了样例，现在来自己生成一张，比如说我想要世界第一城东京（2025年也是微弱优势战胜纽约了），就可以这样写：python create_map_poster.py --city tokyo --country japan -t...</div></div></div></a><a class="pagination-related" href="/toys-and-tools-homepage/" title="toys and tools"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-02-25</div><div class="info-item-2">toys and tools</div></div><div class="info-2"><div class="info-item-1">之前在需要用b站一些资源的时候写过一篇这个： bilibili audio and video download 其实就有过想法写一个好玩的小工具汇总，不过一直没有提上日程。这里也是来写一个汇总主页。  bilibili audio and video download  generate a beautiful map  try codex  try openclaw   </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Invoker-pray" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#install"><span class="toc-number">1.</span> <span class="toc-text">install</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#configure-openclaw"><span class="toc-number">2.</span> <span class="toc-text">configure openclaw</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set-telegram-bot"><span class="toc-number">3.</span> <span class="toc-text">set telegram bot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#continue-openclaw-onboard"><span class="toc-number">4.</span> <span class="toc-text">continue openclaw onboard</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set-systemd"><span class="toc-number">5.</span> <span class="toc-text">set systemd</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#test"><span class="toc-number">6.</span> <span class="toc-text">test</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#problem1-pnpm%E6%B1%A1%E6%9F%93"><span class="toc-number">6.1.</span> <span class="toc-text">problem1: pnpm污染</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#problem2-proxy"><span class="toc-number">6.2.</span> <span class="toc-text">problem2: proxy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#real-test"><span class="toc-number">6.3.</span> <span class="toc-text">real test</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">一些常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text">我的用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="toc-number">9.</span> <span class="toc-text">其他问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-number">10.</span> <span class="toc-text">后续</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#toys-and-tools-homepage"><span class="toc-number">11.</span> <span class="toc-text">toys and tools homepage</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a href="/link/">友情链接</a> | 用 ❤ 和 Verilog 构建</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"}
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark_dimmed' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Invoker-pray/Invoker-pray.github.io',
+      'data-repo-id': 'R_kgD00eSbpg',
+      'data-category-id': 'DIC_kwD00eSbps4C58pQ',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !true) {
+    if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><script defer src="/js/custom.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true 
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章标题或内容..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

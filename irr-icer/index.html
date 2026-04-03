@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>to become an irreplaceable icer! | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="从「DFT工程师」到「不可替代的IC人」：Blog重构计划 写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？答案：能做判断和决策的人，而不是翻译spec为代码的人。   一、现状盘点：我已经走到了哪里回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：    已完成 内容 属于哪个能力维度    Week 1 Verilog&#x2F;SV环境搭建 + 语法复">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>to become an irreplaceable icer! | Jiao hongbao's Trash</title><meta name="author" content="Jiao hongbao"><meta name="copyright" content="Jiao hongbao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="从「DFT工程师」到「不可替代的IC人」：Blog重构计划 写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？答案：能做判断和决策的人，而不是翻译spec为代码的人。   一、现状盘点：我已经走到了哪里回顾「从零开始的DFT工程师」前5周 + 特别篇，已完成的内容如下：    已完成 内容 属于哪个能力维度    Week 1 Verilog&#x2F;SV环境搭建 + 语法复">
 <meta property="og:type" content="article">
 <meta property="og:title" content="to become an irreplaceable icer!">
 <meta property="og:url" content="https://invoker-pray.github.io/irr-icer/index.html">
@@ -26,7 +26,7 @@
       "url": "https://invoker-pray.github.io/"
     }
   ]
-}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/irr-icer/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://invoker-pray.github.io/irr-icer/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
     (() => {
       
     const saveToLocal = {
@@ -72,7 +72,7 @@
         document.head.appendChild(link)
       }),
       addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
+        if (!true && key.startsWith('pjax')) return
         const globalFn = parent.globalFn || {}
         globalFn[key] = globalFn[key] || {}
         globalFn[key][name || Object.keys(globalFn[key]).length] = fn
@@ -90,7 +90,7 @@
       const activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
         }
       }
 
@@ -116,12 +116,12 @@
     detectApple()
   
     })()
-  </script><script>const GLOBAL_CONFIG = {
+  </script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"/search.json","preload":true,"top_n_per_article":-1,"unescape":true,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
   translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
   copy: {
     success: 'Copy Successful',
     error: 'Copy Failed',
@@ -140,14 +140,14 @@
     month: 'months ago'
   },
   copyright: undefined,
-  lightbox: 'null',
+  lightbox: 'fancybox',
   Snackbar: undefined,
   infinitegrid: {
     js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
     buttonText: 'Load More'
   },
   isPhotoFigcaption: false,
-  islazyloadPlugin: false,
+  islazyloadPlugin: true,
   isAnchor: false,
   percent: {
     toc: true,
@@ -159,8 +159,29 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
-</head><body><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/irr-icer.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">to become an irreplaceable icer!</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">to become an irreplaceable icer!</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-04-01T11:37:36.526Z" title="Updated 2026-04-01 19:37:36">2026-04-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/irr-icer/">irr-icer</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="从「DFT工程师」到「不可替代的IC人」：Blog重构计划"><a href="#从「DFT工程师」到「不可替代的IC人」：Blog重构计划" class="headerlink" title="从「DFT工程师」到「不可替代的IC人」：Blog重构计划"></a>从「DFT工程师」到「不可替代的IC人」：Blog重构计划</h1><blockquote>
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Jiao hongbao's Trash" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/start.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover/irr-icer.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jiao hongbao's Trash</span></a><a class="nav-page-title" href="/"><span class="site-name">to become an irreplaceable icer!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">to become an irreplaceable icer!</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-04-01T11:37:36.526Z" title="Updated 2026-04-01 19:37:36">2026-04-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/irr-icer/">irr-icer</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>9mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:180,&quot;messagePrev&quot;:&quot;本文最后更新于&quot;,&quot;messageNext&quot;:&quot;天前，部分内容可能已过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2026-04-01 19:37:36&quot;}" hidden></div><h1 id="从「DFT工程师」到「不可替代的IC人」：Blog重构计划"><a href="#从「DFT工程师」到「不可替代的IC人」：Blog重构计划" class="headerlink" title="从「DFT工程师」到「不可替代的IC人」：Blog重构计划"></a>从「DFT工程师」到「不可替代的IC人」：Blog重构计划</h1><blockquote>
 <p>写给自己的路线重构。核心问题：AI时代，什么样的IC工程师不会被淘汰？<br>答案：能做判断和决策的人，而不是翻译spec为代码的人。</p>
 </blockquote>
 <hr>
@@ -443,5 +464,146 @@
 <p>“为什么这样设计”和”这个方案行不行”，在可预见的未来，还是得你自己来。</p>
 <hr>
 <p><em>Last updated: 2026-03-21</em></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/irr-icer/">https://invoker-pray.github.io/irr-icer/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/irr-icer/">irr-icer</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/irr-icer.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/openclaw-try/" title="try openclaw"><img class="cover" src="/img/cover/toysandtools-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">try openclaw</div></div><div class="info-2"><div class="info-item-1">然后就是最近比较火的openclaw，当然也要尝试一手。  install首先安装必要的依赖：npm install -g node-addon-api node-gyp 安装openclaw的方法有三种，首先是arch用户可以通过yay -S openclaw-git通过AUR下载，但是AUR带有git后缀的一般是源码编译，一般来说会比较慢。 不过openclaw本质上是nodejs应用，所以其实应该只是npm安装。 第二种就是直接通过npm&#x2F;pnpm安装，npm install -g openclaw@latest需要调整nodejs版本为22.16+. 第三种是，ollama现在官方支持使用openclaw，只要ollama launch openclaw就可以完成安装和使用。 考虑到openclaw本身也需要烧token，还是选择使用ollama local model + openclaw. 其实都需要nodejs...</div></div></div></a><a class="pagination-related" href="/life-reflection17/" title="life reflection 17"><img class="cover" src="/img/cover/life-reflection-homepage.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">life reflection 17</div></div><div class="info-2"><div class="info-item-1">欢迎回来。现在是2026年4月1日。  还是先来谈一下近况，首先是毕设。 毕业设计毕业设计的内容是，设计一个数字存算一体阵列架构，并且进行FPGA设计验证。 我首先来说几句官话：  当前，以YOLO、SSD为代表的深度学习目标检测算法在不断提升检测精度的同时，也面临着计算密集与内存访问瓶颈的严峻挑战。在传统冯·诺依曼架构中，处理器与存储器分离，数据在两者之间频繁搬运，导致巨大的功耗开销与延迟，严重制约了系统算力与能效比的提升。这一问题在边缘计算场景中尤为突出——由于对功耗和实时性要求极为苛刻，传统架构已难以满足实际需求。存算一体（Computing-in-Memory, CIM）技术通过将计算功能嵌入存储器内部，直接利用存储单元完成运算，从根本上消除了数据搬运开销，被视为突破“内存墙”瓶颈的革命性路径。  在当前背景之下，设计存算阵列的意义在于，通过在存储单元中原位实现卷积的乘加运算，降低因为数据搬运产生的动态功耗，为低功耗边缘智能设备提供高性能的计算核心。 在3月17日的时候我创建了一个github...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E3%80%8CDFT%E5%B7%A5%E7%A8%8B%E5%B8%88%E3%80%8D%E5%88%B0%E3%80%8C%E4%B8%8D%E5%8F%AF%E6%9B%BF%E4%BB%A3%E7%9A%84IC%E4%BA%BA%E3%80%8D%EF%BC%9ABlog%E9%87%8D%E6%9E%84%E8%AE%A1%E5%88%92"><span class="toc-number">1.</span> <span class="toc-text">从「DFT工程师」到「不可替代的IC人」：Blog重构计划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%8E%B0%E7%8A%B6%E7%9B%98%E7%82%B9%EF%BC%9A%E6%88%91%E5%B7%B2%E7%BB%8F%E8%B5%B0%E5%88%B0%E4%BA%86%E5%93%AA%E9%87%8C"><span class="toc-number">1.1.</span> <span class="toc-text">一、现状盘点：我已经走到了哪里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9B%9B%E5%A4%A7%E8%83%BD%E5%8A%9B%E6%94%AF%E6%9F%B1%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="toc-number">1.2.</span> <span class="toc-text">二、四大能力支柱：重新定义学习目标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-A%EF%BC%9A%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%B7%B1%E5%B1%82%E7%90%86%E8%A7%A3"><span class="toc-number">1.2.1.</span> <span class="toc-text">支柱 A：体系结构深层理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-B%EF%BC%9APPA-%E7%9B%B4%E8%A7%89%E4%B8%8E%E7%89%A9%E7%90%86%E6%84%9F%E7%9F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">支柱 B：PPA 直觉与物理感知</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-C%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95%E5%AD%A6%E2%80%94%E2%80%94%E2%80%9C%E6%80%8E%E4%B9%88%E6%83%B3%E2%80%9D"><span class="toc-number">1.2.3.</span> <span class="toc-text">支柱 C：验证方法学——“怎么想”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-D%EF%BC%9A%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.2.4.</span> <span class="toc-text">支柱 D：软硬件协同设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Blog-%E7%B3%BB%E5%88%97%E9%87%8D%E6%9E%84%E6%96%B9%E6%A1%88"><span class="toc-number">1.3.</span> <span class="toc-text">三、Blog 系列重构方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E5%90%8D%E4%B8%8E%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.3.1.</span> <span class="toc-text">改名与定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F-DFT-%E7%B3%BB%E5%88%97-Week-6-%E7%9A%84%E8%B0%83%E6%95%B4"><span class="toc-number">1.3.2.</span> <span class="toc-text">原 DFT 系列 Week 6+ 的调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E7%AF%87-Blog-%E7%9A%84%E5%86%99%E4%BD%9C%E6%A8%A1%E6%9D%BF%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.3.</span> <span class="toc-text">每篇 Blog 的写作模板建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B7%E4%BD%93%E8%A1%8C%E5%8A%A8%E8%AE%A1%E5%88%92%EF%BC%88%E6%8E%A5%E4%B8%8B%E6%9D%A5-3-%E4%B8%AA%E6%9C%88%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">四、具体行动计划（接下来 3 个月）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-1%EF%BC%9A%E8%A1%A5%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-%E9%AA%8C%E8%AF%81%E6%80%9D%E7%BB%B4%E8%BD%AC%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">Month 1：补体系结构 + 验证思维转型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-2%EF%BC%9APPA%E7%9B%B4%E8%A7%89%E5%BB%BA%E7%AB%8B-%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E8%B5%B7%E6%AD%A5"><span class="toc-number">1.4.2.</span> <span class="toc-text">Month 2：PPA直觉建立 + 软硬件协同起步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-3%EF%BC%9A%E6%95%B4%E5%90%88-AI%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">1.4.3.</span> <span class="toc-text">Month 3：整合 + AI工作流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%80%BB%E7%BB%93"><span class="toc-number">1.5.</span> <span class="toc-text">五、一句话总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Invoker-pray.github.io">Jiao hongbao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://invoker-pray.github.io/irr-icer/">https://invoker-pray.github.io/irr-icer/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/irr-icer/">irr-icer</a></div><div class="post-share"><div class="social-share" data-image="/img/cover/irr-icer.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/openclaw-try/" title="try openclaw"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">try openclaw</div></div><div class="info-2"><div class="info-item-1">然后就是最近比较火的openclaw，当然也要尝试一手。  install首先安装必要的依赖：npm install -g node-addon-api node-gyp 安装openclaw的方法有三种，首先是arch用户可以通过yay -S openclaw-git通过AUR下载，但是AUR带有git后缀的一般是源码编译，一般来说会比较慢。 不过openclaw本质上是nodejs应用，所以其实应该只是npm安装。 第二种就是直接通过npm&#x2F;pnpm安装，npm install -g openclaw@latest需要调整nodejs版本为22.16+. 第三种是，ollama现在官方支持使用openclaw，只要ollama launch openclaw就可以完成安装和使用。 考虑到openclaw本身也需要烧token，还是选择使用ollama local model + openclaw. 其实都需要nodejs...</div></div></div></a><a class="pagination-related" href="/life-reflection17/" title="life reflection 17"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/life-reflection-homepage.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">life reflection 17</div></div><div class="info-2"><div class="info-item-1">欢迎回来。现在是2026年4月1日。  还是先来谈一下近况，首先是毕设。 毕业设计毕业设计的内容是，设计一个数字存算一体阵列架构，并且进行FPGA设计验证。 我首先来说几句官话：  当前，以YOLO、SSD为代表的深度学习目标检测算法在不断提升检测精度的同时，也面临着计算密集与内存访问瓶颈的严峻挑战。在传统冯·诺依曼架构中，处理器与存储器分离，数据在两者之间频繁搬运，导致巨大的功耗开销与延迟，严重制约了系统算力与能效比的提升。这一问题在边缘计算场景中尤为突出——由于对功耗和实时性要求极为苛刻，传统架构已难以满足实际需求。存算一体（Computing-in-Memory, CIM）技术通过将计算功能嵌入存储器内部，直接利用存储单元完成运算，从根本上消除了数据搬运开销，被视为突破“内存墙”瓶颈的革命性路径。  在当前背景之下，设计存算阵列的意义在于，通过在存储单元中原位实现卷积的乘加运算，降低因为数据搬运产生的动态功耗，为低功耗边缘智能设备提供高性能的计算核心。 在3月17日的时候我创建了一个github...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Jiao hongbao</div><div class="author-info-description">male/INFJ/Libra/Digital-Integrated-Circuit</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Invoker-pray"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Invoker-pray" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5e2T8qkSuBo1E2BMbEwdSM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E3%80%8CDFT%E5%B7%A5%E7%A8%8B%E5%B8%88%E3%80%8D%E5%88%B0%E3%80%8C%E4%B8%8D%E5%8F%AF%E6%9B%BF%E4%BB%A3%E7%9A%84IC%E4%BA%BA%E3%80%8D%EF%BC%9ABlog%E9%87%8D%E6%9E%84%E8%AE%A1%E5%88%92"><span class="toc-number">1.</span> <span class="toc-text">从「DFT工程师」到「不可替代的IC人」：Blog重构计划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%8E%B0%E7%8A%B6%E7%9B%98%E7%82%B9%EF%BC%9A%E6%88%91%E5%B7%B2%E7%BB%8F%E8%B5%B0%E5%88%B0%E4%BA%86%E5%93%AA%E9%87%8C"><span class="toc-number">1.1.</span> <span class="toc-text">一、现状盘点：我已经走到了哪里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9B%9B%E5%A4%A7%E8%83%BD%E5%8A%9B%E6%94%AF%E6%9F%B1%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="toc-number">1.2.</span> <span class="toc-text">二、四大能力支柱：重新定义学习目标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-A%EF%BC%9A%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%B7%B1%E5%B1%82%E7%90%86%E8%A7%A3"><span class="toc-number">1.2.1.</span> <span class="toc-text">支柱 A：体系结构深层理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-B%EF%BC%9APPA-%E7%9B%B4%E8%A7%89%E4%B8%8E%E7%89%A9%E7%90%86%E6%84%9F%E7%9F%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">支柱 B：PPA 直觉与物理感知</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-C%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95%E5%AD%A6%E2%80%94%E2%80%94%E2%80%9C%E6%80%8E%E4%B9%88%E6%83%B3%E2%80%9D"><span class="toc-number">1.2.3.</span> <span class="toc-text">支柱 C：验证方法学——“怎么想”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%9F%B1-D%EF%BC%9A%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.2.4.</span> <span class="toc-text">支柱 D：软硬件协同设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Blog-%E7%B3%BB%E5%88%97%E9%87%8D%E6%9E%84%E6%96%B9%E6%A1%88"><span class="toc-number">1.3.</span> <span class="toc-text">三、Blog 系列重构方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E5%90%8D%E4%B8%8E%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.3.1.</span> <span class="toc-text">改名与定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F-DFT-%E7%B3%BB%E5%88%97-Week-6-%E7%9A%84%E8%B0%83%E6%95%B4"><span class="toc-number">1.3.2.</span> <span class="toc-text">原 DFT 系列 Week 6+ 的调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E7%AF%87-Blog-%E7%9A%84%E5%86%99%E4%BD%9C%E6%A8%A1%E6%9D%BF%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.3.</span> <span class="toc-text">每篇 Blog 的写作模板建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B7%E4%BD%93%E8%A1%8C%E5%8A%A8%E8%AE%A1%E5%88%92%EF%BC%88%E6%8E%A5%E4%B8%8B%E6%9D%A5-3-%E4%B8%AA%E6%9C%88%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">四、具体行动计划（接下来 3 个月）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-1%EF%BC%9A%E8%A1%A5%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-%E9%AA%8C%E8%AF%81%E6%80%9D%E7%BB%B4%E8%BD%AC%E5%9E%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">Month 1：补体系结构 + 验证思维转型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-2%EF%BC%9APPA%E7%9B%B4%E8%A7%89%E5%BB%BA%E7%AB%8B-%E8%BD%AF%E7%A1%AC%E4%BB%B6%E5%8D%8F%E5%90%8C%E8%B5%B7%E6%AD%A5"><span class="toc-number">1.4.2.</span> <span class="toc-text">Month 2：PPA直觉建立 + 软硬件协同起步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Month-3%EF%BC%9A%E6%95%B4%E5%90%88-AI%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">1.4.3.</span> <span class="toc-text">Month 3：整合 + AI工作流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%80%BB%E7%BB%93"><span class="toc-number">1.5.</span> <span class="toc-text">五、一句话总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/irr-icer/" title="to become an irreplaceable icer!"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/irr-icer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="to become an irreplaceable icer!"/></a><div class="content"><a class="title" href="/irr-icer/" title="to become an irreplaceable icer!">to become an irreplaceable icer!</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/life-reflection17/" title="life reflection 17"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/life-reflection-homepage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="life reflection 17"/></a><div class="content"><a class="title" href="/life-reflection17/" title="life reflection 17">life reflection 17</a><time datetime="2026-03-31T16:00:00.000Z" title="Created 2026-04-01 00:00:00">2026-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/openclaw-try/" title="try openclaw"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try openclaw"/></a><div class="content"><a class="title" href="/openclaw-try/" title="try openclaw">try openclaw</a><time datetime="2026-03-16T16:00:00.000Z" title="Created 2026-03-17 00:00:00">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/DFT-FROM-ZERO-cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的DFT工程师！特别篇：verdi"/></a><div class="content"><a class="title" href="/DFT-from-zero-verdi/" title="从零开始的DFT工程师！特别篇：verdi">从零开始的DFT工程师！特别篇：verdi</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/codex-try/" title="try codex"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cover/toysandtools-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="try codex"/></a><div class="content"><a class="title" href="/codex-try/" title="try codex">try codex</a><time datetime="2026-03-15T16:00:00.000Z" title="Created 2026-03-16 00:00:00">2026-03-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By Jiao hongbao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a href="/link/">友情链接</a> | 用 ❤ 和 Verilog 构建</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"}
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark_dimmed' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Invoker-pray/Invoker-pray.github.io',
+      'data-repo-id': 'R_kgD00eSbpg',
+      'data-category-id': 'DIC_kwD00eSbps4C58pQ',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !true) {
+    if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><script defer src="/js/custom.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true 
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章标题或内容..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
