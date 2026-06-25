@@ -6,7 +6,7 @@
   <link href="https://invoker-pray.github.io/atom.xml" rel="self"/>
   
   <link href="https://invoker-pray.github.io/"/>
-  <updated>2026-06-20T14:50:06.293Z</updated>
+  <updated>2026-06-25T17:17:20.454Z</updated>
   <id>https://invoker-pray.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>finale&amp;emerge</title>
+    <link href="https://invoker-pray.github.io/2026-summer/"/>
+    <id>https://invoker-pray.github.io/2026-summer/</id>
+    <published>2026-06-30T16:00:00.000Z</published>
+    <updated>2026-06-25T17:17:20.454Z</updated>
+    
+    <content type="html"><![CDATA[<p><audio id="bgm" style="display:none;"></audio></p><script>(function () {  const playlist = [    "/files/bgm/finale.mp3",    "/files/bgm/until_sunfall.mp3",    "/files/bgm/献给如今正迈步前行的你.mp3"  ];  const shuffle = true;   // true = 随机播放；false = 列表顺序循环  const audio = document.getElementById("bgm");  const order = playlist.map((_, i) => i);  let cursor = 0;  function shuffleArray(a) {            // Fisher-Yates 洗牌    for (let i = a.length - 1; i > 0; i--) {      const j = Math.floor(Math.random() * (i + 1));      [a[i], a[j]] = [a[j], a[i]];    }  }  function load() { audio.src = playlist[order[cursor]]; }  audio.addEventListener("ended", function () {    cursor++;    if (cursor >= order.length) {              cursor = 0;      if (shuffle) shuffleArray(order);      }    load();    audio.play();  });  if (shuffle) shuffleArray(order);  load();  audio.play().catch(function () {           const resume = function () {      audio.play();      ["click", "touchstart", "scroll"].forEach(function (e) {        document.removeEventListener(e, resume);      });    };    ["click", "touchstart", "scroll"].forEach(function (e) {      document.addEventListener(e, resume, { passive: true });    });  });})();</script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;audio id=&quot;bgm&quot; style=&quot;display:none;&quot;&gt;&lt;/audio&gt;&lt;/p&gt;
+&lt;script&gt;
+(function () {
+  const playlist = [
+    &quot;/files/bgm/finale.mp3&quot;,
+    &quot;/files/</summary>
+      
+    
+    
+    
+    <category term="annual memoir" scheme="https://invoker-pray.github.io/categories/annual-memoir/"/>
+    
+    
+    <category term="annual memoir" scheme="https://invoker-pray.github.io/tags/annual-memoir/"/>
+    
+  </entry>
   
   <entry>
     <title>life reflection 18</title>
@@ -490,31 +519,6 @@
     
     
     <category term="GPU Programming and Architecture" scheme="https://invoker-pray.github.io/tags/GPU-Programming-and-Architecture/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>occupations</title>
-    <link href="https://invoker-pray.github.io/occupations-homepage/"/>
-    <id>https://invoker-pray.github.io/occupations-homepage/</id>
-    <published>2025-10-07T16:00:00.000Z</published>
-    <updated>2025-10-08T12:11:47.783Z</updated>
-    
-    <content type="html"><![CDATA[<p>在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。</p><table><thead><tr><th>content</th><th>links</th></tr></thead><tbody><tr><td>GPU Programming and Architecture</td><td><a href="/GPU_Programming_and_Archtecture/">click</a></td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在很早之前的古老blog里面是有这个板块的，但是之前一直懒得往里面写，现在大四时间也算是多了一点，所以准备恢复一下这个扩展板块。总的来说，这里应该是会放一些（目前看来）的专业学习不怎么相关但是还算比较好玩的东西，可能会有图形学或者是其他比较有意思的小玩意。&lt;/p&gt;
-&lt;tab</summary>
-      
-    
-    
-    
-    <category term="occupations" scheme="https://invoker-pray.github.io/categories/occupations/"/>
-    
-    
-    <category term="occupations" scheme="https://invoker-pray.github.io/tags/occupations/"/>
     
   </entry>
   
