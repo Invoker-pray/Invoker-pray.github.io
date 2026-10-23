@@ -1,0 +1,369 @@
+/* ============================================
+   Jiao hongbao's Trash - Custom Beautification
+   ============================================ */
+
+/* --- Google Font: only Caveat is used (loaded via blog_title_font in _config.yml) --- */
+
+/* --- Site Title Typewriter Effect --- */
+#site-info {
+  text-align: center !important;
+}
+
+#site-title {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(255, 255, 255, 0.8);
+  max-width: 0;
+  animation:
+    typing 2.8s steps(22, end) 0.5s forwards,
+    blink-caret 0.75s step-end infinite;
+  display: inline-block;
+  text-align: center;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Stop caret blinking after typing finishes */
+#site-title.typed-done {
+  border-color: transparent;
+  animation: typing 2.8s steps(22, end) 0.5s forwards;
+}
+
+/* --- Scroll-triggered Fade-in for Post Cards --- */
+#recent-posts > .recent-post-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#recent-posts > .recent-post-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay for cards */
+#recent-posts > .recent-post-item:nth-child(1) {
+  transition-delay: 0s;
+}
+#recent-posts > .recent-post-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#recent-posts > .recent-post-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+#recent-posts > .recent-post-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+#recent-posts > .recent-post-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+/* --- Enhanced Card Hover --- */
+#recent-posts > .recent-post-item {
+  transition:
+    opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.35s ease;
+}
+
+#recent-posts > .recent-post-item:hover {
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) !important;
+}
+
+/* --- Aside Cards Entrance Animation (pure CSS, pjax-safe) --- */
+#aside-content > .card-widget {
+  animation: aside-slide-in 0.6s ease both;
+}
+
+#aside-content > .card-widget:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#aside-content > .card-widget:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#aside-content > .card-widget:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#aside-content > .card-widget:nth-child(4) {
+  animation-delay: 0.4s;
+}
+#aside-content > .card-widget:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes aside-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --- Smooth Scroll Down Arrow Bounce --- */
+#scroll-down .scroll-down-effects {
+  animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+@keyframes bounce-arrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* --- Navigation Bar Glass Effect (enhanced) --- */
+#page-header.nav-fixed #nav,
+#page-header.nav-visible:not(.fixed) #nav {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme="dark"] #page-header.nav-fixed #nav,
+[data-theme="dark"] #page-header.nav-visible:not(.fixed) #nav {
+  background: rgba(30, 30, 30, 0.7) !important;
+}
+
+/* --- Card Glass-morphism --- */
+#aside-content > .card-widget {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* --- Subtitle Typing Cursor Enhancement --- */
+.typed-cursor {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 100 !important;
+  font-size: 1.6em !important;
+  animation: typed-blink 0.7s infinite !important;
+}
+
+@keyframes typed-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* --- Footer Fade-in (pure CSS, pjax-safe) --- */
+#footer {
+  animation: footer-fade-in 0.8s ease 0.3s both;
+}
+
+@keyframes footer-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Smooth Page Transition (on load) --- */
+#body-wrap {
+  animation: page-fade-in 0.6s ease-out;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Floating Particles Canvas --- */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+[data-theme="dark"] #particles-canvas {
+  opacity: 0.2;
+}
+
+/* --- Scroll Progress Bar --- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #f472b6, #6366f1);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- Enhanced Avatar Hover --- */
+#aside-content .card-widget .card-info .avatar-img {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#aside-content .card-widget .card-info .avatar-img:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* --- Tag Cloud Hover Color Shift --- */
+.card-tag-cloud a {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease !important;
+}
+
+.card-tag-cloud a:hover {
+  transform: scale(1.15);
+  display: inline-block;
+}
+
+/* --- Post Cover Image Parallax-like Effect (subtle) --- */
+.recent-post-item .post_cover .post-bg {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.recent-post-item:hover .post_cover .post-bg {
+  transform: scale(1.08) !important;
+}
+
+/* --- Link Underline Animation --- */
+#article-container a:not(.btn):not(.fancybox):not(.card-more-btn) {
+  position: relative;
+  text-decoration: none;
+}
+
+#article-container a:not(.btn):not(.fancybox):not(.card-more-btn)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #6366f1;
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+#article-container a:not(.btn):not(.fancybox):not(.card-more-btn):hover::after {
+  width: 100%;
+}
+
+/* --- Mobile optimizations --- */
+@media screen and (max-width: 768px) {
+  #site-title {
+    white-space: normal;
+    border-right: none;
+    width: auto;
+    max-width: none !important;
+    animation: mobile-title-fade 1.5s ease forwards;
+  }
+
+  @keyframes mobile-title-fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #particles-canvas {
+    display: none;
+  }
+
+  #recent-posts > .recent-post-item {
+    transform: translateY(20px);
+  }
+}
+
+/* --- Dark Mode Card Glow Border --- */
+[data-theme="dark"] #recent-posts > .recent-post-item {
+  box-shadow:
+    0 0 1px rgba(99, 102, 241, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] #recent-posts > .recent-post-item:hover {
+  box-shadow:
+    0 0 8px rgba(99, 102, 241, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] #aside-content > .card-widget {
+  box-shadow:
+    0 0 1px rgba(99, 102, 241, 0.25),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Homepage Banner Parallax --- */
+#page-header.full_page {
+  background-attachment: fixed;
+  will-change: background-position;
+}
+
+/* --- Outdate Notice Styling --- */
+.post-outdate-notice {
+  border-left: 4px solid #f59e0b !important;
+  background: rgba(245, 158, 11, 0.08) !important;
+}
+
+[data-theme="dark"] .post-outdate-notice {
+  background: rgba(245, 158, 11, 0.12) !important;
+}
